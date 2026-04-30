@@ -400,6 +400,229 @@
   }
   .modal-close:hover { color: #fff; }
 
+  /* ── EBOOK MOCKUP ── */
+  .book-wrap {
+    perspective: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .book {
+    width: 210px;
+    height: 285px;
+    position: relative;
+    transform: rotateY(-18deg) rotateX(4deg);
+    transform-style: preserve-3d;
+    transition: transform .4s ease;
+    filter: drop-shadow(-16px 24px 48px rgba(0,0,0,.55));
+  }
+
+  .book:hover {
+    transform: rotateY(-8deg) rotateX(2deg);
+  }
+
+  /* Capa frontal */
+  .book-front {
+    position: absolute;
+    inset: 0;
+    border-radius: 3px 8px 8px 3px;
+    background: linear-gradient(160deg, #1a2a5e 0%, #0F1830 100%);
+    border-top: 5px solid #C9A84C;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 22px 18px 18px;
+    backface-visibility: hidden;
+  }
+
+  /* Padrão de fundo da capa — grade de pontos */
+  .book-front::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle, rgba(201,168,76,.12) 1px, transparent 1px);
+    background-size: 18px 18px;
+    pointer-events: none;
+  }
+
+  /* Brilho diagonal */
+  .book-front::after {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: -20%;
+    width: 60%;
+    height: 120%;
+    background: linear-gradient(135deg, rgba(255,255,255,.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .book-badge {
+    display: inline-block;
+    background: rgba(201,168,76,.2);
+    border: 1px solid rgba(201,168,76,.5);
+    color: #C9A84C;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 14px;
+    position: relative;
+    width: fit-content;
+  }
+
+  .book-icon {
+    font-size: 34px;
+    margin-bottom: 10px;
+    position: relative;
+    line-height: 1;
+  }
+
+  .book-title {
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: -.3px;
+    position: relative;
+    margin-bottom: 4px;
+  }
+
+  .book-title span { color: #C9A84C; }
+
+  .book-subtitle {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(255,255,255,.5);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    margin-bottom: auto;
+  }
+
+  .book-divider {
+    width: 28px;
+    height: 2px;
+    background: #C9A84C;
+    border-radius: 2px;
+    margin: 10px 0;
+    position: relative;
+  }
+
+  .book-chapters {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+
+  .book-ch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 8.5px;
+    color: rgba(255,255,255,.5);
+  }
+
+  .book-ch::before {
+    content: '';
+    width: 10px;
+    height: 1px;
+    background: rgba(201,168,76,.5);
+    flex-shrink: 0;
+  }
+
+  .book-price-tag {
+    background: #C9A84C;
+    color: #0F1830;
+    font-size: 13px;
+    font-weight: 900;
+    padding: 5px 10px;
+    border-radius: 4px;
+    position: relative;
+    width: fit-content;
+  }
+
+  /* Lombada do livro */
+  .book-spine {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 22px;
+    background: linear-gradient(to right, #070e20, #0e1a3a);
+    border-radius: 3px 0 0 3px;
+    transform: rotateY(-90deg);
+    transform-origin: left center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .book-spine-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 7px;
+    font-weight: 800;
+    color: rgba(201,168,76,.6);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* Páginas (lateral direita) */
+  .book-pages {
+    position: absolute;
+    right: -6px;
+    top: 3px;
+    bottom: 3px;
+    width: 8px;
+    background: repeating-linear-gradient(
+      to right,
+      #e8e8e8,
+      #e8e8e8 1px,
+      #f5f5f0 1px,
+      #f5f5f0 3px
+    );
+    border-radius: 0 2px 2px 0;
+    transform: translateZ(-4px);
+  }
+
+  /* ── HERO VARIANTE B (split) ── */
+  .hero-split {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .hero-split-text { flex: 1; min-width: 0; }
+  .hero-split-visual {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .book-social-proof {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 12px;
+    color: rgba(255,255,255,.6);
+    text-align: center;
+    max-width: 220px;
+  }
+
+  .book-social-proof strong { color: #C9A84C; }
+
   /* ── MOBILE ── */
   @media (max-width: 640px) {
     .hero { padding: 60px 0 50px; }
@@ -413,6 +636,9 @@
     .topbar-cta { display: none; }
     .hero-cta-wrap { align-items: center; }
     section { padding: 56px 0; }
+    .hero-split { flex-direction: column-reverse; gap: 36px; }
+    .book { width: 170px; height: 230px; }
+    .book-title { font-size: 16px; }
   }
 </style>
 </head>
@@ -426,42 +652,9 @@
   </div>
 </header>
 
-<!-- ══ HERO ══ -->
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-badge">Guia Prático · Maio 2026</div>
-    <!-- TESTE A/B: headline preenchida via JS abaixo -->
-    <h1 id="hero-headline"></h1>
-    <p class="hero-sub">
-      Um guia direto ao ponto que mostra como pequenas e médias empresas usam
-      inteligência artificial para trabalhar menos, gastar menos e lucrar mais —
-      sem precisar de TI, sem código, sem complicação.
-    </p>
-    <div class="hero-metrics">
-      <div class="hero-metric">
-        <div class="num">40%</div>
-        <div class="lbl">mais produtividade<br>com IA (BCG, 2024)</div>
-      </div>
-      <div class="hero-metric">
-        <div class="num">R$40M</div>
-        <div class="lbl">economizados por ano<br>(Klarna, 2024)</div>
-      </div>
-      <div class="hero-metric">
-        <div class="num">360k</div>
-        <div class="lbl">horas/ano poupadas<br>(JPMorgan, 2023)</div>
-      </div>
-      <div class="hero-metric">
-        <div class="num">R$37</div>
-        <div class="lbl">preço do guia completo<br>com garantia de 7 dias</div>
-      </div>
-    </div>
-    <div class="hero-cta-wrap">
-      <a href="#oferta" class="btn-primary">QUERO O GUIA AGORA — R$37</a>
-      <span class="hero-note">
-        <strong>✓ Garantia de 7 dias</strong> · Acesso imediato em PDF · Sem assinatura
-      </span>
-    </div>
-  </div>
+<!-- ══ HERO — renderizado via JS (A/B test de layout + headline) ══ -->
+<section class="hero" id="hero-section">
+  <div class="wrap" id="hero-inner"></div>
 </section>
 
 <!-- ══ TRUST BAR ══ -->
@@ -959,38 +1152,111 @@
 
 <!-- ══ SCRIPTS ══ -->
 <script>
-// ─────────────────────────────────────────────────
-// TESTE A/B — HEADLINE HERO
-// Variante A ou B definida aleatoriamente por sessão
-// Resultado enviado ao GA4 para comparar conversão
-// ─────────────────────────────────────────────────
-(function() {
-  var variants = {
-    A: 'A IA já está <em>cortando custos</em><br>em empresas do mundo todo.<br>A sua é a próxima.',
-    B: 'Enquanto você lê isso,<br>seus concorrentes já usam IA<br>para <em>ganhar mais e gastar menos.</em>'
-  };
+// ═══════════════════════════════════════════════════
+// TESTE A/B — LAYOUT DO HERO
+//
+// Variante A: Hero centralizado, texto puro (atual)
+// Variante B: Hero split — texto à esq, mockup do ebook à dir
+//
+// A variante é mantida por sessão e registrada no GA4.
+// ═══════════════════════════════════════════════════
 
-  // Mantém a mesma variante durante a sessão
-  var variant = sessionStorage.getItem('ab_headline');
+var BOOK_MOCKUP = [
+  '<div class="book-wrap">',
+  '  <div class="book">',
+  '    <div class="book-spine"><span class="book-spine-text">IA Para Todos · Guia Prático</span></div>',
+  '    <div class="book-pages"></div>',
+  '    <div class="book-front">',
+  '      <div class="book-badge">Guia Prático · 2026</div>',
+  '      <div class="book-icon">🤖</div>',
+  '      <div class="book-title">IA PARA<br><span>TODOS</span></div>',
+  '      <div class="book-subtitle">Como PMEs usam IA para lucrar mais</div>',
+  '      <div class="book-divider"></div>',
+  '      <div class="book-chapters">',
+  '        <div class="book-ch">Prompts prontos para usar</div>',
+  '        <div class="book-ch">Fórmula C.A.R.E.</div>',
+  '        <div class="book-ch">Plano de 30 dias</div>',
+  '        <div class="book-ch">Comparativo de ferramentas</div>',
+  '      </div>',
+  '      <div class="book-price-tag">R$ 37</div>',
+  '    </div>',
+  '  </div>',
+  '</div>'
+].join('');
+
+var METRICAS = [
+  '<div class="hero-metrics">',
+  '  <div class="hero-metric"><div class="num">40%</div><div class="lbl">mais produtividade<br>com IA (BCG, 2024)</div></div>',
+  '  <div class="hero-metric"><div class="num">R$40M</div><div class="lbl">economizados por ano<br>(Klarna, 2024)</div></div>',
+  '  <div class="hero-metric"><div class="num">360k</div><div class="lbl">horas/ano poupadas<br>(JPMorgan, 2023)</div></div>',
+  '  <div class="hero-metric"><div class="num">R$37</div><div class="lbl">preço do guia completo<br>com garantia de 7 dias</div></div>',
+  '</div>'
+].join('');
+
+var CTA = [
+  '<div class="hero-cta-wrap">',
+  '  <a href="#oferta" class="btn-primary">QUERO O GUIA AGORA — R$37</a>',
+  '  <span class="hero-note"><strong>✓ Garantia de 7 dias</strong> · Acesso imediato em PDF · Sem assinatura</span>',
+  '</div>'
+].join('');
+
+(function() {
+  var variant = sessionStorage.getItem('ab_layout');
   if (!variant) {
     variant = Math.random() < 0.5 ? 'A' : 'B';
-    sessionStorage.setItem('ab_headline', variant);
+    sessionStorage.setItem('ab_layout', variant);
+  }
+  window.AB_VARIANT = variant;
+
+  var el = document.getElementById('hero-inner');
+  if (!el) return;
+
+  if (variant === 'A') {
+    // ── VARIANTE A: Hero centralizado, texto puro ──────────────
+    el.innerHTML = [
+      '<div class="hero-badge">Guia Prático · Maio 2026</div>',
+      '<h1>A IA já está <em>cortando custos</em><br>em empresas do mundo todo.<br>A sua é a próxima.</h1>',
+      '<p class="hero-sub">Um guia direto ao ponto que mostra como pequenas e médias empresas usam',
+      'inteligência artificial para trabalhar menos, gastar menos e lucrar mais —',
+      'sem precisar de TI, sem código, sem complicação.</p>',
+      METRICAS,
+      CTA
+    ].join('');
+
+  } else {
+    // ── VARIANTE B: Hero split — texto + mockup do ebook ──────
+    el.innerHTML = [
+      '<div class="hero-split">',
+      '  <div class="hero-split-text">',
+      '    <div class="hero-badge">Guia Prático · Maio 2026</div>',
+      '    <h1>Enquanto você lê isso,<br>seus concorrentes já usam IA<br>para <em>ganhar mais e gastar menos.</em></h1>',
+      '    <p class="hero-sub" style="max-width:100%">',
+      '      Um guia direto ao ponto com prompts prontos, plano de 30 dias e aplicações práticas',
+      '      para PMEs — sem TI, sem código, sem complicação.',
+      '    </p>',
+      '    <div class="hero-metrics" style="margin-bottom:32px;">',
+      '      <div class="hero-metric"><div class="num">40%</div><div class="lbl">mais produtividade<br>com IA</div></div>',
+      '      <div class="hero-metric"><div class="num">R$37</div><div class="lbl">acesso completo<br>garantia de 7 dias</div></div>',
+      '    </div>',
+      '    ' + CTA,
+      '  </div>',
+      '  <div class="hero-split-visual">',
+      '    ' + BOOK_MOCKUP,
+      '    <div class="book-social-proof">',
+      '      ★★★★★<br><strong>+200 profissionais</strong><br>já aplicando IA nos negócios',
+      '    </div>',
+      '  </div>',
+      '</div>'
+    ].join('');
   }
 
-  // Aplica headline
-  var el = document.getElementById('hero-headline');
-  if (el) el.innerHTML = variants[variant];
-
-  // Registra no GA4 qual variante foi exibida
+  // Registra variante no GA4
   if (typeof gtag !== 'undefined') {
-    gtag('event', 'ab_headline_view', {
+    gtag('event', 'ab_layout_view', {
       event_category: 'ab_test',
-      event_label: 'headline_' + variant
+      event_label: 'layout_' + variant
     });
   }
-
-  // Expõe variante globalmente para outros eventos
-  window.AB_VARIANT = variant;
 })();
 
 // ─────────────────────────────────────────────────
