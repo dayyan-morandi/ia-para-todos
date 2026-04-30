@@ -352,9 +352,53 @@
   /* ── FOOTER ── */
   footer {
     background: var(--navy2); color: rgba(255,255,255,0.4);
-    text-align: center; padding: 28px 24px; font-size: 12px;
+    text-align: center; padding: 48px 24px 32px; font-size: 12px;
     border-top: 2px solid rgba(201,168,76,0.3);
   }
+  .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
+  .footer-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 12px; transition: color .2s; }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,.06); margin: 20px auto; max-width: 600px; }
+
+  /* ── COOKIE BANNER ── */
+  #cookie-banner {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: #0F1830; border-top: 2px solid rgba(201,168,76,0.3);
+    padding: 16px 24px; display: flex; align-items: center;
+    justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    z-index: 9999; box-shadow: 0 -4px 24px rgba(0,0,0,.4);
+  }
+  #cookie-banner p { font-size: 13px; color: rgba(255,255,255,.6); margin: 0; max-width: 720px; line-height: 1.5; }
+  #cookie-banner a { color: var(--gold); text-decoration: underline; }
+  #cookie-accept {
+    background: var(--gold); color: var(--navy2);
+    border: none; border-radius: 6px; padding: 10px 22px;
+    font-weight: 700; font-size: 13px; cursor: pointer; white-space: nowrap; flex-shrink: 0;
+  }
+
+  /* ── MODAL LGPD ── */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,.7); z-index: 10000;
+    align-items: center; justify-content: center; padding: 24px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: #1A2451; border: 1px solid rgba(201,168,76,.2);
+    border-radius: 12px; padding: 36px 32px; max-width: 640px;
+    width: 100%; max-height: 80vh; overflow-y: auto;
+    position: relative;
+  }
+  .modal-box h3 { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 16px; }
+  .modal-box h4 { font-size: 13px; font-weight: 700; color: var(--gold); margin: 18px 0 6px; text-transform: uppercase; letter-spacing: .05em; }
+  .modal-box p, .modal-box li { font-size: 13.5px; color: rgba(255,255,255,.65); line-height: 1.7; margin-bottom: 8px; }
+  .modal-box ul { padding-left: 18px; margin-bottom: 8px; }
+  .modal-close {
+    position: absolute; top: 16px; right: 20px;
+    background: none; border: none; color: rgba(255,255,255,.4);
+    font-size: 22px; cursor: pointer; line-height: 1;
+  }
+  .modal-close:hover { color: #fff; }
 
   /* ── MOBILE ── */
   @media (max-width: 640px) {
@@ -1020,9 +1064,160 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- ══ FOOTER ══ -->
 <footer>
-  <p>IA para Todos — Guia Prático · Maio 2026</p>
-  <p style="margin-top:6px;">Produzido integralmente por Inteligência Artificial · Todos os dados de mercado são de fontes públicas.</p>
+  <div class="footer-links">
+    <a href="#" onclick="abrirModal('modal-privacidade');return false;">Política de Privacidade</a>
+    <a href="#" onclick="abrirModal('modal-termos');return false;">Termos de Uso</a>
+    <a href="#" onclick="abrirModal('modal-disclaimer');return false;">Disclaimer</a>
+    <a href="mailto:contato@businessforchampions.com">contato@businessforchampions.com</a>
+  </div>
+  <hr class="footer-divider"/>
+  <p>© 2026 Business for Champions · IA para Todos — Guia Prático</p>
+  <p style="margin-top:6px;">CNPJ: a preencher · R. a preencher, São Paulo — SP</p>
+  <p style="margin-top:10px;font-size:11px;color:rgba(255,255,255,.2);">
+    Este guia foi produzido com auxílio de Inteligência Artificial (Claude, da Anthropic) e revisado pelo autor.
+    Os dados de mercado citados são provenientes de fontes públicas. Resultados mencionados podem variar conforme o contexto de cada negócio.
+  </p>
 </footer>
+
+<!-- ══ COOKIE BANNER ══ -->
+<div id="cookie-banner">
+  <p>
+    Usamos cookies para análise de tráfego (Google Analytics) e anúncios (Meta Pixel).
+    Ao continuar navegando, você concorda com nossa
+    <a href="#" onclick="abrirModal('modal-privacidade');return false;">Política de Privacidade</a>
+    e com a <strong style="color:rgba(255,255,255,.8)">LGPD</strong>.
+  </p>
+  <button id="cookie-accept" onclick="aceitarCookies()">Entendi</button>
+</div>
+
+<!-- ══ MODAL: POLÍTICA DE PRIVACIDADE ══ -->
+<div class="modal-overlay" id="modal-privacidade">
+  <div class="modal-box">
+    <button class="modal-close" onclick="fecharModal('modal-privacidade')">✕</button>
+    <h3>Política de Privacidade</h3>
+    <p>Esta política descreve como coletamos e usamos seus dados em conformidade com a <strong style="color:#C9A84C">Lei Geral de Proteção de Dados (LGPD — Lei 13.709/2018)</strong>.</p>
+
+    <h4>Dados coletados</h4>
+    <ul>
+      <li>Dados de navegação (páginas visitadas, tempo na página) via Google Analytics 4</li>
+      <li>Dados de interação com anúncios via Meta Pixel (Facebook/Instagram)</li>
+      <li>Dados de compra (nome, e-mail, CPF) coletados pela plataforma de pagamento — não armazenamos dados de cartão</li>
+      <li>E-mail para envio do material adquirido e comunicações relacionadas</li>
+    </ul>
+
+    <h4>Finalidade</h4>
+    <ul>
+      <li>Entrega do produto digital adquirido</li>
+      <li>Comunicações sobre o produto (confirmação de compra, suporte)</li>
+      <li>Análise de tráfego para melhoria do site</li>
+      <li>Veiculação de anúncios relevantes</li>
+    </ul>
+
+    <h4>Compartilhamento</h4>
+    <p>Seus dados são compartilhados apenas com a plataforma de pagamento (para processar a transação) e com o Google/Meta (para análise e anúncios), conforme suas respectivas políticas de privacidade. Não vendemos dados a terceiros.</p>
+
+    <h4>Seus direitos (LGPD)</h4>
+    <ul>
+      <li>Acesso, correção ou exclusão dos seus dados</li>
+      <li>Revogação do consentimento a qualquer momento</li>
+      <li>Portabilidade dos dados</li>
+    </ul>
+    <p>Para exercer seus direitos, envie e-mail para <strong style="color:#C9A84C">contato@businessforchampions.com</strong>.</p>
+
+    <h4>Retenção</h4>
+    <p>Dados de compra são retidos pelo prazo legal de 5 anos. Dados de navegação seguem o prazo padrão das plataformas de análise (26 meses no GA4).</p>
+  </div>
+</div>
+
+<!-- ══ MODAL: TERMOS DE USO ══ -->
+<div class="modal-overlay" id="modal-termos">
+  <div class="modal-box">
+    <button class="modal-close" onclick="fecharModal('modal-termos')">✕</button>
+    <h3>Termos de Uso</h3>
+
+    <h4>1. Produto</h4>
+    <p><strong style="color:#C9A84C">IA para Todos — Guia Prático</strong> é um produto digital (arquivo PDF) comercializado por Business for Champions. Após a confirmação do pagamento, o comprador recebe acesso imediato ao arquivo.</p>
+
+    <h4>2. Licença de uso</h4>
+    <p>A compra concede ao adquirente uma licença pessoal, intransferível e não exclusiva de uso do conteúdo. É proibido reproduzir, revender, redistribuir ou compartilhar o material total ou parcialmente sem autorização expressa.</p>
+
+    <h4>3. Garantia de 7 dias</h4>
+    <p>O comprador tem 7 (sete) dias corridos após a compra para solicitar reembolso integral, sem necessidade de justificativa, por meio do e-mail <strong style="color:#C9A84C">contato@businessforchampions.com</strong>. O prazo segue o Código de Defesa do Consumidor (Art. 49 — compras à distância).</p>
+
+    <h4>4. Limitação de responsabilidade</h4>
+    <p>O conteúdo tem finalidade educacional e informativa. Os resultados apresentados como exemplos são ilustrativos e podem variar. O produtor não garante resultados financeiros específicos decorrentes da aplicação do conteúdo.</p>
+
+    <h4>5. Propriedade intelectual</h4>
+    <p>Todo o conteúdo é protegido por direitos autorais. A produção contou com auxílio de ferramentas de Inteligência Artificial, com curadoria e revisão humana pelo autor.</p>
+
+    <h4>6. Foro</h4>
+    <p>Fica eleito o foro da Comarca de São Paulo — SP para dirimir eventuais controvérsias.</p>
+  </div>
+</div>
+
+<!-- ══ MODAL: DISCLAIMER ══ -->
+<div class="modal-overlay" id="modal-disclaimer">
+  <div class="modal-box">
+    <button class="modal-close" onclick="fecharModal('modal-disclaimer')">✕</button>
+    <h3>Disclaimer — Aviso Importante</h3>
+
+    <h4>Conteúdo gerado com IA</h4>
+    <p>Este guia foi produzido com o auxílio da Inteligência Artificial <strong style="color:#C9A84C">Claude</strong> (Anthropic), com curadoria, revisão e direção editorial humana. O uso de IA na produção de conteúdo educacional é legal, transparente e alinhado às melhores práticas do mercado.</p>
+
+    <h4>Dados e estatísticas</h4>
+    <p>Os dados de mercado citados (BCG, McKinsey, Klarna, JPMorgan, entre outros) são provenientes de relatórios e publicações públicas. Recomendamos que o leitor consulte as fontes originais para aprofundamento. Os números podem ter sido atualizados desde a publicação.</p>
+
+    <h4>Resultados</h4>
+    <p>Exemplos de resultados apresentados no guia são reais e verificáveis, mas não constituem garantia de performance. Resultados individuais variam conforme o tipo de negócio, nível de implementação e contexto de mercado.</p>
+
+    <h4>Relação com ferramentas citadas</h4>
+    <p>Não possuímos vínculo comercial ou afiliação com as ferramentas citadas no guia (ChatGPT, Claude, Gemini, etc.). As recomendações são baseadas exclusivamente em critérios editoriais.</p>
+
+    <h4>Finalidade educacional</h4>
+    <p>Este material tem caráter exclusivamente educacional e informativo. Não constitui consultoria empresarial, financeira ou jurídica.</p>
+  </div>
+</div>
+
+<script>
+  // ── COOKIE BANNER ──
+  (function() {
+    if (localStorage.getItem('cookies_ok')) {
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  })();
+
+  function aceitarCookies() {
+    localStorage.setItem('cookies_ok', '1');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  // ── MODAIS ──
+  function abrirModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function fecharModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Fecha modal clicando fora
+  document.querySelectorAll('.modal-overlay').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      if (e.target === el) fecharModal(el.id);
+    });
+  });
+
+  // Fecha com ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(function(el) {
+        fecharModal(el.id);
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
