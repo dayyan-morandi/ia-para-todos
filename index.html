@@ -623,6 +623,33 @@
 
   .book-social-proof strong { color: #C9A84C; }
 
+  /* ── HERO IMAGE ── */
+  .hero-img-wrap {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0,0,0,.5);
+    max-width: 460px;
+  }
+
+  .hero-img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+  }
+
+  .hero-img-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(10,14,30,.92) 0%, transparent 100%);
+    padding: 32px 20px 18px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #C9A84C;
+    letter-spacing: .03em;
+    text-align: center;
+  }
+
   /* ── MOBILE ── */
   @media (max-width: 640px) {
     .hero { padding: 60px 0 50px; }
@@ -639,6 +666,7 @@
     .hero-split { flex-direction: column-reverse; gap: 36px; }
     .book { width: 170px; height: 230px; }
     .book-title { font-size: 16px; }
+    .hero-img-wrap { max-width: 100%; }
   }
 </style>
 </head>
@@ -1224,7 +1252,7 @@ var CTA = [
     ].join('');
 
   } else {
-    // ── VARIANTE B: Hero split — texto + mockup do ebook ──────
+    // ── VARIANTE B: Hero split — texto + foto real ──────
     el.innerHTML = [
       '<div class="hero-split">',
       '  <div class="hero-split-text">',
@@ -1241,9 +1269,9 @@ var CTA = [
       '    ' + CTA,
       '  </div>',
       '  <div class="hero-split-visual">',
-      '    ' + BOOK_MOCKUP,
-      '    <div class="book-social-proof">',
-      '      ★★★★★<br><strong>+200 profissionais</strong><br>já aplicando IA nos negócios',
+      '    <div class="hero-img-wrap">',
+      '      <img src="hero.jpg" alt="A IA trabalha enquanto você descansa" class="hero-img" />',
+      '      <div class="hero-img-caption">A IA trabalha. Você descansa.</div>',
       '    </div>',
       '  </div>',
       '</div>'
