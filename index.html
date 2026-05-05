@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IA para Todos — Guia Prático | R$37 · Garantia de 7 dias</title>
 <meta name="description" content="O guia prático de IA que mostra como pequenas e médias empresas cortam custos, automatizam operações e lucram mais. R$37 com garantia de 7 dias. Acesso imediato.">
+<meta name="theme-color" content="#0F1830">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWJN4FSKP1"></script>
 <script>
@@ -344,7 +345,7 @@ a{text-decoration:none;color:inherit;}
 .leg-dot{width:11px;height:11px;border-radius:2px;flex-shrink:0;margin-top:1px;}
 
 /* ── ROI TABLE ── */
-.tbl-wrap{border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.07);}
+.tbl-wrap{border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.07);overflow-x:auto;-webkit-overflow-scrolling:touch;}
 .roi-tbl{width:100%;border-collapse:collapse;font-size:13.5px;}
 .roi-tbl thead th{background:rgba(15,24,48,0.9);color:rgba(255,255,255,0.85);padding:13px 16px;text-align:left;font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;}
 .roi-tbl thead th.gold{background:rgba(201,168,76,0.85);color:#07111E;}
@@ -506,7 +507,7 @@ footer{
 /* ── EXIT INTENT ── */
 .exit-ov{
   display:none;position:fixed;inset:0;
-  background:rgba(0,0,0,0.8);z-index:10002;
+  background:rgba(0,0,0,0.8);z-index:10003;
   align-items:center;justify-content:center;padding:24px;
 }
 .exit-ov.open{display:flex;}
@@ -518,7 +519,7 @@ footer{
   max-width:480px;width:100%;text-align:center;position:relative;
   box-shadow:0 0 40px rgba(0,230,118,0.15);
 }
-.exit-x{position:absolute;top:13px;right:16px;background:none;border:none;color:rgba(255,255,255,0.25);font-size:21px;cursor:pointer;transition:color .2s;line-height:1;}
+.exit-x{position:absolute;top:6px;right:8px;background:none;border:none;color:rgba(255,255,255,0.25);font-size:21px;cursor:pointer;transition:color .2s;line-height:1;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;border-radius:6px;}
 .exit-x:hover{color:var(--white);}
 .exit-bx .eico{font-size:38px;margin-bottom:14px;display:block;}
 .exit-bx h3{font-size:23px;font-weight:900;color:var(--white);margin-bottom:9px;line-height:1.2;}
@@ -536,21 +537,24 @@ footer{
   border-top:2px solid rgba(201,168,76,0.25);
   padding:14px 22px;display:flex;align-items:center;
   justify-content:space-between;gap:14px;flex-wrap:wrap;
-  z-index:9999;box-shadow:0 -4px 20px rgba(0,0,0,0.5);
+  z-index:10001;box-shadow:0 -4px 20px rgba(0,0,0,0.5);
 }
-#cookie-banner p{font-size:12.5px;color:rgba(255,255,255,0.55);margin:0;max-width:700px;line-height:1.5;}
+#cookie-banner p{font-size:12.5px;color:rgba(255,255,255,0.75);margin:0;max-width:700px;line-height:1.5;}
 #cookie-banner a{color:var(--gold);text-decoration:underline;}
-#cookie-accept{background:var(--gold);color:#07111E;border:none;border-radius:6px;padding:9px 20px;font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap;flex-shrink:0;}
+#cookie-accept{background:var(--gold);color:#07111E;border:none;border-radius:6px;padding:9px 20px;font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap;flex-shrink:0;min-height:44px;}
 
 /* ── LGPD MODALS ── */
-.mod-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:10001;align-items:center;justify-content:center;padding:24px;}
+.mod-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:10005;align-items:center;justify-content:center;padding:24px;}
 .mod-ov.open{display:flex;}
-.mod-bx{background:#0E1A2E;border:1px solid rgba(201,168,76,0.18);border-radius:12px;padding:34px 30px;max-width:620px;width:100%;max-height:80vh;overflow-y:auto;position:relative;}
+.mod-bx{background:#0E1A2E;border:1px solid rgba(201,168,76,0.18);border-radius:12px;padding:34px 30px;max-width:620px;width:100%;max-height:80vh;overflow-y:auto;position:relative;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(201,168,76,0.3) rgba(0,0,0,0.2);}
+.mod-bx::-webkit-scrollbar{width:5px;}
+.mod-bx::-webkit-scrollbar-track{background:rgba(0,0,0,0.2);}
+.mod-bx::-webkit-scrollbar-thumb{background:rgba(201,168,76,0.35);border-radius:3px;}
 .mod-bx h3{font-size:17px;font-weight:800;color:var(--white);margin-bottom:14px;}
 .mod-bx h4{font-size:11.5px;font-weight:700;color:var(--gold);margin:16px 0 5px;text-transform:uppercase;letter-spacing:.05em;}
 .mod-bx p,.mod-bx li{font-size:13px;color:rgba(255,255,255,0.58);line-height:1.7;margin-bottom:7px;}
 .mod-bx ul{padding-left:17px;margin-bottom:7px;}
-.mod-cls{position:absolute;top:14px;right:18px;background:none;border:none;color:rgba(255,255,255,0.3);font-size:21px;cursor:pointer;line-height:1;}
+.mod-cls{position:absolute;top:6px;right:8px;background:none;border:none;color:rgba(255,255,255,0.3);font-size:21px;cursor:pointer;line-height:1;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;border-radius:6px;}
 .mod-cls:hover{color:var(--white);}
 
 /* ── RESPONSIVE ── */
@@ -606,8 +610,13 @@ h1,h2,h3,h4,p,a{overflow-wrap:break-word;word-break:break-word;}
   .ch-card{flex-direction:column;gap:8px;}
   .trust-items{gap:10px;}
   .trust-item{font-size:11.5px;}
-  .tbl-wrap{overflow-x:auto;}
   .roi-tbl,.tools-tbl{min-width:480px;}
+  .faq-btn{padding:18px 8px;font-size:14px;}
+  #cookie-banner{padding:12px 14px;}
+  #cookie-banner p{font-size:12px;}
+  #cookie-accept{font-size:14px;padding:10px 18px;}
+  .mob-bar .mb{font-size:14px;}
+  .ann-x{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;}
 }
 
 @media(max-width:420px){
@@ -1183,7 +1192,7 @@ h1,h2,h3,h4,p,a{overflow-wrap:break-word;word-break:break-word;}
 <!-- ── EXIT INTENT ── -->
 <div class="exit-ov" id="exit-modal">
   <div class="exit-bx">
-    <button class="exit-x" onclick="fecharExit()">✕</button>
+    <button class="exit-x" onclick="fecharExit()" aria-label="Fechar">✕</button>
     <span class="eico">⏳</span>
     <h3>Espera — o preço de <em>lançamento encerra em breve</em></h3>
     <p>Você está prestes a fechar esta página. O preço de R$37 é válido apenas durante o lançamento. Depois, volta para R$97.</p>
@@ -1203,7 +1212,7 @@ h1,h2,h3,h4,p,a{overflow-wrap:break-word;word-break:break-word;}
 <!-- ── MODAIS LGPD ── -->
 <div class="mod-ov" id="modal-priv">
   <div class="mod-bx">
-    <button class="mod-cls" onclick="fecharModal('modal-priv')">✕</button>
+    <button class="mod-cls" onclick="fecharModal('modal-priv')" aria-label="Fechar">✕</button>
     <h3>Política de Privacidade</h3>
     <p>Esta política descreve como coletamos e usamos seus dados em conformidade com a <strong style="color:var(--gold)">LGPD — Lei 13.709/2018</strong>.</p>
     <h4>Dados coletados</h4>
@@ -1232,7 +1241,7 @@ h1,h2,h3,h4,p,a{overflow-wrap:break-word;word-break:break-word;}
 
 <div class="mod-ov" id="modal-termos">
   <div class="mod-bx">
-    <button class="mod-cls" onclick="fecharModal('modal-termos')">✕</button>
+    <button class="mod-cls" onclick="fecharModal('modal-termos')" aria-label="Fechar">✕</button>
     <h3>Termos de Uso</h3>
     <h4>1. Produto</h4>
     <p><strong style="color:var(--gold)">IA para Todos — Guia Prático</strong> é um produto digital (PDF) comercializado por Business for Champions. Acesso imediato após confirmação do pagamento.</p>
@@ -1251,7 +1260,7 @@ h1,h2,h3,h4,p,a{overflow-wrap:break-word;word-break:break-word;}
 
 <div class="mod-ov" id="modal-disc">
   <div class="mod-bx">
-    <button class="mod-cls" onclick="fecharModal('modal-disc')">✕</button>
+    <button class="mod-cls" onclick="fecharModal('modal-disc')" aria-label="Fechar">✕</button>
     <h3>Disclaimer — Aviso Importante</h3>
     <h4>Conteúdo gerado com IA</h4>
     <p>Este guia foi produzido com <strong style="color:var(--gold)">Claude</strong> (Anthropic), com curadoria, revisão e direção editorial humana. O uso de IA na produção de conteúdo educacional é legal e transparente.</p>
@@ -1280,7 +1289,7 @@ function trackCTA(pos){
 (function(){
   var KEY='ia_cd_dl';
   var dl=parseInt(localStorage.getItem(KEY),10);
-  if(!dl||dl<Date.now()){dl=Date.now()+48*3600000;localStorage.setItem(KEY,dl);}
+  if(!dl||isNaN(dl)||dl<Date.now()){dl=Date.now()+48*3600000;localStorage.setItem(KEY,String(dl));}
   function pad(n){return n<10?'0'+n:n;}
   function tick(){
     var d=Math.max(0,dl-Date.now());
@@ -1306,13 +1315,24 @@ function toggleFaq(btn){
 // EXIT INTENT
 (function(){
   var shown=false;
-  document.addEventListener('mouseleave',function(e){
-    if(e.clientY<=0&&!shown&&!sessionStorage.getItem('exit_shown')){
-      shown=true;sessionStorage.setItem('exit_shown','1');
-      document.getElementById('exit-modal').classList.add('open');
-      if(typeof gtag!=='undefined')gtag('event','exit_intent_shown',{event_category:'engagement'});
-    }
-  });
+  function showExit(){
+    if(shown||sessionStorage.getItem('exit_shown'))return;
+    shown=true;sessionStorage.setItem('exit_shown','1');
+    document.getElementById('exit-modal').classList.add('open');
+    if(typeof gtag!=='undefined')gtag('event','exit_intent_shown',{event_category:'engagement'});
+  }
+  // Desktop: mouse leaving top of viewport
+  document.addEventListener('mouseleave',function(e){if(e.clientY<=0)showExit();});
+  // Mobile: fast scroll up (likely trying to close/leave)
+  var lastY=0,ticking=false;
+  window.addEventListener('scroll',function(){
+    if(ticking)return;ticking=true;
+    requestAnimationFrame(function(){
+      var y=window.scrollY;
+      if(lastY-y>80&&y<300)showExit();
+      lastY=y;ticking=false;
+    });
+  },{passive:true});
 })();
 function fecharExit(){document.getElementById('exit-modal').classList.remove('open');}
 
