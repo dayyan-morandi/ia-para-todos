@@ -15,7 +15,9 @@ Sua compra foi confirmada. Obrigado!
 
 Aqui está o seu acesso ao guia:
 
-→ [BAIXAR IA PARA TODOS — GUIA PRÁTICO] (link do arquivo)
+→ [BAIXAR IA PARA TODOS — GUIA PRÁTICO] {{link_arquivo}}
+
+*(campo preenchido automaticamente pela Kiwify — configure em Produto → E-mails automáticos)*
 
 ━━━━━━━━━━━━━━━━━━━
 📌 Salve este e-mail
@@ -24,9 +26,10 @@ no seu Google Drive ou pasta de downloads.
 ━━━━━━━━━━━━━━━━━━━
 
 O que você acabou de adquirir:
+✓ 30 prompts prontos — copie, cole e use hoje
+✓ Fórmula C.A.R.E. — economize 5+ horas por semana
 ✓ 8 capítulos — do zero ao avançado
-✓ Aplicações práticas para PMEs por departamento
-✓ Fórmula C.A.R.E. com prompts prontos para copiar
+✓ Aplicações práticas por departamento (Vendas, Marketing, RH, Financeiro)
 ✓ Plano de ação de 30 dias — semana a semana
 ✓ Comparativo de ferramentas — Maio 2026
 
@@ -102,11 +105,13 @@ Seja específico e direto."
 
 Substitua os colchetes pelo seu contexto e veja o que aparece.
 
-É só isso. O guia tem dezenas de prompts assim — mas este
-já mostra o potencial em menos de 5 minutos.
+É só isso. O guia tem 30 prompts assim — organizados por situação, prontos para economizar 5+ horas na sua semana. Este já mostra o potencial em menos de 5 minutos.
 
-Dayyan
+Qualquer dúvida, responda este e-mail.
+
+Dayyan Morandi
 Business for Champions
+contato@businessforchampions.com
 ```
 
 ---

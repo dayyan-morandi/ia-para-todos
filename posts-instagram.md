@@ -39,9 +39,9 @@ A diferença não é talento.
 
 O BCG mediu: profissionais que usam IA corretamente são 40% mais produtivos. Não daqui a 5 anos. Agora.
 
-O guia "IA para Todos" mostra exatamente como — com prompts prontos, sem precisar saber programar, sem assinar nada caro.
+O guia "IA para Todos" mostra exatamente como — com 30 prompts prontos para copiar e usar hoje, sem precisar saber programar, sem assinar nada caro.
 
-R$37. Acesso imediato. Garantia de 7 dias.
+Economize 5+ horas por semana. R$37. Acesso imediato. Garantia de 7 dias.
 
 👇 Link na bio para garantir o seu.
 
@@ -58,7 +58,7 @@ Seu concorrente? Já resolveu tudo isso com IA. Está tomando café.
 
 Não é ficção. É o que está acontecendo agora nas empresas que decidiram agir.
 
-Criei um guia com tudo que você precisa pra virar esse jogo — prompts prontos, ferramentas testadas, plano de 30 dias.
+Criei um guia com 30 prompts prontos para virar esse jogo — copie, cole, economize 5+ horas por semana. Sem saber programar.
 
 R$37. Sem enrolação. Com garantia.
 
@@ -77,7 +77,7 @@ Link na bio 👆
 LINHA 1 (pequena, dourada): E SE VOCÊ PUDESSE CONTRATAR
 LINHA 2 (grande, branca, bold): O funcionário
 LINHA 3 (grande, dourada, bold): perfeito
-LINHA 4 (média, branca): por menos de R$ 37 por mês?
+LINHA 4 (média, branca): por R$37 — pagamento único?
 LINHA 5 (pequena, opaca): Disponível 24h · Nunca reclama · Entrega sempre
 RODAPÉ (dourado): businessforchampions.com
 ```
@@ -103,9 +103,9 @@ Imagina um funcionário que:
 
 Ele existe. Se chama IA.
 
-E no guia "IA para Todos" eu mostro exatamente como colocar ele pra trabalhar no seu negócio — com os comandos certos, nas ferramentas certas.
+E no guia "IA para Todos" eu mostro exatamente como — com 30 prompts prontos para copiar, nas ferramentas certas, sem saber programar.
 
-R$37. Acesso imediato. Garantia de 7 dias.
+Economize 5+ horas por semana. R$37. Acesso imediato. Garantia de 7 dias.
 
 Link na bio 👆
 
@@ -177,9 +177,9 @@ Uma pequena agência que aplica o mesmo princípio corta:
 → Custo de atendimento em 40%
 → Tempo em reuniões internas em 30%
 
-O guia "IA para Todos" foi feito para quem não tem time de TI, não tem budget de multinacional — e quer resultado real.
+O guia "IA para Todos" foi feito para quem não tem time de TI, não tem budget de multinacional — e quer resultado real. 30 prompts prontos para copiar e usar hoje.
 
-R$37. Garantia de 7 dias. Sem enrolação.
+Economize 5+ horas por semana. R$37. Garantia de 7 dias. Sem enrolação.
 
 🔗 Link na bio.
 
@@ -241,7 +241,7 @@ A IA não trava.
 Você dá o contexto, ela entrega o rascunho.
 Você ajusta em 5 minutos. Manda. Resolvido.
 
-No guia "IA para Todos" tem os prompts exatos pra cada uma dessas situações.
+No guia "IA para Todos" tem 30 prompts exatos pra cada uma dessas situações — copie e cole, economize 5+ horas por semana.
 
 R$37 · Acesso imediato · Garantia de 7 dias
 
