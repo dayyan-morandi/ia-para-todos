@@ -1378,6 +1378,60 @@ document.addEventListener('keydown',function(e){
     fecharExit();
   }
 });
+
+// ── META PIXEL REMARKETING EVENTS ──────────────────────────────────────────
+(function(){
+  function mpx(event,params){if(typeof fbq!=='undefined')fbq('trackCustom',event,params||{});}
+  function mpxStd(event,params){if(typeof fbq!=='undefined')fbq('track',event,params||{});}
+
+  // ViewContent — visitante real (permaneceu 15s+)
+  setTimeout(function(){
+    mpxStd('ViewContent',{content_name:'IA para Todos LP',content_category:'landing_page',value:37,currency:'BRL'});
+  },15000);
+
+  // Retornante — detecta visita múltipla via localStorage
+  var VKEY='ia_visit_count';
+  var visits=parseInt(localStorage.getItem(VKEY)||'0',10)+1;
+  localStorage.setItem(VKEY,String(visits));
+  if(visits>=2){
+    mpx('ReturnVisit',{visit_number:visits,content_name:'IA para Todos'});
+    if(typeof gtag!=='undefined')gtag('event','return_visit',{event_category:'engagement',event_label:'visit_'+visits});
+  }
+
+  // Scroll depth — segmentos 50% e 75%
+  var scrollFired={};
+  window.addEventListener('scroll',function(){
+    var pct=Math.round((window.scrollY/Math.max(1,document.body.scrollHeight-window.innerHeight))*100);
+    if(pct>=50&&!scrollFired[50]){
+      scrollFired[50]=true;
+      mpx('ScrollDepth50',{content_name:'IA para Todos'});
+    }
+    if(pct>=75&&!scrollFired[75]){
+      scrollFired[75]=true;
+      mpx('ScrollDepth75',{content_name:'IA para Todos'});
+    }
+  },{passive:true});
+
+  // Exit intent disparado — audiência "quase comprou"
+  var origShowExit=window.showExit;
+  document.addEventListener('exitIntentShown',function(){
+    mpx('ExitIntent',{content_name:'IA para Todos',value:37,currency:'BRL'});
+  });
+})();
+
+// Dispara evento customizado ao mostrar exit intent (para pixel acima capturar)
+var _origFecharExit=window.fecharExit;
+document.addEventListener('DOMContentLoaded',function(){
+  var exitOv=document.getElementById('exit-modal');
+  if(!exitOv)return;
+  var observer=new MutationObserver(function(muts){
+    muts.forEach(function(m){
+      if(m.target.classList.contains('open'))
+        document.dispatchEvent(new Event('exitIntentShown'));
+    });
+  });
+  observer.observe(exitOv,{attributes:true,attributeFilter:['class']});
+});
 </script>
 </body>
 </html>
