@@ -152,7 +152,7 @@ a{text-decoration:none;color:inherit;}
 
 /* ── HERO ── */
 .hero{
-  padding:80px 0 72px;position:relative;overflow:hidden;
+  padding:48px 0 44px;position:relative;overflow:hidden;
 }
 .hero-topline{
   position:absolute;top:0;left:0;right:0;height:3px;
@@ -179,24 +179,24 @@ a{text-decoration:none;color:inherit;}
   display:inline-block;
   background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);
   color:var(--gold);font-weight:700;font-size:10px;letter-spacing:2px;
-  padding:5px 13px;border-radius:20px;margin-bottom:18px;text-transform:uppercase;
+  padding:5px 13px;border-radius:20px;margin-bottom:12px;text-transform:uppercase;
 }
 .hero h1{
-  font-size:clamp(26px,3.2vw,42px);font-weight:900;
-  color:var(--white);line-height:1.12;margin-bottom:18px;letter-spacing:-0.3px;
-  max-width:520px;
+  font-size:clamp(22px,2.7vw,36px);font-weight:900;
+  color:var(--white);line-height:1.14;margin-bottom:12px;letter-spacing:-0.3px;
+  max-width:500px;
 }
 .hero h1 em{color:var(--neon-g);font-style:normal;}
 .hero-sub{
   font-size:15px;color:rgba(255,255,255,0.58);
-  max-width:500px;margin-bottom:24px;line-height:1.72;
+  max-width:500px;margin-bottom:16px;line-height:1.65;
 }
 
 /* hero countdown */
 .hero-cd{
   display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
   background:rgba(0,230,118,0.06);border:1px solid rgba(0,230,118,0.22);
-  border-radius:8px;padding:10px 16px;margin-bottom:24px;
+  border-radius:8px;padding:8px 14px;margin-bottom:16px;
 }
 .hero-cd .lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.35);}
 .hero-cd-u{display:flex;align-items:flex-start;gap:3px;}
@@ -205,7 +205,7 @@ a{text-decoration:none;color:inherit;}
 .cdu .l{font-size:8px;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:0.8px;display:block;margin-top:1px;}
 .cdsep{font-family:monospace;font-size:17px;color:rgba(0,230,118,0.35);line-height:1;margin-top:3px;}
 
-.hero-metrics{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:28px;}
+.hero-metrics{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px;}
 .hero-m{border-left:2px solid var(--gold);padding-left:12px;}
 .hero-m .n{font-size:20px;font-weight:900;color:var(--white);line-height:1.1;}
 .hero-m .l{font-size:10.5px;color:rgba(255,255,255,0.38);margin-top:2px;line-height:1.4;}
@@ -275,9 +275,9 @@ a{text-decoration:none;color:inherit;}
 }
 .pain-card:hover{border-color:rgba(239,68,68,0.6);box-shadow:var(--glow-red-h);}
 .pain-ico{font-size:24px;margin-bottom:9px;}
-.pain-tag{font-size:10px;font-weight:700;color:var(--red);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
-.pain-card strong{color:var(--white);font-size:14px;display:block;margin-bottom:5px;line-height:1.4;}
-.pain-card p{font-size:13px;color:var(--muted);line-height:1.6;}
+.pain-tag{font-size:12px;font-weight:700;color:var(--red);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.pain-card strong{color:var(--white);font-size:16px;display:block;margin-bottom:5px;line-height:1.4;}
+.pain-card p{font-size:15px;color:var(--muted);line-height:1.6;}
 
 /* ── BENEFIT GRID ── */
 .ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
@@ -559,7 +559,7 @@ footer{
 }
 @media(max-width:768px){
   .hero-in{flex-direction:column-reverse;gap:36px;}
-  .hero h1{font-size:26px;text-align:center;}
+  .hero h1{font-size:24px;text-align:center;}
   .hero-sub{text-align:center;margin-left:auto;margin-right:auto;}
   .hero-badge{display:block;text-align:center;}
   .hero-metrics{justify-content:center;}
@@ -574,9 +574,9 @@ footer{
   .tb-cta{display:none;}
   .mob-bar{display:flex;}
   body{padding-bottom:68px;}
-  .section{padding:58px 0;}
-  .hero{padding:60px 0 52px;}
-  .hero h1{font-size:24px;}
+  .section{padding:52px 0;}
+  .hero{padding:36px 0 32px;}
+  .hero h1{font-size:22px;}
   .ben-grid{grid-template-columns:1fr;}
   .bar-lbl{width:90px;font-size:11px;}
   .btn-g{font-size:14px;padding:14px 28px;min-width:180px;}
@@ -622,8 +622,7 @@ footer{
         <div class="hero-badge">Guia Prático · Maio 2026</div>
         <h1>A IA já está <em>cortando custos</em> nas maiores empresas do mundo. A sua é a próxima.</h1>
         <p class="hero-sub">
-          Um guia direto ao ponto que mostra como PMEs usam inteligência artificial para trabalhar menos,
-          gastar menos e lucrar mais — sem TI, sem código, sem complicação.
+          O guia prático para qualquer profissional que quer iniciar sua jornada com inteligência artificial — de forma simples, rápida e sem precisar saber programar.
         </p>
 
         <div class="hero-cd">
@@ -702,7 +701,7 @@ footer{
 <section class="section section-alt">
   <div class="wrap">
     <div class="eyebrow">O problema</div>
-    <h2 class="ttl">Enquanto você hesita, seus concorrentes já estão usando IA</h2>
+    <h2 class="ttl">Enquanto você fica aí procrastinando, seus concorrentes já estão usando IA</h2>
     <div class="gbar"></div>
     <div class="pain-grid">
       <div class="pain-card">
