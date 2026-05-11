@@ -173,7 +173,7 @@ a{text-decoration:none;color:inherit;}
 }
 .hero::after{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse at 72% 50%,rgba(0,230,118,0.07) 0%,transparent 55%);
+  background:radial-gradient(ellipse at 72% 50%,rgba(201,168,76,0.06) 0%,transparent 55%);
   pointer-events:none;
 }
 .hero-in{
@@ -229,29 +229,29 @@ a{text-decoration:none;color:inherit;}
 }
 .hero-photo-wrap::before{
   content:'';position:absolute;
-  width:340px;height:420px;
+  width:680px;height:500px;
   border-radius:50%;
-  background:radial-gradient(circle,rgba(0,230,118,0.18) 0%,rgba(0,230,118,0.04) 50%,transparent 75%);
+  background:radial-gradient(ellipse,rgba(201,168,76,0.28) 0%,rgba(201,168,76,0.08) 45%,transparent 72%);
   pointer-events:none;z-index:0;
-  filter:blur(18px);
+  filter:blur(28px);
 }
 .hero-photo-card{
   position:relative;z-index:1;
-  width:300px;
+  width:600px;
   border-radius:20px;
   overflow:hidden;
   box-shadow:
-    0 0 0 1px rgba(0,230,118,0.15),
-    0 24px 64px rgba(0,0,0,0.6),
-    0 0 40px rgba(0,230,118,0.08);
+    0 0 0 1px rgba(201,168,76,0.2),
+    0 24px 64px rgba(0,0,0,0.65),
+    0 0 60px rgba(201,168,76,0.15);
   transition:transform .3s ease, box-shadow .3s ease;
 }
 .hero-photo-card:hover{
   transform:translateY(-4px);
   box-shadow:
-    0 0 0 1px rgba(0,230,118,0.25),
-    0 32px 80px rgba(0,0,0,0.65),
-    0 0 60px rgba(0,230,118,0.14);
+    0 0 0 1px rgba(201,168,76,0.35),
+    0 32px 80px rgba(0,0,0,0.7),
+    0 0 90px rgba(201,168,76,0.22);
 }
 .hero-photo-card img{
   display:block;width:100%;height:auto;
@@ -578,8 +578,8 @@ h1,h2,h3,h4,p,a{overflow-wrap:break-word;word-break:break-word;}
   .hero-cd{width:100%;justify-content:center;flex-wrap:wrap;gap:8px;}
   .hero-cta{align-items:center;}
   .hero-cta .btn-g{display:block;width:100%;max-width:340px;white-space:normal;}
-  .hero-photo-card{width:220px;}
-  .hero-photo-wrap::before{width:260px;height:300px;}
+  .hero-photo-card{width:340px;}
+  .hero-photo-wrap::before{width:400px;height:320px;}
   .offer-box{padding:36px 22px;}
   .exit-bx{padding:32px 22px;}
 }
