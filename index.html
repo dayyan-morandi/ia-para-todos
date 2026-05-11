@@ -1383,19 +1383,15 @@ function toggleFaq(btn){
     shown=true;sessionStorage.setItem('exit_shown','1');
     document.getElementById('exit-modal').classList.add('open');
     if(typeof gtag!=='undefined')gtag('event','exit_intent_shown',{event_category:'engagement'});
+    if(typeof fbq!=='undefined')fbq('trackCustom','ExitIntent',{content_name:'IA para Todos',value:37,currency:'BRL'});
   }
-  // Desktop: mouse leaving top of viewport
-  document.addEventListener('mouseleave',function(e){if(e.clientY<=0)showExit();});
-  // Mobile: fast scroll up (likely trying to close/leave)
-  var lastY=0,ticking=false;
+  // 1. Chegou ao final da página (≥92% rolado)
   window.addEventListener('scroll',function(){
-    if(ticking)return;ticking=true;
-    requestAnimationFrame(function(){
-      var y=window.scrollY;
-      if(lastY-y>80&&y<300)showExit();
-      lastY=y;ticking=false;
-    });
+    var pct=(window.scrollY+window.innerHeight)/Math.max(1,document.body.scrollHeight);
+    if(pct>=0.92)showExit();
   },{passive:true});
+  // 2. Fechar aba ou mudar URL (beforeunload)
+  window.addEventListener('beforeunload',function(){showExit();});
 })();
 function fecharExit(){document.getElementById('exit-modal').classList.remove('open');}
 
