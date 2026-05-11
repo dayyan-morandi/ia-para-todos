@@ -10,8 +10,7 @@
 <meta property="og:url" content="https://businessforchampions.com">
 <meta property="og:title" content="IA para Todos — Guia Prático | R$37 · Garantia de 7 dias">
 <meta property="og:description" content="30 prompts prontos + o método por trás de cada um. Para qualquer profissional aprender a pensar com IA, ganhar controle das ferramentas e economizar 5+ horas por semana.">
-<meta property="og:image" content="https://businessforchampions.com/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IA para Todos — Guia Prático | R$37">
 <meta name="twitter:description" content="30 prompts prontos + o método por trás de cada um. Economize 5+ horas por semana. Garantia de 7 dias.">
 
@@ -811,8 +810,8 @@ h1,h2,h3,h4,p,a{overflow-wrap:break-word;word-break:break-word;}
       </div>
       <div class="ben-card">
         <div class="ben-ico-w">🕹️</div>
-        <h4>Controle total das ferramentas</h4>
-        <p>Saiba exatamente qual ferramenta usar em cada situação — e como tirar o máximo dela. Você decide, a IA executa.</p>
+        <h4>Orquestre agentes e ferramentas</h4>
+        <p>Aprenda a combinar múltiplos agentes de IA em fluxos de trabalho — e saiba qual ferramenta usar em cada etapa. Você decide a estratégia, a IA executa.</p>
       </div>
       <div class="ben-card">
         <div class="ben-ico-w">🛠️</div>
@@ -1047,7 +1046,7 @@ h1,h2,h3,h4,p,a{overflow-wrap:break-word;word-break:break-word;}
       <div class="ch-card"><div class="ch-n">04</div><div><div class="ch-ttl">Automação de Processos</div><div class="ch-dsc">Antes vs. depois em 5 processos comuns de PME. Como transformar operações que levam dias em rotinas de minutos.</div></div></div>
       <div class="ch-card"><div class="ch-n">05</div><div><div class="ch-ttl">Engenharia de Prompt — Fórmula C.A.R.E.</div><div class="ch-dsc">O sistema que transforma qualquer pedido em um prompt que realmente funciona. Exemplos prontos para copiar e usar.</div></div></div>
       <div class="ch-card"><div class="ch-n">06</div><div><div class="ch-ttl">As Principais Ferramentas de IA</div><div class="ch-dsc">Comparativo completo de ChatGPT, Claude, Gemini, Perplexity e outras. Qual usar para cada tipo de tarefa.</div></div></div>
-      <div class="ch-card"><div class="ch-n">07</div><div><div class="ch-ttl">Arquitetura de Informação com IA</div><div class="ch-dsc">Como estruturar documentos, processos e bases de conhecimento usando IA. Organização que escala sem esforço humano constante.</div></div></div>
+      <div class="ch-card"><div class="ch-n">07</div><div><div class="ch-ttl">Arquitetura de Informação e Agentes de IA</div><div class="ch-dsc">Como estruturar processos, bases de conhecimento e orquestrar múltiplos agentes de IA trabalhando juntos — automações que escalam sem esforço humano constante.</div></div></div>
       <div class="ch-card"><div class="ch-n">08</div><div><div class="ch-ttl">Plano de Ação — 30 Dias com IA</div><div class="ch-dsc">Um cronograma semana a semana para integrar IA no seu trabalho real — com metas, ferramentas e prompts para cada etapa.</div></div></div>
     </div>
     <div class="cta-blk">
@@ -1111,6 +1110,7 @@ h1,h2,h3,h4,p,a{overflow-wrap:break-word;word-break:break-word;}
         <li><span class="ck">✓</span> Dicas exclusivas para tirar o máximo de cada ferramenta — e qual usar em cada situação</li>
         <li><span class="ck">✓</span> Comparativo completo de ferramentas — Maio 2026</li>
         <li><span class="ck">✓</span> Capítulo exclusivo: Arquitetura de Informação com IA</li>
+        <li><span class="ck">✓</span> Como orquestrar múltiplos agentes de IA para tarefas complexas</li>
         <li><span class="ck">✓</span> Plano de ação de 30 dias — semana a semana</li>
         <li><span class="ck">✓</span> Acesso imediato em PDF — para sempre</li>
       </ul>
@@ -1365,14 +1365,25 @@ function trackCTA(pos){
     fbq('track','InitiateCheckout',{value:37,currency:'BRL',content_name:'IA para Todos',content_type:'product'});
 }
 
-// COUNTDOWN — rolling 48h from first visit
+// COUNTDOWN — 7-day rolling; auto-extends 1 week on expiry with success message
 (function(){
   var KEY='ia_cd_dl';
+  var WEEK=7*24*3600000;
   var dl=parseInt(localStorage.getItem(KEY),10);
-  if(!dl||isNaN(dl)||dl<Date.now()){dl=Date.now()+48*3600000;localStorage.setItem(KEY,String(dl));}
+  if(!dl||isNaN(dl)){dl=Date.now()+WEEK;localStorage.setItem(KEY,String(dl));}
   function pad(n){return n<10?'0'+n:n;}
+  function showExtendedMsg(){
+    var lbls=document.querySelectorAll('.hero-cd .lbl, .off-cd .lbl');
+    lbls.forEach(function(el){el.textContent='O sucesso foi tanto que estendemos o preço de lançamento por mais uma semana 🎉';el.style.fontSize='13px';});
+  }
   function tick(){
-    var d=Math.max(0,dl-Date.now());
+    var now=Date.now();
+    if(dl<=now){
+      dl=now+WEEK;
+      localStorage.setItem(KEY,String(dl));
+      showExtendedMsg();
+    }
+    var d=dl-now;
     var h=Math.floor(d/3600000),m=Math.floor((d%3600000)/60000),s=Math.floor((d%60000)/1000);
     var hs=pad(h),ms=pad(m),ss=pad(s);
     var a=document.getElementById('ann-cd');if(a)a.textContent=hs+':'+ms+':'+ss;
