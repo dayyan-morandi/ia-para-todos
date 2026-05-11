@@ -177,10 +177,10 @@ a{text-decoration:none;color:inherit;}
   pointer-events:none;
 }
 .hero-in{
-  display:flex;align-items:center;gap:64px;
+  display:flex;align-items:center;gap:48px;
   position:relative;z-index:1;
 }
-.hero-txt{flex:1;min-width:0;}
+.hero-txt{flex:1;min-width:0;max-width:520px;}
 .hero-vis{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:18px;}
 
 .hero-badge{
@@ -224,34 +224,35 @@ a{text-decoration:none;color:inherit;}
 
 /* ── HERO PHOTO ── */
 .hero-photo-wrap{
-  position:relative;flex-shrink:0;
+  position:relative;
+  flex:0 0 44%;min-width:0;
   display:flex;align-items:center;justify-content:center;
 }
 .hero-photo-wrap::before{
   content:'';position:absolute;
-  width:680px;height:500px;
+  inset:-40px;
   border-radius:50%;
-  background:radial-gradient(ellipse,rgba(201,168,76,0.28) 0%,rgba(201,168,76,0.08) 45%,transparent 72%);
+  background:radial-gradient(ellipse,rgba(201,168,76,0.3) 0%,rgba(201,168,76,0.08) 50%,transparent 75%);
   pointer-events:none;z-index:0;
-  filter:blur(28px);
+  filter:blur(32px);
 }
 .hero-photo-card{
   position:relative;z-index:1;
-  width:600px;
+  width:100%;
   border-radius:20px;
   overflow:hidden;
   box-shadow:
-    0 0 0 1px rgba(201,168,76,0.2),
+    0 0 0 1px rgba(201,168,76,0.22),
     0 24px 64px rgba(0,0,0,0.65),
-    0 0 60px rgba(201,168,76,0.15);
+    0 0 60px rgba(201,168,76,0.18);
   transition:transform .3s ease, box-shadow .3s ease;
 }
 .hero-photo-card:hover{
   transform:translateY(-4px);
   box-shadow:
-    0 0 0 1px rgba(201,168,76,0.35),
+    0 0 0 1px rgba(201,168,76,0.38),
     0 32px 80px rgba(0,0,0,0.7),
-    0 0 90px rgba(201,168,76,0.22);
+    0 0 90px rgba(201,168,76,0.25);
 }
 .hero-photo-card img{
   display:block;width:100%;height:auto;
@@ -578,8 +579,8 @@ h1,h2,h3,h4,p,a{overflow-wrap:break-word;word-break:break-word;}
   .hero-cd{width:100%;justify-content:center;flex-wrap:wrap;gap:8px;}
   .hero-cta{align-items:center;}
   .hero-cta .btn-g{display:block;width:100%;max-width:340px;white-space:normal;}
-  .hero-photo-card{width:340px;}
-  .hero-photo-wrap::before{width:400px;height:320px;}
+  .hero-photo-wrap{flex:0 0 42%;}
+  .hero-in{gap:28px;}
   .offer-box{padding:36px 22px;}
   .exit-bx{padding:32px 22px;}
 }
