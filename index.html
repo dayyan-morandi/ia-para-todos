@@ -5,15 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IA para Todos — Guia Prático | R$37 · Garantia de 7 dias</title>
 <meta name="description" content="30 prompts prontos para economizar 5+ horas por semana. Aprenda a pensar com IA e ganhe controle das ferramentas — para qualquer profissional, sem saber programar. R$37 com garantia de 7 dias.">
-<meta name="theme-color" content="#0F1830">
+<meta name="theme-color" content="#06080b">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://businessforchampions.com">
 <meta property="og:title" content="IA para Todos — Guia Prático | R$37 · Garantia de 7 dias">
 <meta property="og:description" content="30 prompts prontos + o método por trás de cada um. Para qualquer profissional aprender a pensar com IA, ganhar controle das ferramentas e economizar 5+ horas por semana.">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://businessforchampions.com/assets/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="IA para Todos — Guia Prático | R$37">
 <meta name="twitter:description" content="30 prompts prontos + o método por trás de cada um. Economize 5+ horas por semana. Garantia de 7 dias.">
 
+<!-- ── GOOGLE ANALYTICS 4 ── -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWJN4FSKP1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -21,6 +23,8 @@
   gtag('js', new Date());
   gtag('config', 'G-XWJN4FSKP1');
 </script>
+
+<!-- ── META PIXEL ── -->
 <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -32,1444 +36,1069 @@
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=4464612493823002&ev=PageView&noscript=1"/></noscript>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
 /* ── TOKENS ── */
 :root{
-  --gold:   #C9A84C;
-  --goldf:  #E8C96A;
-  --neon-g: #00E676;
-  --neon-y: #FFE066;
-  --white:  #FFFFFF;
-  --text:   #D8E0EE;
-  --muted:  rgba(216,224,238,0.52);
-  --green:  #059669;
-  --red:    #EF4444;
-  --r:      10px;
-
-  /* neon glow combos */
-  --glow-green: 0 0 14px rgba(0,230,118,0.22), 0 0 40px rgba(0,230,118,0.08);
-  --glow-green-h: 0 0 22px rgba(0,230,118,0.40), 0 0 60px rgba(0,230,118,0.15);
-  --glow-gold:  0 0 14px rgba(201,168,76,0.22),  0 0 40px rgba(201,168,76,0.08);
-  --glow-gold-h:0 0 22px rgba(201,168,76,0.40),  0 0 60px rgba(201,168,76,0.15);
-  --glow-red:   0 0 12px rgba(239,68,68,0.20),   0 0 36px rgba(239,68,68,0.07);
-  --glow-red-h: 0 0 20px rgba(239,68,68,0.38),   0 0 52px rgba(239,68,68,0.13);
+  --lime:    #C8FF3D;
+  --ink:     #06080b;
+  --ink2:    #0a0d12;
+  --ink3:    #04060a;
+  --white:   #ffffff;
+  --text:    rgba(255,255,255,.72);
+  --muted:   rgba(255,255,255,.55);
+  --faint:   rgba(255,255,255,.4);
+  --line:    rgba(255,255,255,.10);
+  --card:    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  --card-h:  linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.03));
+  --limebg:  rgba(200,255,61,.08);
+  --limebd:  rgba(200,255,61,.25);
+  --red:     #ff6b5c;
+  --sans:    'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --mono:    'JetBrains Mono', ui-monospace, monospace;
 }
-
-/* ── RESET ── */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
+html,body{max-width:100%;overflow-x:hidden;}
 body{
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;
-  background:linear-gradient(170deg,#0F1830 0%,#09111F 35%,#04080F 65%,#010305 100%);
-  background-attachment:fixed;
-  color:var(--text);
-  line-height:1.65;font-size:16px;
-  min-height:100vh;
+  font-family:var(--sans);
+  background:var(--ink3);
+  color:var(--white);
+  line-height:1.6;font-size:16px;min-height:100vh;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
 }
 a{text-decoration:none;color:inherit;}
+h1,h2,h3,h4,p,a{overflow-wrap:break-word;}
+img{max-width:100%;display:block;}
 
 /* ── LAYOUT ── */
-.wrap       {max-width:1040px;margin:0 auto;padding:0 24px;}
-.wrap-n     {max-width:740px; margin:0 auto;padding:0 24px;}
-.section    {padding:84px 0;}
-.section-alt{background:rgba(0,0,0,0.28);}
-.tc         {text-align:center;}
-.tc .sub    {margin-left:auto;margin-right:auto;}
-.tc .gbar   {margin-left:auto;margin-right:auto;}
-
-/* ── TYPOGRAPHY ── */
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  font-weight:700;font-size:11px;letter-spacing:2.5px;
-  color:var(--gold);text-transform:uppercase;margin-bottom:14px;
-}
-.eyebrow::before{content:'';width:22px;height:2px;background:var(--gold);flex-shrink:0;}
-
-.ttl{
-  font-size:clamp(24px,3.4vw,40px);font-weight:900;
-  color:var(--white);line-height:1.12;margin-bottom:14px;letter-spacing:-0.3px;
-}
-.sub{
-  font-size:16px;color:var(--muted);max-width:580px;
-  margin-bottom:46px;line-height:1.72;
-}
-.gbar{width:52px;height:3px;background:var(--gold);border-radius:2px;margin:14px 0 34px;}
+.wrap{max-width:1280px;margin:0 auto;padding:0 64px;}
+.section{padding:110px 0;}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;margin-bottom:20px;}
+.eyebrow.lime{color:var(--lime);}
+.ttl{font-size:clamp(38px,4.6vw,64px);line-height:1.02;letter-spacing:-.022em;font-weight:800;color:#fff;text-wrap:balance;}
+.sub{margin-top:22px;font-size:18px;line-height:1.55;color:var(--text);max-width:680px;}
+.lime{color:var(--lime);}
 
 /* ── BUTTONS ── */
-.btn{
-  display:inline-block;font-weight:800;border:none;cursor:pointer;
-  border-radius:8px;transition:all .22s;text-align:center;
-  white-space:nowrap;
-}
-.btn-g{
-  background:var(--gold);color:#07111E;
-  font-size:15px;padding:15px 40px;min-width:220px;
-}
-.btn-g:hover{background:var(--goldf);transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,0.45);}
-.btn-g.lg{font-size:16px;padding:17px 48px;min-width:260px;}
-.btn-g.xl{font-size:17px;padding:19px 56px;min-width:280px;}
-.btn-g.blk{display:block;width:100%;max-width:380px;margin:0 auto;}
+.btn{display:inline-flex;align-items:center;gap:12px;justify-content:center;font-family:var(--sans);font-weight:700;border:none;cursor:pointer;border-radius:999px;transition:all .2s;text-align:center;letter-spacing:-.005em;}
+.btn-lime{background:var(--lime);color:#0a0a0a;font-size:17px;padding:20px 36px;box-shadow:0 12px 40px rgba(200,255,61,.34), inset 0 1px 0 rgba(255,255,255,.4);}
+.btn-lime:hover{transform:translateY(-2px);box-shadow:0 18px 50px rgba(200,255,61,.5), inset 0 1px 0 rgba(255,255,255,.4);}
+.btn-lime.sm{font-size:14px;padding:12px 24px;box-shadow:0 8px 24px rgba(200,255,61,.28);}
+.arrow{width:18px;height:18px;}
 
-.gn{color:var(--muted);font-size:12px;margin-top:10px;}
-.gn strong{color:var(--green);}
+/* ── CARD ── */
+.card{background:var(--card);border:1px solid rgba(255,255,255,.12);border-radius:22px;backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:0 8px 28px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.05);transition:all .26s cubic-bezier(.2,.7,.2,1);}
+.card.hov:hover{background:var(--card-h);border-color:rgba(255,255,255,.20);box-shadow:0 18px 50px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.07);}
+.ico-box{width:48px;height:48px;border-radius:12px;background:var(--limebg);border:1px solid var(--limebd);display:grid;place-items:center;flex-shrink:0;}
 
 /* ── ANNOUNCEMENT BAR ── */
-.ann{
-  background:rgba(4,8,16,0.92);
-  border-bottom:1px solid rgba(201,168,76,0.18);
-  padding:9px 52px 9px 24px;
-  display:flex;align-items:center;justify-content:center;
-  gap:10px;flex-wrap:wrap;
-  font-size:12.5px;color:rgba(255,255,255,0.6);
-  position:relative;
-}
-.ann strong{color:var(--gold);}
-.ann-cd{
-  display:inline-block;
-  background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);
-  border-radius:4px;padding:2px 10px;
-  font-family:monospace;font-size:13px;font-weight:700;
-  color:var(--gold);letter-spacing:1.5px;
-}
-.ann-x{
-  position:absolute;right:14px;top:50%;transform:translateY(-50%);
-  background:none;border:none;color:rgba(255,255,255,0.22);
-  cursor:pointer;font-size:17px;line-height:1;transition:color .2s;
-}
-.ann-x:hover{color:rgba(255,255,255,0.6);}
+.ann{background:rgba(4,6,10,.92);border-bottom:1px solid rgba(200,255,61,.16);padding:9px 52px 9px 24px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);position:relative;}
+.ann strong{color:var(--lime);}
+.ann-cd{display:inline-block;background:var(--limebg);border:1px solid var(--limebd);border-radius:4px;padding:2px 10px;font-family:var(--mono);font-size:13px;font-weight:700;color:var(--lime);letter-spacing:1.5px;}
+.ann-x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.25);cursor:pointer;font-size:17px;line-height:1;min-width:32px;min-height:32px;}
+.ann-x:hover{color:rgba(255,255,255,.6);}
 
-/* ── TOPBAR ── */
-.topbar{
-  background:rgba(7,13,24,0.96);
-  border-bottom:1px solid rgba(201,168,76,0.15);
-  padding:13px 0;position:sticky;top:0;z-index:90;
-  backdrop-filter:blur(8px);
-}
-.topbar-in{
-  max-width:1040px;margin:0 auto;padding:0 24px;
-  display:flex;justify-content:space-between;align-items:center;
-}
-.logo{font-weight:800;font-size:15px;color:var(--white);letter-spacing:-0.3px;}
-.logo span{color:var(--gold);}
-.tb-cta{
-  background:var(--gold);color:#07111E;
-  font-weight:700;font-size:13px;padding:9px 22px;
-  border-radius:6px;transition:all .2s;border:none;cursor:pointer;white-space:nowrap;
-}
-.tb-cta:hover{background:var(--goldf);transform:translateY(-1px);box-shadow:0 4px 16px rgba(201,168,76,0.4);}
+/* ── NAVBAR ── */
+.nav{position:fixed;top:38px;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:22px 64px;transition:all .3s;}
+.nav.scrolled{top:0;background:rgba(8,10,14,.82);backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);border-bottom:1px solid rgba(255,255,255,.06);padding:13px 64px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-mark{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);display:grid;place-items:center;}
+.brand-name{font-size:17px;font-weight:700;letter-spacing:-.01em;color:#fff;}
+.nav-links{display:flex;align-items:center;gap:32px;}
+.nav-links a{color:var(--muted);font-size:14px;font-weight:500;transition:color .2s;}
+.nav-links a:hover{color:#fff;}
 
 /* ── HERO ── */
-.hero{
-  padding:48px 0 44px;position:relative;overflow:hidden;
-}
-.hero-topline{
-  position:absolute;top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,var(--gold),var(--goldf),var(--gold));
-}
-.hero::before{
-  content:'';position:absolute;inset:0;
-  background-image:radial-gradient(circle,rgba(201,168,76,0.06) 1px,transparent 1px);
-  background-size:30px 30px;pointer-events:none;
-}
-.hero::after{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse at 72% 50%,rgba(201,168,76,0.06) 0%,transparent 55%);
-  pointer-events:none;
-}
-.hero .wrap{max-width:1280px;}
-.hero-in{
-  display:flex;align-items:center;gap:56px;
-  position:relative;z-index:1;
-}
-.hero-txt{flex:0 0 480px;min-width:0;}
-.hero-vis{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:18px;}
+.hero{position:relative;min-height:100vh;width:100%;overflow:hidden;background:#0a0a0a;}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:75% center;}
+.hero-grad{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,8,11,.85) 0%,rgba(6,8,11,.75) 30%,rgba(6,8,11,.33) 58%,rgba(6,8,11,.15) 78%,rgba(6,8,11,.33) 100%);}
+.hero-grad2{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,transparent 18%,transparent 60%,rgba(0,0,0,.85) 100%);}
+.hero-main{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr 1fr;gap:56px;padding:140px 64px 100px;max-width:1640px;margin:0 auto;align-items:center;min-height:100vh;}
+.hero h1{font-size:clamp(56px,7.4vw,116px);line-height:1.0;letter-spacing:-.028em;font-weight:800;color:#fff;text-wrap:balance;}
+.hero h1 .l2{color:var(--lime);}
+.hero-sub{margin-top:32px;max-width:540px;font-size:19px;line-height:1.55;color:rgba(255,255,255,.82);}
+.hero-cta-row{margin-top:44px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;}
+.hero-cd{display:flex;flex-direction:column;gap:4px;border-left:1px solid rgba(255,255,255,.15);padding-left:22px;}
+.hero-cd .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;}
+.hero-cd .clock{display:flex;align-items:baseline;gap:6px;font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--lime);font-size:26px;font-weight:600;letter-spacing:-.01em;}
+.hero-cd .clock span.sep{opacity:.4;}
+.hero-trust{margin-top:28px;display:flex;gap:26px;flex-wrap:wrap;color:rgba(255,255,255,.8);font-size:14px;}
+.hero-trust span{display:inline-flex;align-items:center;gap:8px;}
+.hero-cards{display:flex;flex-direction:column;gap:16px;}
+.hcard{display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:flex-start;padding:24px 28px;border-radius:22px;background:linear-gradient(180deg,rgba(22,24,32,.82),rgba(10,12,18,.88));border:1px solid rgba(255,255,255,.10);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);box-shadow:0 14px 40px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.06);transition:all .28s cubic-bezier(.2,.7,.2,1);}
+.hcard:hover{background:linear-gradient(180deg,rgba(28,30,38,.86),rgba(14,16,22,.92));border-color:rgba(255,255,255,.18);transform:translateX(-4px);box-shadow:0 24px 60px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.10);}
+.hcard .ic{width:44px;height:44px;border-radius:12px;background:var(--limebg);border:1px solid rgba(200,255,61,.22);display:grid;place-items:center;margin-top:2px;}
+.hcard h4{color:#fff;font-size:20px;font-weight:700;letter-spacing:-.012em;margin-bottom:6px;}
+.hcard p{color:rgba(255,255,255,.7);font-size:14.5px;line-height:1.5;}
 
-.hero-badge{
-  display:inline-block;
-  background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);
-  color:var(--gold);font-weight:700;font-size:10px;letter-spacing:2px;
-  padding:5px 13px;border-radius:20px;margin-bottom:12px;text-transform:uppercase;
-}
-.hero h1{
-  font-size:clamp(22px,2.7vw,36px);font-weight:900;
-  color:var(--white);line-height:1.14;margin-bottom:12px;letter-spacing:-0.3px;
-  max-width:500px;
-}
-.hero h1 em{color:var(--neon-g);font-style:normal;}
-.hero-sub{
-  font-size:15px;color:rgba(255,255,255,0.58);
-  max-width:500px;margin-bottom:16px;line-height:1.65;
-}
+/* ── GENERIC GRIDS ── */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.head-block{max-width:820px;margin-bottom:60px;}
+.head-block.center{margin-left:auto;margin-right:auto;text-align:center;}
+.head-block.center .sub{margin-left:auto;margin-right:auto;}
 
-/* hero countdown */
-.hero-cd{
-  display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
-  background:rgba(0,230,118,0.06);border:1px solid rgba(0,230,118,0.22);
-  border-radius:8px;padding:8px 14px;margin-bottom:16px;
-}
-.hero-cd .lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.35);}
-.hero-cd-u{display:flex;align-items:flex-start;gap:3px;}
-.cdu{text-align:center;min-width:34px;}
-.cdu .n{font-family:monospace;font-size:20px;font-weight:900;color:var(--neon-g);line-height:1;display:block;}
-.cdu .l{font-size:8px;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:0.8px;display:block;margin-top:1px;}
-.cdsep{font-family:monospace;font-size:17px;color:rgba(0,230,118,0.35);line-height:1;margin-top:3px;}
+/* ── PROBLEM ── */
+.pcard{padding:36px 38px;}
+.pcard .ico-box{margin-bottom:24px;}
+.pcard .tag{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin-bottom:12px;}
+.pcard h3{font-size:23px;font-weight:700;color:#fff;letter-spacing:-.015em;line-height:1.18;margin-bottom:12px;}
+.pcard p{color:var(--text);font-size:15.5px;line-height:1.55;}
 
-.hero-metrics{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px;}
-.hero-m{border-left:2px solid var(--gold);padding-left:12px;}
-.hero-m .n{font-size:20px;font-weight:900;color:var(--white);line-height:1.1;}
-.hero-m .l{font-size:10.5px;color:rgba(255,255,255,0.38);margin-top:2px;line-height:1.4;}
+/* ── REASONS / AUDIENCE small cards ── */
+.scard{padding:32px;}
+.scard .ic{margin-bottom:20px;}
+.scard h4{font-size:19px;font-weight:700;color:#fff;letter-spacing:-.012em;line-height:1.25;margin-bottom:12px;}
+.scard p{color:var(--text);font-size:14.5px;line-height:1.55;}
 
-.hero-cta{display:flex;flex-direction:column;align-items:flex-start;gap:8px;}
-.hero-note{font-size:12px;color:rgba(255,255,255,0.34);}
-.hero-note strong{color:rgba(201,168,76,0.7);}
+/* ── AUTHOR ── */
+.author-grid{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:center;margin-top:8px;}
+.author-photo{width:300px;height:300px;border-radius:24px;overflow:hidden;border:1px solid var(--line);position:relative;}
+.author-photo img{width:100%;height:100%;object-fit:cover;}
+.author-grid h2{font-size:clamp(34px,3.8vw,54px);line-height:1.04;letter-spacing:-.02em;font-weight:800;color:#fff;text-wrap:balance;}
+.author-meta{margin-top:26px;display:flex;flex-direction:column;gap:16px;max-width:760px;}
+.author-name-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.author-name{font-size:22px;font-weight:700;color:#fff;letter-spacing:-.012em;}
+.author-chip{font-size:13px;padding:5px 12px;border-radius:999px;background:var(--limebg);border:1px solid rgba(200,255,61,.22);color:var(--lime);font-family:var(--mono);letter-spacing:.06em;}
+.author-bio{color:var(--text);font-size:16.5px;line-height:1.6;}
+.author-link{color:var(--lime);font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:8px;margin-top:2px;}
 
-/* ── HERO PHOTO ── */
-.hero-photo-wrap{
-  position:relative;
-  flex:1;min-width:0;max-width:52%;
-  display:flex;align-items:center;justify-content:flex-end;
-}
-.hero-photo-wrap::before{
-  content:'';position:absolute;
-  inset:-40px;
-  border-radius:50%;
-  background:radial-gradient(ellipse,rgba(201,168,76,0.3) 0%,rgba(201,168,76,0.08) 50%,transparent 75%);
-  pointer-events:none;z-index:0;
-  filter:blur(32px);
-}
-.hero-photo-card{
-  position:relative;z-index:1;
-  width:100%;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:
-    0 0 0 1px rgba(201,168,76,0.22),
-    0 24px 64px rgba(0,0,0,0.65),
-    0 0 60px rgba(201,168,76,0.18);
-}
-.hero-photo-card img{
-  display:block;
-  width:111%;
-  margin-left:-11%;
-  height:auto;
-  object-fit:cover;
-}
+/* ── PROMPT SAMPLE ── */
+.ps-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center;}
+.ps-term{border-radius:22px;background:var(--card);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(18px);box-shadow:0 18px 50px rgba(0,0,0,.35);overflow:hidden;}
+.ps-bar{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:rgba(0,0,0,.25);border-bottom:1px solid rgba(255,255,255,.06);}
+.ps-dots{display:flex;gap:6px;}
+.ps-dot{width:11px;height:11px;border-radius:50%;}
+.ps-meta{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;}
+.ps-save{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--lime);}
+.ps-tabs{display:flex;gap:6px;padding:12px 18px 0;border-bottom:1px solid rgba(255,255,255,.04);}
+.ps-tab{padding:8px 14px;border-radius:8px 8px 0 0;background:transparent;border:0;border-bottom:2px solid transparent;color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;font-family:var(--sans);transition:all .2s;}
+.ps-tab.active{background:var(--limebg);border-bottom-color:var(--lime);color:#fff;}
+.ps-body{padding:22px;display:flex;flex-direction:column;gap:14px;}
+.ps-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;}
+.ps-you .ps-label{color:var(--faint);}
+.ps-ia .ps-label{color:var(--lime);display:flex;align-items:center;gap:6px;}
+.ps-you .bubble{padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.78);font-size:13.5px;line-height:1.5;white-space:pre-wrap;font-family:var(--mono);max-height:130px;overflow:hidden;}
+.ps-ia .bubble{padding:14px 16px;border-radius:12px;background:rgba(200,255,61,.05);border:1px solid rgba(200,255,61,.20);color:#fff;font-size:13.5px;line-height:1.55;white-space:pre-wrap;}
+.ps-ia .bubble strong{color:#fff;font-weight:700;}
+.ps-dot-live{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 8px var(--lime);}
+.ps-stats{margin-top:32px;display:grid;grid-template-columns:auto 1fr;gap:14px 16px;max-width:460px;}
+.ps-stats .k{color:var(--muted);font-size:14px;padding-right:16px;border-right:1px solid var(--line);}
+.ps-stats .v{color:var(--lime);font-family:var(--mono);font-size:14px;font-variant-numeric:tabular-nums;}
 
-/* ── TRUST BAR ── */
-.trust-bar{
-  background:rgba(0,0,0,0.35);
-  border-top:1px solid rgba(255,255,255,0.06);
-  border-bottom:1px solid rgba(255,255,255,0.06);
-  padding:16px 0;
-}
-.trust-items{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;}
-.trust-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:rgba(255,255,255,0.45);font-weight:500;}
-.trust-icon{color:var(--neon-g);font-size:14px;}
+/* ── OFFER / PRICING ── */
+.offer-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;}
+.offer-list{margin-top:32px;list-style:none;display:flex;flex-direction:column;gap:12px;}
+.offer-list li{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.85);font-size:16px;}
+.chk-sm{width:22px;height:22px;border-radius:6px;flex-shrink:0;background:var(--limebg);border:1px solid var(--limebd);display:grid;place-items:center;}
+.price-card{border:1px solid rgba(200,255,61,.30);box-shadow:0 30px 80px rgba(0,0,0,.45), 0 0 0 1px rgba(200,255,61,.10);padding:40px;border-radius:22px;background:var(--card);backdrop-filter:blur(18px);}
+.upd-badge{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;background:rgba(200,255,61,.06);border:1px solid rgba(200,255,61,.22);margin-bottom:8px;}
+.upd-badge strong{display:block;color:#fff;font-size:15px;font-weight:700;letter-spacing:-.01em;}
+.upd-badge span{display:block;color:var(--text);font-size:13px;line-height:1.4;margin-top:2px;}
+.cd-blocks{display:inline-flex;align-items:flex-end;gap:22px;margin-top:6px;}
+.cd-blk{text-align:center;}
+.cd-blk .n{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:clamp(44px,5vw,72px);font-weight:600;line-height:1;color:var(--lime);letter-spacing:-.02em;}
+.cd-blk .l{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;margin-top:10px;}
+.cd-colon{font-size:clamp(36px,4vw,56px);color:rgba(255,255,255,.25);font-weight:300;line-height:1;padding-bottom:22px;}
+.price-row{padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:28px;}
+.price-from{color:rgba(255,255,255,.45);font-size:17px;text-decoration:line-through;margin-bottom:8px;}
+.price-now{display:flex;align-items:baseline;gap:4px;}
+.price-now .cur{color:rgba(255,255,255,.5);font-size:22px;font-weight:600;}
+.price-now .val{color:var(--lime);font-size:84px;font-weight:800;letter-spacing:-.04em;line-height:1;}
+.price-side{font-size:12px;color:var(--muted);font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase;text-align:right;line-height:1.6;}
+.price-btn{display:flex;align-items:center;justify-content:center;gap:12px;padding:22px 28px;border-radius:16px;margin-top:24px;background:var(--lime);color:#0a0a0a;font-size:17px;font-weight:700;width:100%;box-shadow:0 14px 40px rgba(200,255,61,.34), inset 0 1px 0 rgba(255,255,255,.4);transition:transform .2s;}
+.price-btn:hover{transform:translateY(-2px);}
+.price-notes{margin-top:18px;display:flex;flex-direction:column;gap:10px;}
+.price-notes div{display:flex;align-items:center;gap:10px;font-size:13.5px;}
 
-/* ── PAIN CARDS ── */
-.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;}
-.pain-card{
-  background:rgba(239,68,68,0.04);
-  border:1px solid rgba(239,68,68,0.28);
-  border-radius:var(--r);padding:22px 18px;
-  transition:all .22s;
-  box-shadow:var(--glow-red);
-}
-.pain-card:hover{border-color:rgba(239,68,68,0.6);box-shadow:var(--glow-red-h);}
-.pain-ico{font-size:24px;margin-bottom:9px;}
-.pain-tag{font-size:12px;font-weight:700;color:var(--red);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
-.pain-card strong{color:var(--white);font-size:16px;display:block;margin-bottom:5px;line-height:1.4;}
-.pain-card p{font-size:15px;color:var(--muted);line-height:1.6;}
+/* ── MANDATORY CASES ── */
+.case{position:relative;padding:56px;border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);overflow:hidden;}
+.case-glow{position:absolute;top:-120px;right:-120px;width:380px;height:380px;background:radial-gradient(circle,rgba(200,255,61,.10) 0%,transparent 60%);pointer-events:none;}
+.case-in{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:start;position:relative;}
+.case-num{font-family:var(--mono);font-size:clamp(80px,9vw,140px);font-weight:600;color:var(--lime);line-height:.9;letter-spacing:-.04em;font-variant-numeric:tabular-nums;text-shadow:0 0 40px rgba(200,255,61,.2);margin-bottom:20px;}
+.case-tag{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin:16px 0 28px;}
+.case-metric{display:inline-block;padding:14px 18px;border-radius:14px;background:rgba(200,255,61,.06);border:1px solid rgba(200,255,61,.22);}
+.case-metric .v{font-size:26px;font-weight:800;color:var(--lime);letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums;}
+.case-metric .u{font-size:12px;color:var(--text);margin-top:4px;}
+.case h3{font-size:clamp(26px,2.6vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.018em;margin-bottom:36px;color:#fff;text-wrap:balance;max-width:720px;}
+.ba{display:grid;grid-template-columns:1fr 1fr;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:rgba(0,0,0,.25);}
+.ba-col{padding:26px 28px;}
+.ba-col.left{border-right:1px solid var(--line);}
+.ba-col.right{background:rgba(200,255,61,.025);}
+.ba-h{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px;}
+.ba-col.left .ba-h{color:var(--faint);}
+.ba-col.right .ba-h{color:var(--lime);}
+.ba-col ul{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.ba-col.left li{color:var(--muted);font-size:15px;line-height:1.45;padding-left:18px;position:relative;}
+.ba-col.left li::before{content:'';position:absolute;left:0;top:.7em;width:8px;height:1px;background:rgba(255,255,255,.3);}
+.ba-col.right li{color:rgba(255,255,255,.92);font-size:15px;line-height:1.45;padding-left:24px;position:relative;}
+.ba-col.right li::before{content:'✓';position:absolute;left:0;top:0;color:var(--lime);font-weight:700;}
+.case-aud{margin-top:26px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.case-aud .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--faint);text-transform:uppercase;margin-right:8px;}
+.aud-chip{font-size:13px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--text);}
 
-/* ── BENEFIT GRID ── */
-.ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-.ben-card{
-  background:rgba(0,230,118,0.03);
-  border:1px solid rgba(0,230,118,0.25);
-  border-radius:var(--r);padding:28px 22px;
-  box-shadow:var(--glow-green);transition:all .22s;
-}
-.ben-card:hover{border-color:rgba(0,230,118,0.6);box-shadow:var(--glow-green-h);transform:translateY(-3px);}
-.ben-ico-w{
-  width:48px;height:48px;border-radius:10px;
-  background:rgba(0,230,118,0.1);border:1px solid rgba(0,230,118,0.25);
-  display:flex;align-items:center;justify-content:center;
-  font-size:22px;margin-bottom:14px;
-}
-.ben-card h4{font-size:14.5px;font-weight:800;color:var(--white);margin-bottom:7px;line-height:1.3;}
-.ben-card p{font-size:13px;color:var(--muted);line-height:1.6;}
-
-/* ── DATA CARDS ── */
-.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;}
-.data-card{
-  background:rgba(201,168,76,0.04);
-  border:1px solid rgba(201,168,76,0.25);
-  border-radius:var(--r);padding:26px 22px;
-  box-shadow:var(--glow-gold);transition:all .22s;
-}
-.data-card:hover{border-color:rgba(201,168,76,0.6);box-shadow:var(--glow-gold-h);}
-.data-card .stat{font-size:36px;font-weight:900;color:var(--white);line-height:1;margin-bottom:7px;}
-.data-card .stat span{color:var(--gold);}
-.data-card .desc{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:8px;}
-.data-card .src{font-size:10px;color:rgba(255,255,255,0.25);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;}
-.data-card .src::before{content:'— ';}
+/* ── MARKET DATA ── */
+.dcard{padding:38px 36px 32px;}
+.dcard .stat{font-size:clamp(34px,3.6vw,50px);font-weight:800;letter-spacing:-.025em;color:var(--lime);line-height:1;margin-bottom:20px;}
+.dcard .desc{color:rgba(255,255,255,.78);font-size:15.5px;line-height:1.5;margin-bottom:20px;}
+.dcard .src{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--faint);text-transform:uppercase;padding-top:16px;border-top:1px solid var(--line);}
 
 /* ── CTA BLOCK ── */
-.cta-blk{
-  background:rgba(201,168,76,0.06);
-  border:1px solid rgba(201,168,76,0.3);
-  border-top:3px solid var(--gold);
-  border-radius:var(--r);padding:38px 40px;
-  text-align:center;margin-top:56px;
-  box-shadow:var(--glow-gold);
-}
-.cta-blk h3{font-size:20px;font-weight:800;color:var(--white);margin-bottom:7px;}
-.cta-blk p{font-size:14px;color:var(--muted);margin-bottom:22px;}
+.cta-blk{margin-top:80px;padding:56px 64px;border-radius:28px;background:linear-gradient(135deg,rgba(200,255,61,.07) 0%,rgba(200,255,61,.02) 100%);border:1px solid rgba(200,255,61,.20);display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.cta-blk h3{font-size:clamp(24px,2.4vw,32px);font-weight:800;color:#fff;letter-spacing:-.015em;line-height:1.2;}
+.cta-blk p{margin-top:12px;color:var(--text);font-size:15.5px;max-width:620px;}
 
-/* ── BAR CHART ── */
-.bar-wrap{
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.07);
-  border-radius:var(--r);padding:26px 26px 22px;margin-bottom:32px;
-}
-.bar-wrap-ttl{font-weight:800;font-size:14.5px;color:var(--white);margin-bottom:5px;}
-.bar-wrap-sub{font-size:12.5px;color:var(--muted);margin-bottom:18px;}
-.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:13px;}
-.bar-lbl{width:130px;font-size:12px;color:rgba(255,255,255,0.65);font-weight:600;flex-shrink:0;text-align:right;}
-.bar-track{flex:1;position:relative;padding-right:48px;}
-.bar-bef{height:9px;border-radius:3px;background:rgba(255,255,255,0.1);position:relative;margin-bottom:3px;}
-.bar-aft{height:9px;border-radius:3px;background:var(--neon-g);position:relative;box-shadow:0 0 8px rgba(0,230,118,0.4);}
-.bar-v{font-size:10.5px;color:rgba(255,255,255,0.35);position:absolute;right:0;top:50%;transform:translateY(-50%);white-space:nowrap;}
-.bar-va{color:var(--neon-g);font-weight:700;}
-.bar-tag{width:44px;font-size:10.5px;font-weight:700;color:#07111E;background:var(--neon-g);border-radius:4px;padding:3px 0;text-align:center;flex-shrink:0;box-shadow:0 0 8px rgba(0,230,118,0.4);}
-.chart-leg{display:flex;gap:18px;margin-bottom:18px;font-size:11.5px;color:var(--muted);}
-.leg-dot{width:11px;height:11px;border-radius:2px;flex-shrink:0;margin-top:1px;}
-
-/* ── ROI TABLE ── */
-.tbl-wrap{border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,0.07);overflow-x:auto;-webkit-overflow-scrolling:touch;}
-.roi-tbl{width:100%;border-collapse:collapse;font-size:13.5px;}
-.roi-tbl thead th{background:rgba(15,24,48,0.9);color:rgba(255,255,255,0.85);padding:13px 16px;text-align:left;font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;}
-.roi-tbl thead th.gold{background:rgba(201,168,76,0.85);color:#07111E;}
-.roi-tbl thead th:last-child{text-align:right;}
-.roi-tbl tbody tr:nth-child(odd) {background:rgba(255,255,255,0.04);}
-.roi-tbl tbody tr:nth-child(even){background:rgba(255,255,255,0.01);}
-.roi-tbl tbody td{padding:11px 16px;color:rgba(255,255,255,0.72);border-bottom:1px solid rgba(255,255,255,0.05);}
-.roi-tbl tbody td:last-child{text-align:right;font-weight:700;color:var(--neon-g);}
-.roi-tbl tbody td.bef{color:rgba(255,255,255,0.3);text-decoration:line-through;}
-.roi-tbl tfoot td{padding:13px 16px;background:rgba(15,24,48,0.9);color:rgba(255,255,255,0.85);font-weight:700;font-size:14px;}
-.roi-tbl tfoot td:last-child{color:var(--gold);text-align:right;}
+/* ── BAR CHART / ROI ── */
+.bars{padding:48px;}
+.bars-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:8px;}
+.bars-head h3{font-size:22px;font-weight:700;color:#fff;letter-spacing:-.012em;}
+.bars-leg{display:flex;gap:22px;font-size:13px;}
+.bars-leg span{display:flex;align-items:center;gap:8px;color:var(--muted);}
+.leg-dot{width:12px;height:12px;border-radius:3px;}
+.bars-sub{color:var(--muted);font-size:14px;margin-bottom:28px;}
+.bar-row{display:grid;grid-template-columns:220px 1fr 80px;align-items:center;gap:24px;margin-bottom:22px;}
+.bar-lbl{color:#fff;font-size:15px;font-weight:500;}
+.bar-bars{display:flex;flex-direction:column;gap:6px;}
+.bar-line{display:flex;align-items:center;gap:12px;}
+.bar-bef{height:10px;background:rgba(255,255,255,.18);border-radius:4px;}
+.bar-aft{height:10px;background:var(--lime);border-radius:4px;box-shadow:0 0 16px rgba(200,255,61,.4);}
+.bar-v{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;}
+.bar-v.bef{color:var(--muted);}
+.bar-v.aft{color:#fff;}
+.bar-pct{text-align:right;color:var(--lime);font-weight:700;font-size:18px;font-family:var(--mono);font-variant-numeric:tabular-nums;}
+.tbl-wrap{margin-top:28px;border-radius:22px;overflow:hidden;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+table.roi{width:100%;border-collapse:collapse;font-family:var(--sans);min-width:640px;}
+table.roi thead th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:20px 28px;font-weight:500;}
+table.roi thead th:last-child{text-align:right;}
+table.roi tbody td{padding:20px 28px;font-size:15px;color:var(--text);border-top:1px solid rgba(255,255,255,.06);}
+table.roi td.bef{color:var(--muted);}
+table.roi td.now{color:#fff;font-weight:600;}
+table.roi td.save{color:var(--lime);font-weight:700;text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;}
+table.roi tfoot td{padding:20px 28px;border-top:1px solid rgba(200,255,61,.25);background:rgba(200,255,61,.04);font-weight:700;color:#fff;}
+table.roi tfoot td:last-child{color:var(--lime);text-align:right;font-size:22px;font-family:var(--mono);}
 
 /* ── CHAPTERS ── */
-.chs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;}
-.ch-card{
-  background:rgba(0,230,118,0.02);
-  border:1px solid rgba(0,230,118,0.2);
-  border-radius:var(--r);padding:20px 18px;
-  display:flex;gap:14px;align-items:flex-start;
-  transition:all .2s;box-shadow:var(--glow-green);
-}
-.ch-card:hover{border-color:rgba(0,230,118,0.5);box-shadow:var(--glow-green-h);}
-.ch-n{
-  background:rgba(0,230,118,0.12);color:var(--neon-g);
-  border:1px solid rgba(0,230,118,0.3);
-  font-weight:900;font-size:11.5px;padding:4px 8px;
-  border-radius:6px;flex-shrink:0;margin-top:1px;letter-spacing:0.3px;
-}
-.ch-ttl{font-weight:700;font-size:14px;color:var(--white);margin-bottom:4px;line-height:1.3;}
-.ch-dsc{font-size:12.5px;color:var(--muted);line-height:1.55;}
+.chcard{display:grid;grid-template-columns:140px 1fr;border-radius:22px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.10);overflow:hidden;transition:all .26s cubic-bezier(.2,.7,.2,1);}
+.chcard:hover{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.18);}
+.chcard .num{background:rgba(200,255,61,.04);border-right:1px solid rgba(200,255,61,.18);display:grid;place-items:center;font-family:var(--mono);font-size:56px;font-weight:600;color:var(--lime);letter-spacing:-.02em;font-variant-numeric:tabular-nums;transition:background .26s;}
+.chcard:hover .num{background:rgba(200,255,61,.08);}
+.chcard .body{padding:28px 30px;}
+.chcard h4{font-size:20px;font-weight:700;color:#fff;letter-spacing:-.012em;line-height:1.22;margin-bottom:10px;}
+.chcard p{color:var(--text);font-size:15px;line-height:1.55;}
 
 /* ── TOOLS TABLE ── */
-.tools-tbl{width:100%;border-collapse:collapse;font-size:13px;}
-.tools-tbl thead th{background:rgba(15,24,48,0.9);color:rgba(255,255,255,0.85);padding:11px 14px;text-align:left;font-size:10.5px;font-weight:700;letter-spacing:0.7px;text-transform:uppercase;}
-.tools-tbl thead th:first-child{width:22%;}
-.tools-tbl thead th.gold{background:rgba(201,168,76,0.85);color:#07111E;}
-.tools-tbl tbody tr:nth-child(odd) {background:rgba(255,255,255,0.04);}
-.tools-tbl tbody tr:nth-child(even){background:rgba(255,255,255,0.01);}
-.tools-tbl tbody td{padding:10px 14px;color:rgba(255,255,255,0.7);border-bottom:1px solid rgba(255,255,255,0.05);vertical-align:middle;}
-.tools-tbl td.tnm{font-weight:700;color:var(--white);}
-.chk{color:var(--neon-g);font-weight:700;}
-.crs{color:rgba(255,255,255,0.2);}
-.btag{display:inline-block;background:var(--gold);color:#07111E;font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;margin-left:5px;vertical-align:middle;letter-spacing:0.3px;text-transform:uppercase;}
+table.tools{width:100%;border-collapse:collapse;font-family:var(--sans);min-width:900px;}
+table.tools thead th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:20px;font-weight:500;text-align:center;}
+table.tools thead th:first-child{text-align:left;min-width:180px;}
+table.tools thead th:last-child{text-align:left;min-width:240px;}
+table.tools tbody td{padding:20px;font-size:15px;color:var(--text);border-top:1px solid rgba(255,255,255,.06);vertical-align:middle;text-align:center;}
+table.tools tbody td:first-child{text-align:left;}
+table.tools tbody td:last-child{text-align:left;font-size:14.5px;color:rgba(255,255,255,.75);}
+.tnm{color:#fff;font-weight:600;}
+.btag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;padding:3px 8px;border-radius:6px;background:var(--limebg);border:1px solid rgba(200,255,61,.30);color:var(--lime);text-transform:uppercase;margin-left:8px;vertical-align:middle;}
+.chk{color:var(--lime);font-weight:700;}
+.crs{color:rgba(255,255,255,.22);}
 
-/* ── OFFER BOX ── */
-.offer-box{
-  max-width:680px;margin:0 auto;
-  background:rgba(201,168,76,0.05);
-  border:1px solid rgba(201,168,76,0.3);
-  border-top:4px solid var(--gold);
-  border-radius:14px;padding:52px 44px;text-align:center;
-  box-shadow:var(--glow-gold-h),0 0 80px rgba(201,168,76,0.06);
-}
-.offer-box h2{font-size:30px;font-weight:900;color:var(--white);margin-bottom:7px;}
-.offer-box .ofsub{font-size:15px;color:var(--muted);margin-bottom:32px;}
-.chklist{list-style:none;max-width:460px;margin:0 auto 32px;text-align:left;}
-.chklist li{
-  display:flex;align-items:flex-start;gap:10px;
-  padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.06);
-  font-size:14.5px;color:rgba(255,255,255,0.8);
-}
-.chklist li:last-child{border-bottom:none;}
-.ck{color:var(--neon-g);font-weight:900;flex-shrink:0;margin-top:2px;}
-
-/* offer countdown */
-.off-cd{
-  display:inline-flex;flex-direction:column;align-items:center;gap:6px;
-  background:rgba(0,230,118,0.06);border:1px solid rgba(0,230,118,0.22);
-  border-radius:10px;padding:14px 24px;margin-bottom:24px;
-}
-.off-cd .lbl{font-size:10.5px;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:1px;}
-.off-cd-u{display:flex;align-items:flex-start;gap:5px;}
-.off-cd .cdu .n{font-size:32px;}
-.off-cd .cdsep{font-size:26px;}
-
-.price-rsn{
-  display:inline-block;background:rgba(0,230,118,0.1);border:1px solid rgba(0,230,118,0.25);
-  color:var(--neon-g);font-size:11.5px;font-weight:700;padding:4px 13px;
-  border-radius:20px;margin-bottom:14px;letter-spacing:0.5px;
-}
-.price-fnl{margin-bottom:26px;}
-.price-fnl .from{font-size:14px;color:rgba(255,255,255,0.28);text-decoration:line-through;margin-bottom:3px;}
-.price-fnl .main{font-size:52px;font-weight:900;color:var(--white);line-height:1;}
-.price-fnl .main span{color:var(--gold);}
-.price-fnl .per{font-size:12.5px;color:rgba(255,255,255,0.28);margin-top:5px;}
-
-/* ── FAQ ── */
-.faq-list{max-width:700px;}
-.faq-item{border-bottom:1px solid rgba(255,255,255,0.07);}
-.faq-btn{
-  width:100%;text-align:left;background:none;border:none;
-  padding:18px 0;cursor:pointer;
-  display:flex;justify-content:space-between;align-items:flex-start;gap:14px;
-  font-size:15px;font-weight:700;color:rgba(255,255,255,0.82);line-height:1.4;
-  transition:color .2s;
-}
-.faq-btn:hover{color:var(--neon-g);}
-.faq-btn::before{content:'— ';color:var(--gold);flex-shrink:0;}
-.faq-ico{font-size:19px;color:var(--neon-g);flex-shrink:0;transition:transform .25s;line-height:1;margin-top:2px;}
-.faq-item.open .faq-ico{transform:rotate(45deg);}
-.faq-ans{overflow:hidden;max-height:0;transition:max-height .35s ease;}
-.faq-item.open .faq-ans{max-height:500px;}
-.faq-ans p{font-size:14px;color:var(--muted);line-height:1.72;padding-bottom:20px;}
+/* ── INCLUDED ── */
+.inc-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:start;}
+.inc-list{margin-top:36px;list-style:none;display:grid;gap:14px;}
+.inc-list li{display:flex;align-items:flex-start;gap:12px;}
+.inc-list span{color:rgba(255,255,255,.82);font-size:16px;line-height:1.5;}
 
 /* ── TRANSPARENCY ── */
-.tr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
-.tr-card{
-  background:rgba(0,230,118,0.03);
-  border:1px solid rgba(0,230,118,0.22);
-  border-radius:var(--r);padding:26px 20px;text-align:center;
-  box-shadow:var(--glow-green);transition:all .22s;
-}
-.tr-card:hover{border-color:rgba(0,230,118,0.55);box-shadow:var(--glow-green-h);transform:translateY(-2px);}
-.tr-ico{font-size:30px;margin-bottom:10px;}
-.tr-card h4{font-size:14px;font-weight:800;color:var(--white);margin-bottom:5px;line-height:1.3;}
-.tr-card p{font-size:12.5px;color:var(--muted);line-height:1.6;}
+.tr-chips{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:32px;}
+.tr-chips .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--faint);text-transform:uppercase;margin-right:4px;}
+.tr-chip{font-size:14px;padding:8px 16px;border-radius:999px;background:rgba(200,255,61,.06);border:1px solid rgba(200,255,61,.22);color:var(--lime);font-weight:600;}
+.tr-quote{padding:40px 48px;border-radius:22px;background:var(--card);border:1px solid rgba(200,255,61,.20);}
+.tr-quote .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--lime);text-transform:uppercase;margin-bottom:18px;}
+.tr-quote p{font-size:19px;line-height:1.6;color:rgba(255,255,255,.8);max-width:940px;}
+.tr-quote strong{color:#fff;font-weight:600;}
 
-/* transparency quote box */
-.tr-quote{
-  max-width:660px;margin:44px auto 0;
-  background:rgba(201,168,76,0.05);
-  border:1px solid rgba(201,168,76,0.22);
-  border-left:4px solid var(--gold);
-  border-radius:var(--r);padding:26px 26px 22px;
-  box-shadow:var(--glow-gold);
-}
-.tr-quote p{font-size:14.5px;color:rgba(255,255,255,0.7);line-height:1.78;}
-.tr-quote strong{color:var(--white);}
+/* ── FAQ ── */
+.faq-list{max-width:980px;}
+.faq-item{border-bottom:1px solid var(--line);padding:26px 0;}
+.faq-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0;background:transparent;border:0;cursor:pointer;text-align:left;color:#fff;font-family:var(--sans);}
+.faq-btn .q{font-size:19px;font-weight:600;letter-spacing:-.012em;line-height:1.35;}
+.faq-ic{width:36px;height:36px;border-radius:50%;flex-shrink:0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;transition:all .25s;color:#fff;font-size:18px;line-height:1;}
+.faq-item.open .faq-ic{background:var(--lime);border-color:var(--lime);color:#0a0a0a;transform:rotate(45deg);}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.2,.7,.2,1), margin-top .35s;}
+.faq-item.open .faq-ans{margin-top:16px;}
+.faq-ans p{color:rgba(255,255,255,.7);font-size:16px;line-height:1.6;max-width:820px;}
 
 /* ── FOOTER ── */
-footer{
-  background:rgba(0,0,0,0.5);
-  border-top:1px solid rgba(201,168,76,0.18);
-  padding:44px 24px 28px;font-size:12px;
-  text-align:center;color:rgba(255,255,255,0.3);
-}
-.ft-links{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-bottom:16px;}
-.ft-links a{color:rgba(255,255,255,0.28);font-size:12px;transition:color .2s;}
-.ft-links a:hover{color:var(--gold);}
-.ft-div{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px auto;max-width:560px;}
+footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding:72px 64px 48px;color:var(--muted);font-size:14px;}
+.ft-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;}
+.ft-brand{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+.ft-col-h{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;margin-bottom:18px;}
+.ft-links{display:flex;flex-direction:column;gap:10px;}
+.ft-links a{color:rgba(255,255,255,.7);transition:color .2s;cursor:pointer;}
+.ft-links a:hover{color:var(--lime);}
+.ft-bottom{max-width:1280px;margin:56px auto 0;padding-top:28px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;font-size:13px;}
+.ft-bottom a{color:var(--lime);font-weight:600;display:inline-flex;align-items:center;gap:8px;}
 
 /* ── MOBILE CTA BAR ── */
-.mob-bar{
-  display:none;position:fixed;bottom:0;left:0;right:0;
-  background:rgba(4,8,16,0.97);
-  border-top:2px solid var(--gold);
-  padding:11px 18px;z-index:200;
-  box-shadow:0 -4px 20px rgba(0,0,0,0.5);
-  align-items:center;justify-content:space-between;gap:10px;
-}
-.mob-bar .mp{color:rgba(255,255,255,0.55);font-size:11.5px;line-height:1.3;}
-.mob-bar .mp strong{color:var(--gold);font-size:17px;display:block;line-height:1.1;}
-.mob-bar .mb{
-  background:var(--gold);color:#07111E;
-  font-weight:800;font-size:13px;padding:11px 18px;
-  border-radius:7px;border:none;cursor:pointer;flex-shrink:0;white-space:nowrap;
-}
+.mob-bar{display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:60;padding:12px 16px 12px 22px;border-radius:999px;background:rgba(10,13,18,.9);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 50px rgba(0,0,0,.5);align-items:center;justify-content:space-between;gap:14px;}
+.mob-bar .mp{color:#fff;font-size:13px;}
+.mob-bar .mp strong{color:var(--lime);font-size:18px;}
+.mob-bar .mb{background:var(--lime);color:#0a0a0a;font-weight:700;font-size:13.5px;padding:12px 20px;border-radius:999px;flex-shrink:0;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;}
 
 /* ── EXIT INTENT ── */
-.exit-ov{
-  display:none;position:fixed;inset:0;
-  background:rgba(0,0,0,0.8);z-index:10003;
-  align-items:center;justify-content:center;padding:24px;
-}
+.exit-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:10003;align-items:center;justify-content:center;padding:24px;}
 .exit-ov.open{display:flex;}
-.exit-bx{
-  background:#070D1C;
-  border:1px solid rgba(0,230,118,0.3);
-  border-top:4px solid var(--neon-g);
-  border-radius:14px;padding:44px 40px;
-  max-width:480px;width:100%;text-align:center;position:relative;
-  box-shadow:0 0 40px rgba(0,230,118,0.15);
-}
-.exit-x{position:absolute;top:6px;right:8px;background:none;border:none;color:rgba(255,255,255,0.25);font-size:21px;cursor:pointer;transition:color .2s;line-height:1;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;border-radius:6px;}
-.exit-x:hover{color:var(--white);}
-.exit-bx .eico{font-size:38px;margin-bottom:14px;display:block;}
-.exit-bx h3{font-size:23px;font-weight:900;color:var(--white);margin-bottom:9px;line-height:1.2;}
-.exit-bx h3 em{color:var(--neon-g);font-style:normal;}
-.exit-bx p{font-size:14px;color:var(--muted);margin-bottom:26px;line-height:1.7;}
-.exit-gn{font-size:12.5px;color:rgba(255,255,255,0.28);margin-top:12px;}
-.exit-gn strong{color:var(--green);}
-.exit-dis{background:none;border:none;color:rgba(255,255,255,0.18);font-size:11.5px;cursor:pointer;margin-top:12px;display:block;width:100%;text-align:center;transition:color .2s;}
-.exit-dis:hover{color:rgba(255,255,255,0.45);}
+.exit-bx{background:#0a0d12;border:1px solid rgba(200,255,61,.30);border-top:4px solid var(--lime);border-radius:20px;padding:44px 40px;max-width:480px;width:100%;text-align:center;position:relative;box-shadow:0 0 60px rgba(200,255,61,.12);}
+.exit-x{position:absolute;top:8px;right:10px;background:none;border:none;color:rgba(255,255,255,.3);font-size:22px;cursor:pointer;line-height:1;min-width:44px;min-height:44px;border-radius:8px;}
+.exit-x:hover{color:#fff;}
+.exit-bx h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:10px;line-height:1.2;}
+.exit-bx h3 em{color:var(--lime);font-style:normal;}
+.exit-bx p{font-size:14.5px;color:var(--text);margin-bottom:26px;line-height:1.65;}
+.exit-gn{font-size:12.5px;color:var(--faint);margin-top:14px;}
+.exit-dis{background:none;border:none;color:rgba(255,255,255,.2);font-size:12px;cursor:pointer;margin-top:12px;width:100%;}
+.exit-dis:hover{color:rgba(255,255,255,.45);}
 
-/* ── COOKIE BANNER ── */
-#cookie-banner{
-  position:fixed;bottom:0;left:0;right:0;
-  background:rgba(4,8,16,0.97);
-  border-top:2px solid rgba(201,168,76,0.25);
-  padding:14px 22px;display:flex;align-items:center;
-  justify-content:space-between;gap:14px;flex-wrap:wrap;
-  z-index:10001;box-shadow:0 -4px 20px rgba(0,0,0,0.5);
-}
-#cookie-banner p{font-size:12.5px;color:rgba(255,255,255,0.75);margin:0;max-width:700px;line-height:1.5;}
-#cookie-banner a{color:var(--gold);text-decoration:underline;}
-#cookie-accept{background:var(--gold);color:#07111E;border:none;border-radius:6px;padding:9px 20px;font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap;flex-shrink:0;min-height:44px;}
-
-/* ── LGPD MODALS ── */
-.mod-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:10005;align-items:center;justify-content:center;padding:24px;}
+/* ── COOKIE + LGPD ── */
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;background:rgba(4,6,10,.97);border-top:2px solid rgba(200,255,61,.25);padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;z-index:10001;box-shadow:0 -4px 20px rgba(0,0,0,.5);}
+#cookie-banner p{font-size:12.5px;color:rgba(255,255,255,.75);max-width:760px;line-height:1.5;}
+#cookie-banner a{color:var(--lime);text-decoration:underline;cursor:pointer;}
+#cookie-accept{background:var(--lime);color:#0a0a0a;border:none;border-radius:8px;padding:10px 22px;font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap;flex-shrink:0;min-height:44px;}
+.mod-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:10005;align-items:center;justify-content:center;padding:24px;}
 .mod-ov.open{display:flex;}
-.mod-bx{background:#0E1A2E;border:1px solid rgba(201,168,76,0.18);border-radius:12px;padding:34px 30px;max-width:620px;width:100%;max-height:80vh;overflow-y:auto;position:relative;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(201,168,76,0.3) rgba(0,0,0,0.2);}
-.mod-bx::-webkit-scrollbar{width:5px;}
-.mod-bx::-webkit-scrollbar-track{background:rgba(0,0,0,0.2);}
-.mod-bx::-webkit-scrollbar-thumb{background:rgba(201,168,76,0.35);border-radius:3px;}
-.mod-bx h3{font-size:17px;font-weight:800;color:var(--white);margin-bottom:14px;}
-.mod-bx h4{font-size:11.5px;font-weight:700;color:var(--gold);margin:16px 0 5px;text-transform:uppercase;letter-spacing:.05em;}
-.mod-bx p,.mod-bx li{font-size:13px;color:rgba(255,255,255,0.58);line-height:1.7;margin-bottom:7px;}
-.mod-bx ul{padding-left:17px;margin-bottom:7px;}
-.mod-cls{position:absolute;top:6px;right:8px;background:none;border:none;color:rgba(255,255,255,0.3);font-size:21px;cursor:pointer;line-height:1;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;border-radius:6px;}
-.mod-cls:hover{color:var(--white);}
+.mod-bx{background:#0a0d12;border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:34px 30px;max-width:640px;width:100%;max-height:82vh;overflow-y:auto;position:relative;}
+.mod-bx h3{font-size:18px;font-weight:800;color:#fff;margin-bottom:14px;}
+.mod-bx h4{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--lime);margin:16px 0 5px;text-transform:uppercase;letter-spacing:.05em;}
+.mod-bx p,.mod-bx li{font-size:13.5px;color:var(--text);line-height:1.7;margin-bottom:7px;}
+.mod-bx ul{padding-left:18px;}
+.mod-cls{position:absolute;top:8px;right:10px;background:none;border:none;color:rgba(255,255,255,.3);font-size:22px;cursor:pointer;line-height:1;min-width:44px;min-height:44px;border-radius:8px;}
+.mod-cls:hover{color:#fff;}
 
 /* ── RESPONSIVE ── */
-html,body{max-width:100%;overflow-x:hidden;}
-h1,h2,h3,h4,p,a{overflow-wrap:break-word;word-break:break-word;}
-
-@media(max-width:900px){
-  .ben-grid{grid-template-columns:repeat(2,1fr);}
+@media(max-width:1024px){
+  .wrap{padding:0 40px;}
+  .nav,.nav.scrolled{padding-left:40px;padding-right:40px;}
+  .hero-main{grid-template-columns:1fr;gap:48px;padding:120px 40px 80px;}
+  .hero-cards{max-width:560px;}
+  .grid-3{grid-template-columns:repeat(2,1fr);}
+  .author-grid,.ps-grid,.offer-grid,.inc-grid{grid-template-columns:1fr;gap:40px;}
+  .author-photo{width:240px;height:240px;}
+  .case-in{grid-template-columns:1fr;gap:32px;}
+  .nav-links a:not(.btn){display:none;}
 }
-
 @media(max-width:768px){
-  .hero-in{flex-direction:column-reverse;gap:24px;}
-  .hero h1{font-size:24px;text-align:center;}
-  .hero-sub{text-align:center;margin-left:auto;margin-right:auto;}
-  .hero-badge{display:block;text-align:center;}
-  .hero-metrics{justify-content:center;}
-  .hero-cd{width:100%;justify-content:center;flex-wrap:wrap;gap:8px;}
-  .hero-cta{align-items:center;}
-  .hero-cta .btn-g{display:block;width:100%;max-width:340px;white-space:normal;}
-  .hero .wrap{max-width:100%;}
-  .hero-txt{flex:0 0 400px;}
-  .hero-in{gap:32px;}
-  .offer-box{padding:36px 22px;}
-  .exit-bx{padding:32px 22px;}
-}
-
-@media(max-width:640px){
-  .tb-cta{display:none;}
+  .wrap{padding:0 22px;}
+  .nav,.nav.scrolled{padding-left:22px;padding-right:22px;}
+  .section{padding:72px 0;}
+  .hero-main{padding:110px 22px 72px;}
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .bar-row{grid-template-columns:1fr;gap:8px;}
+  .bar-pct{text-align:left;}
+  .ba{grid-template-columns:1fr;}
+  .ba-col.left{border-right:none;border-bottom:1px solid var(--line);}
+  .cta-blk{padding:36px 28px;}
+  .case{padding:32px 24px;}
+  .chcard{grid-template-columns:90px 1fr;}
+  .chcard .num{font-size:38px;}
+  .price-card,.tr-quote,.bars{padding:28px 22px;}
+  .brand-name{font-size:15px;}
   .mob-bar{display:flex;}
-  body{padding-bottom:68px;}
-  .wrap{padding:0 16px;}
-  .section{padding:48px 0;}
-  .hero{padding:32px 0 28px;}
-  .hero h1{font-size:21px;text-align:center;}
-  .hero-sub{font-size:14px;}
-  .hero-badge{font-size:9px;}
-  .ben-grid{grid-template-columns:1fr;}
-  .bar-lbl{width:80px;font-size:11px;}
-  .btn{white-space:normal;}
-  .btn-g{font-size:14px;padding:13px 20px;min-width:0;width:100%;}
-  .btn-g.lg{font-size:14px;padding:14px 20px;min-width:0;}
-  .btn-g.xl{font-size:15px;padding:15px 20px;min-width:0;}
-  .btn-g.blk{max-width:100%;}
-  .cta-blk{padding:26px 16px;}
-  .price-fnl .main{font-size:40px;}
-  .off-cd .cdu .n{font-size:26px;}
-  .tr-grid{grid-template-columns:repeat(2,1fr);}
-  .hero-metrics{gap:10px;}
-  .hero-m .n{font-size:17px;}
-  .ann{font-size:11px;padding:8px 40px 8px 14px;gap:6px;}
-  .hero-cd .lbl{font-size:10px;text-align:center;width:100%;}
-  .hero-cd-u{justify-content:center;}
-  .pain-grid{grid-template-columns:1fr;}
-  .ch-card{flex-direction:column;gap:8px;}
-  .trust-items{gap:10px;}
-  .trust-item{font-size:11.5px;}
-  .roi-tbl,.tools-tbl{min-width:480px;}
-  .faq-btn{padding:18px 8px;font-size:14px;}
-  #cookie-banner{padding:12px 14px;}
-  #cookie-banner p{font-size:12px;}
-  #cookie-accept{font-size:14px;padding:10px 18px;}
-  .mob-bar .mb{font-size:14px;}
-  .ann-x{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;}
+  body{padding-bottom:80px;}
+  footer{padding:56px 22px 40px;}
+  .ft-grid{grid-template-columns:1fr;gap:32px;}
 }
-
 @media(max-width:420px){
-  .hero h1{font-size:19px;}
-  .tr-grid{grid-template-columns:1fr;}
-  .trust-items{gap:8px;}
-  .hero-photo-wrap{display:none;}
-  .hero-in{flex-direction:column;gap:0;}
-  .hero-metrics{flex-direction:column;gap:6px;align-items:center;}
-  .hero-m{border-left:none;border-bottom:1px solid rgba(201,168,76,0.15);padding:6px 0;text-align:center;width:100%;}
+  .hero h1{font-size:44px;}
+  .price-now .val{font-size:64px;}
+  .hero-cd{border-left:none;padding-left:0;}
 }
 </style>
 </head>
 <body>
 
-<!-- ── ANNOUNCEMENT BAR ── -->
+<!-- ══ ANNOUNCEMENT BAR ══ -->
 <div class="ann" id="ann-bar">
-  <strong>🔥 Preço de lançamento</strong> &nbsp;·&nbsp; Garantia de 7 dias &nbsp;·&nbsp; Acesso imediato
-  &nbsp;·&nbsp; Encerra em: <span class="ann-cd" id="ann-cd">--:--:--</span>
+  <strong>✓ Atualizações mensais grátis</strong> &nbsp;·&nbsp; Acesso vitalício &nbsp;·&nbsp; Garantia de 7 dias &nbsp;·&nbsp; PDF imediato
   <button class="ann-x" onclick="document.getElementById('ann-bar').remove()" aria-label="Fechar">✕</button>
 </div>
 
-<!-- ── TOPBAR ── -->
+<!-- ══ NAVBAR ══ -->
+<header class="nav" id="nav">
+  <div class="brand">
+    <div class="brand-mark">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/><circle cx="12" cy="12" r="2.4" fill="#C8FF3D" stroke="none"/></svg>
+    </div>
+    <div class="brand-name">Business for Champions</div>
+  </div>
+  <nav class="nav-links">
+    <a href="#autor">Autor</a>
+    <a href="#oferta">Oferta</a>
+    <a href="#capitulos">Capítulos</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime sm" onclick="trackCTA('nav')">R$37 → Garantir</a>
+  </nav>
+</header>
 
-<!-- ── HERO ── -->
+<!-- ══ HERO ══ -->
 <section class="hero">
-  <div class="hero-topline"></div>
-  <div class="wrap">
-    <div class="hero-in">
-      <div class="hero-txt">
-        <div class="hero-badge">Guia Prático · Maio 2026</div>
-        <h1>Entenda como a IA funciona — e use isso a favor da <em>sua carreira e do seu negócio.</em></h1>
-        <p class="hero-sub">
-          30 prompts prontos + o método por trás de cada um. Para qualquer profissional aprender a pensar com IA, ganhar controle das ferramentas e economizar 5+ horas por semana — sem precisar saber programar.
-        </p>
-
+  <div class="hero-bg">
+    <img src="assets/hero.jpg" alt="Profissional usando IA no trabalho">
+    <div class="hero-grad"></div>
+    <div class="hero-grad2"></div>
+  </div>
+  <div class="hero-main">
+    <div>
+      <div class="eyebrow">Guia Prático · Edição v1 · Junho 2026</div>
+      <h1>Pense com IA.<br><span class="l2">Recupere 5h por semana.</span></h1>
+      <p class="hero-sub">Um guia direto com 30 prompts prontos e o método por trás de cada um — para qualquer profissional, sem saber programar.</p>
+      <div class="hero-cta-row">
+        <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime" onclick="trackCTA('hero')">
+          Quero economizar 5h por semana
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
         <div class="hero-cd">
-          <span class="lbl">Preço de lançamento encerra em</span>
-          <div class="hero-cd-u">
-            <div class="cdu"><span class="n" id="hcd-h">--</span><span class="l">horas</span></div>
-            <span class="cdsep">:</span>
-            <div class="cdu"><span class="n" id="hcd-m">--</span><span class="l">min</span></div>
-            <span class="cdsep">:</span>
-            <div class="cdu"><span class="n" id="hcd-s">--</span><span class="l">seg</span></div>
-          </div>
-        </div>
-
-        <div class="hero-metrics">
-          <div class="hero-m">
-            <div class="n">40%</div>
-            <div class="l">mais produtividade<br>com IA (BCG, 2024)</div>
-          </div>
-          <div class="hero-m">
-            <div class="n">R$40M</div>
-            <div class="l">economizados/ano<br>(Klarna, 2024)</div>
-          </div>
-          <div class="hero-m">
-            <div class="n">R$37</div>
-            <div class="l">acesso completo<br>garantia 7 dias</div>
-          </div>
-          <div class="hero-m">
-            <div class="n">5+h</div>
-            <div class="l">economizadas/semana<br>com prompts prontos</div>
-          </div>
-        </div>
-
-        <div class="hero-cta">
-          <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener"
-             class="btn btn-g lg" onclick="trackCTA('hero')">QUERO O GUIA AGORA — R$37</a>
-          <span class="hero-note"><strong>✓ Garantia de 7 dias</strong> · PDF imediato · Sem assinatura</span>
+          <span class="lbl">Pague uma vez</span>
+          <div class="clock" style="font-size:17px;letter-spacing:-.005em">Atualizações mensais grátis · v1, v2, v3…</div>
         </div>
       </div>
-
-      <div class="hero-photo-wrap">
-        <div class="hero-photo-card">
-          <img src="./hero-photo.jpg" alt="Profissional usando IA no trabalho" width="300">
-        </div>
+      <div class="hero-trust">
+        <span>✓ R$37 · pagamento único</span>
+        <span>✓ Garantia 7 dias</span>
+        <span>✓ PDF imediato</span>
       </div>
-
     </div>
-  </div>
-</section>
-
-<!-- ── TRUST BAR ── -->
-<div class="trust-bar">
-  <div class="wrap">
-    <div class="trust-items">
-      <div class="trust-item"><span class="trust-icon">✓</span> Acesso imediato em PDF</div>
-      <div class="trust-item"><span class="trust-icon">✓</span> Garantia de 7 dias</div>
-      <div class="trust-item"><span class="trust-icon">✓</span> Pagamento único</div>
-      <div class="trust-item"><span class="trust-icon">✓</span> Prompts prontos para usar</div>
-      <div class="trust-item"><span class="trust-icon">✓</span> Plano de ação de 30 dias</div>
-    </div>
-  </div>
-</div>
-
-<!-- ── PAIN ── -->
-<section class="section section-alt">
-  <div class="wrap">
-    <div class="eyebrow">O problema</div>
-    <h2 class="ttl">Enquanto você fica aí procrastinando, seus concorrentes já estão usando IA</h2>
-    <div class="gbar"></div>
-    <div class="pain-grid">
-      <div class="pain-card">
-        <div class="pain-ico">⏱️</div>
-        <div class="pain-tag">Tempo perdido</div>
-        <strong>Tarefas repetitivas consomem sua semana</strong>
-        <p>Relatórios, e-mails, planilhas, descrições — trabalhos que levam horas e que a IA faz em minutos.</p>
+    <div class="hero-cards">
+      <div class="hcard">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></div>
+        <div><h4>30 prompts prontos</h4><p>Copie, cole e use no mesmo dia em e-mails, propostas e relatórios — sem setup.</p></div>
       </div>
-      <div class="pain-card">
-        <div class="pain-ico">💸</div>
-        <div class="pain-tag">Dinheiro desperdiçado</div>
-        <strong>Você paga por trabalho que poderia ser automatizado</strong>
-        <p>Freelancers de copy, analistas, redatores — custos que podem ser reduzidos em 60–80% com IA.</p>
+      <div class="hcard">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2.2"/><circle cx="18" cy="5" r="2.2"/><path d="M8.2 19H15a3.5 3.5 0 0 0 0-7H9a3.5 3.5 0 0 1 0-7h6.8"/></svg></div>
+        <div><h4>Plano de 30 dias</h4><p>Cronograma semana a semana pra integrar IA na sua rotina real de trabalho.</p></div>
       </div>
-      <div class="pain-card">
-        <div class="pain-ico">📉</div>
-        <div class="pain-tag">Concorrência desigual</div>
-        <strong>Uma pessoa com IA supera uma equipe de 3</strong>
-        <p>Você está competindo no mesmo mercado sem essa vantagem? Cada semana de atraso amplia a distância.</p>
-      </div>
-      <div class="pain-card">
-        <div class="pain-ico">🧱</div>
-        <div class="pain-tag">Barreira falsa</div>
-        <strong>Você não precisa ser técnico para usar IA</strong>
-        <p>As ferramentas de hoje foram feitas para qualquer pessoa. O que falta é saber como pedir — e é isso que este guia ensina.</p>
+      <div class="hcard">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.6 3.4 8.4 8 9 4.6-.6 8-4.4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div><h4>Garantia de 7 dias</h4><p>Não economizou 5h na primeira semana? Devolvemos 100%. Risco zero.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── BENEFIT GRID ── -->
-<section class="section">
+<!-- ══ AUTOR ══ -->
+<section class="section" id="autor" style="background:var(--ink)">
   <div class="wrap">
-    <div class="tc">
+    <div class="eyebrow">Quem fez este guia</div>
+    <div class="author-grid">
+      <div class="author-photo"><img src="assets/dayyan-square.jpg" alt="Dayyán Morandi"></div>
+      <div>
+        <h2>Construído por quem <span class="lime">aplica IA todo dia</span>, não por quem só estuda.</h2>
+        <div class="author-meta">
+          <div class="author-name-row">
+            <span class="author-name">Dayyán Morandi</span>
+            <span class="author-chip">Mentor · Empresário · Estrategista</span>
+          </div>
+          <div class="author-bio">Empresário e empreendedor, especialista em mídia e desenvolvimento de negócios. Possui vinte anos de experiência profissional, criando o que a indústria ainda não sabia que precisava. Pioneiro na produção de conteúdo digital esportivo de alto padrão, com projetos distribuídos em ESPN, DAZN, Amazon Prime Video e Fórmula 1. Criador do BRAVO! Football Group — IP global em expansão internacional — e da metodologia Content Business Strategy (CBS). Diretor Executivo e Criativo da 4Content, com atuação no Brasil, Europa e Estados Unidos.</div>
+          <a href="https://www.linkedin.com/in/dayyanmorandi/" target="_blank" rel="noopener" class="author-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v15.5H.22V8zM7.5 8h4.37v2.12h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 7v8.75h-4.56V15.5c0-1.7-.03-3.88-2.37-3.88-2.37 0-2.73 1.85-2.73 3.76V23.5H7.5V8z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ AMOSTRA DE PROMPT ══ -->
+<section class="section" id="amostra" style="background:linear-gradient(180deg,#06080b 0%,#0a0d12 100%)">
+  <div class="wrap">
+    <div class="ps-grid">
+      <div>
+        <div class="eyebrow lime">Amostra do guia</div>
+        <h2 class="ttl">Um dos 30 prompts.<br><span class="lime">Copie, cole, funciona.</span></h2>
+        <p class="sub">Cada prompt no guia foi escrito com a fórmula <strong style="color:#fff">C.A.R.E.</strong> — Contexto, Ação, Restrições e Exemplo. Resultado: a IA entende exatamente o que você quer, na primeira tentativa.</p>
+        <div class="ps-stats">
+          <span class="k">E-mails</span><span class="v">30 → 5 min cada</span>
+          <span class="k">Relatórios</span><span class="v">5h → 45 min</span>
+          <span class="k">Posts de social</span><span class="v">1h → 8 min</span>
+          <span class="k">Resumos de reunião</span><span class="v">1,5h → 5 min</span>
+        </div>
+      </div>
+      <div>
+        <div class="ps-term">
+          <div class="ps-bar">
+            <div class="ps-dots"><span class="ps-dot" style="background:#ff5f57"></span><span class="ps-dot" style="background:#febc2e"></span><span class="ps-dot" style="background:#28c840"></span></div>
+            <div class="ps-meta" id="ps-meta">prompt #01 · amostra do guia</div>
+            <div class="ps-save" id="ps-save">−15 min por e-mail</div>
+          </div>
+          <div class="ps-tabs" id="ps-tabs">
+            <button class="ps-tab active" data-i="0">E-mail comercial</button>
+            <button class="ps-tab" data-i="1">Resumo de reunião</button>
+            <button class="ps-tab" data-i="2">Descrição de produto</button>
+          </div>
+          <div class="ps-body">
+            <div class="ps-you"><div class="ps-label">Você</div><div class="bubble" id="ps-prompt"></div></div>
+            <div class="ps-ia"><div class="ps-label"><span class="ps-dot-live"></span> IA</div><div class="bubble" id="ps-response"></div></div>
+          </div>
+        </div>
+        <div style="margin-top:18px;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--faint);text-transform:uppercase">↑ navegue pelos 3 prompts de exemplo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OFERTA ══ -->
+<section class="section" id="oferta" style="background:linear-gradient(180deg,#06080b 0%,#0a0d12 100%)">
+  <div class="wrap">
+    <div class="offer-grid">
+      <div>
+        <div class="eyebrow lime">A oferta</div>
+        <h2 class="ttl"><span class="lime">R$37</span> pra recuperar<br>5 horas da sua semana.</h2>
+        <p class="sub">Não é um curso de 40 horas. É um guia direto com o que você precisa pra usar IA na sua rotina — começando hoje.</p>
+        <ul class="offer-list">
+          <li><span class="chk-sm">✓</span> 30 prompts prontos · copia e cola</li>
+          <li><span class="chk-sm">✓</span> 8 capítulos do zero ao avançado</li>
+          <li><span class="chk-sm">✓</span> Plano de ação de 30 dias</li>
+          <li><span class="chk-sm">✓</span> Comparativo de ferramentas sempre atualizado</li>
+          <li><span class="chk-sm">✓</span> Atualizações mensais grátis · v1, v2, v3…</li>
+          <li><span class="chk-sm">✓</span> Acesso vitalício em PDF</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <div class="eyebrow lime" style="margin-bottom:18px">Acesso completo</div>
+        <div class="upd-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+          <div><strong>Atualizações mensais grátis</strong><span>Compre a v1 hoje · receba v2, v3, v4… sem pagar de novo</span></div>
+        </div>
+        <div class="price-row">
+          <div>
+            <div class="price-from">De R$97</div>
+            <div class="price-now"><span class="cur">R$</span><span class="val">37</span></div>
+          </div>
+          <div class="price-side">Pagamento único<br>Acesso vitalício</div>
+        </div>
+        <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="price-btn" onclick="trackCTA('offer')">
+          Garantir meu acesso agora
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <div class="price-notes">
+          <div style="color:rgba(255,255,255,.78)"><span class="chk">✓</span> 7 dias de garantia — devolução 100% sem perguntas</div>
+          <div style="color:var(--muted)">🔒 Pagamento seguro via Kiwify</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OBRIGATÓRIO — 5 CASOS ══ -->
+<section class="section" id="obrigatorio" style="background:linear-gradient(180deg,#0a0d12 0%,#06080b 50%,#0a0d12 100%)">
+  <div class="wrap">
+    <div class="head-block" style="max-width:920px">
+      <div class="eyebrow lime">Por que ficou obrigatório</div>
+      <h2 class="ttl" style="font-size:clamp(40px,5.4vw,80px);line-height:.98">Saber usar IA <span class="lime">não é mais opcional</span>.<br>Veja em 5 frentes onde você já está perdendo.</h2>
+      <p class="sub">Cada um destes casos representa horas, dinheiro ou vantagem competitiva que estão escorrendo enquanto a sua concorrência aprende a usar essas ferramentas. Não é sobre adotar IA "no futuro" — é sobre o que já mudou esta semana.</p>
+    </div>
+    <div id="cases" style="display:flex;flex-direction:column;gap:24px"></div>
+    <div class="cta-blk">
+      <div>
+        <h3>Cinco frentes. Uma única decisão: <span class="lime">aprender hoje</span>.</h3>
+        <p>R$37 pra entrar no mesmo nível de quem já está aplicando IA todos os dias. Em uma semana você está nas 5 frentes acima — com prompt, método e plano.</p>
+      </div>
+      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime" onclick="trackCTA('mandatory')">Quero o guia — R$37 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROBLEMA ══ -->
+<section class="section" id="problema" style="background:var(--ink)">
+  <div class="wrap">
+    <div class="head-block">
+      <div class="eyebrow">O problema</div>
+      <h2 class="ttl">Enquanto você ainda decide, seus concorrentes já estão <span class="lime">usando IA</span></h2>
+      <p class="sub">Quatro custos invisíveis que estão drenando sua semana — e a vantagem que sua concorrência já tem.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card hov pcard"><div class="ico-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div class="tag">Tempo perdido</div><h3>Tarefas repetitivas consomem sua semana</h3><p>Relatórios, e-mails, planilhas, descrições — trabalhos que levam horas e que a IA faz em minutos.</p></div>
+      <div class="card hov pcard"><div class="ico-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5C14 8.5 13 8 12 8c-1.5 0-2.5 1-2.5 2s1 1.7 2.5 2 2.5 1 2.5 2-1 2-2.5 2c-1 0-2-.5-2.5-1.5M12 7v1M12 16v1"/></svg></div><div class="tag">Dinheiro desperdiçado</div><h3>Você paga por trabalho que poderia ser automatizado</h3><p>Freelancers de copy, analistas, redatores — custos que podem ser reduzidos em 60–80% com IA.</p></div>
+      <div class="card hov pcard"><div class="ico-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-9"/><path d="M14 6h7v7"/></svg></div><div class="tag">Concorrência desigual</div><h3>Uma pessoa com IA supera uma equipe de 3</h3><p>Você está competindo no mesmo mercado sem essa vantagem? Cada semana de atraso amplia a distância.</p></div>
+      <div class="card hov pcard"><div class="ico-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1"/><rect x="3" y="14" width="18" height="6" rx="1"/></svg></div><div class="tag">Barreira falsa</div><h3>Você não precisa ser técnico para usar IA</h3><p>As ferramentas de hoje foram feitas para qualquer pessoa. O que falta é saber como pedir — e é isso que este guia ensina.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RAZÕES ══ -->
+<section class="section" id="razoes" style="background:linear-gradient(180deg,#06080b 0%,#0a0d12 100%)">
+  <div class="wrap">
+    <div class="head-block center">
       <div class="eyebrow">Por que este guia funciona</div>
-      <h2 class="ttl">6 razões para começar hoje</h2>
-      <div class="gbar"></div>
+      <h2 class="ttl">6 razões para começar <span class="lime">hoje</span></h2>
       <p class="sub">Mais do que teoria — um guia construído para gerar resultado imediato, mesmo para quem nunca usou IA antes.</p>
     </div>
-    <div class="ben-grid">
-      <div class="ben-card">
-        <div class="ben-ico-w">⚡</div>
-        <h4>Implementação no mesmo dia</h4>
-        <p>Prompts prontos para copiar e usar hoje em e-mails, propostas, relatórios e atendimento — sem configuração.</p>
-      </div>
-      <div class="ben-card">
-        <div class="ben-ico-w">💰</div>
-        <h4>ROI mensurável em semanas</h4>
-        <p>Exemplos concretos de quanto tempo e dinheiro cada automação economiza. Você vê o retorno antes de terminar o guia.</p>
-      </div>
-      <div class="ben-card">
-        <div class="ben-ico-w">🧠</div>
-        <h4>Entenda como a IA pensa</h4>
-        <p>Você aprende a lógica por trás dos resultados — não só o que escrever, mas por que funciona. Isso significa criar seus próprios prompts a partir do zero.</p>
-      </div>
-      <div class="ben-card">
-        <div class="ben-ico-w">📊</div>
-        <h4>Baseado em dados reais</h4>
-        <p>Cada recomendação é respaldada por estudos da BCG, McKinsey, JPMorgan e Klarna — não em especulação.</p>
-      </div>
-      <div class="ben-card">
-        <div class="ben-ico-w">🕹️</div>
-        <h4>Orquestre agentes e ferramentas</h4>
-        <p>Aprenda a combinar múltiplos agentes de IA em fluxos de trabalho — e saiba qual ferramenta usar em cada etapa. Você decide a estratégia, a IA executa.</p>
-      </div>
-      <div class="ben-card">
-        <div class="ben-ico-w">🛠️</div>
-        <h4>Ferramentas de Maio 2026</h4>
-        <p>Comparativo atualizado de ChatGPT, Claude, Gemini, Perplexity e Make — qual usar para cada tipo de tarefa.</p>
-      </div>
-    </div>
+    <div class="grid-3" id="reasons"></div>
   </div>
 </section>
 
-<!-- ── PARA QUEM É ── -->
-<section class="section section-alt">
+<!-- ══ DADOS DE MERCADO ══ -->
+<section class="section" id="dados" style="background:linear-gradient(180deg,#0a0d12 0%,#06080b 100%)">
   <div class="wrap">
-    <div class="tc">
-      <div class="eyebrow">Para quem é este guia</div>
-      <h2 class="ttl">Se você trabalha com informação, comunicação ou decisão — este guia é para você</h2>
-      <div class="gbar"></div>
-      <p class="sub">Não importa a área. Se a sua rotina envolve escrever, analisar, atender, vender ou gerenciar, a IA pode cortar esse tempo pela metade.</p>
-    </div>
-    <div class="ben-grid" style="margin-top:40px">
-      <div class="ben-card">
-        <div class="ben-ico-w">⚖️</div>
-        <h4>Profissionais Liberais</h4>
-        <p>Advogados, médicos, psicólogos, contadores e consultores que querem automatizar documentos, relatórios e comunicações com clientes.</p>
-      </div>
-      <div class="ben-card">
-        <div class="ben-ico-w">📣</div>
-        <h4>Marketing & Comunicação</h4>
-        <p>Social media, redatores, gestores de tráfego e relações públicas que precisam produzir mais conteúdo em menos tempo — com qualidade.</p>
-      </div>
-      <div class="ben-card">
-        <div class="ben-ico-w">🚀</div>
-        <h4>Empreendedores & PMEs</h4>
-        <p>Donos de negócio e sócios que acumulam funções e precisam de ferramentas que multiplicam a produtividade sem aumentar a equipe.</p>
-      </div>
-      <div class="ben-card">
-        <div class="ben-ico-w">👥</div>
-        <h4>Gestores de Equipe</h4>
-        <p>Coordenadores, gerentes e diretores que querem usar IA para tomar decisões mais rápidas, documentar processos e liderar com mais eficiência.</p>
-      </div>
-      <div class="ben-card">
-        <div class="ben-ico-w">💼</div>
-        <h4>Vendas & Atendimento</h4>
-        <p>Representantes, closers e SDRs que querem propostas, follow-ups e scripts personalizados em segundos — sem perder o toque humano.</p>
-      </div>
-      <div class="ben-card">
-        <div class="ben-ico-w">🎓</div>
-        <h4>Qualquer Profissional em Transição</h4>
-        <p>Quem quer se manter relevante no mercado e entender, na prática, como a IA está mudando cada setor — antes de ser impactado por ela.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── MARKET DATA ── -->
-<section class="section section-alt">
-  <div class="wrap">
-    <div class="tc">
+    <div class="head-block center">
       <div class="eyebrow">Dados de mercado</div>
-      <h2 class="ttl">O que as maiores empresas do mundo já estão declarando</h2>
-      <div class="gbar"></div>
+      <h2 class="ttl">O que as maiores empresas do mundo já estão <span class="lime">declarando</span></h2>
       <p class="sub">Declarações públicas de resultados reais com IA. A pergunta é: quando a sua empresa vai fazer o mesmo?</p>
     </div>
-    <div class="data-grid">
-      <div class="data-card">
-        <div class="stat"><span>R$40M</span>/ano</div>
-        <p class="desc">A Klarna substituiu o trabalho de <strong>700 atendentes</strong> com IA — realocando equipe para funções de maior valor.</p>
-        <div class="src">Klarna, Relatório Público 2024</div>
-      </div>
-      <div class="data-card">
-        <div class="stat"><span>360k</span> h/ano</div>
-        <p class="desc">O JPMorgan implementou IA para análise de contratos e economizou <strong>360 mil horas de trabalho jurídico</strong> por ano.</p>
-        <div class="src">JPMorgan Chase, 2023</div>
-      </div>
-      <div class="data-card">
-        <div class="stat"><span>40%</span> melhor</div>
-        <p class="desc">Consultores com IA entregaram trabalho <strong>40% melhor em qualidade</strong> e completaram <strong>25% mais tarefas</strong> no mesmo tempo.</p>
-        <div class="src">BCG & Harvard Business School, 2023</div>
-      </div>
-      <div class="data-card">
-        <div class="stat"><span>55%</span> mais rápido</div>
-        <p class="desc">Desenvolvedores com GitHub Copilot completaram tarefas <strong>55% mais rápido</strong>. Ganhos generalizados em toda a Microsoft.</p>
-        <div class="src">Microsoft / GitHub, 2023</div>
-      </div>
-      <div class="data-card">
-        <div class="stat"><span>44%</span> das funções</div>
-        <p class="desc">O Fórum Econômico Mundial estima que <strong>44% das habilidades profissionais</strong> serão transformadas pela IA até 2027.</p>
-        <div class="src">World Economic Forum, Future of Jobs 2025</div>
-      </div>
-      <div class="data-card">
-        <div class="stat"><span>2×</span> crescimento</div>
-        <p class="desc">PMEs que adotam tecnologia digital crescem <strong>2x mais rápido</strong>. IA é a maior alavanca disponível hoje para qualquer porte.</p>
-        <div class="src">Sebrae / FGV, Relatório de Inovação 2024</div>
-      </div>
-    </div>
+    <div class="grid-3" id="data"></div>
     <div class="cta-blk">
-      <h3>O conhecimento que separa quem cresce de quem fica para trás</h3>
-      <p>Por R$37 você tem acesso a tudo que precisa para começar a usar IA de forma prática, hoje.</p>
-      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener"
-         class="btn btn-g" onclick="trackCTA('market_cta')">QUERO O GUIA — R$37</a>
-      <p class="gn" style="margin-top:12px;"><strong>✓ Garantia total de 7 dias.</strong> Não gostou? Devolvemos 100%.</p>
+      <div>
+        <h3>O conhecimento que separa <span class="lime">quem cresce</span> de quem fica para trás.</h3>
+        <p>Por R$37 você tem acesso a tudo que precisa para começar a usar IA de forma prática, hoje.</p>
+      </div>
+      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime" onclick="trackCTA('market')">Quero o guia — R$37 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ── ROI ── -->
-<section class="section">
+<!-- ══ IMPACTO / ROI ══ -->
+<section class="section" id="impacto" style="background:var(--ink)">
   <div class="wrap">
-    <div class="eyebrow">Comparativo de impacto</div>
-    <h2 class="ttl">Quanto custa <span style="color:var(--red)">NÃO</span> usar IA na sua empresa?</h2>
-    <div class="gbar"></div>
-    <p class="sub">Veja a economia real que um profissional ou pequeno negócio pode gerar com IA nas tarefas do dia a dia.</p>
-
-    <div class="bar-wrap">
-      <div class="bar-wrap-ttl">Horas por tarefa — Antes vs. Com IA</div>
-      <div class="bar-wrap-sub">Estimativa de tempo por tarefa comum em PMEs</div>
-      <div class="chart-leg">
-        <div style="display:flex;align-items:center;gap:5px;"><div class="leg-dot" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.15);"></div> Sem IA</div>
-        <div style="display:flex;align-items:center;gap:5px;"><div class="leg-dot" style="background:var(--neon-g);box-shadow:0 0 6px rgba(0,230,118,0.5);"></div> Com IA</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-lbl">Proposta comercial</div>
-        <div class="bar-track">
-          <div class="bar-bef" style="width:80%"><span class="bar-v">3h</span></div>
-          <div class="bar-aft" style="width:13%"><span class="bar-v bar-va">30min</span></div>
-        </div>
-        <div class="bar-tag">−83%</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-lbl">Posts de conteúdo</div>
-        <div class="bar-track">
-          <div class="bar-bef" style="width:68%"><span class="bar-v">4h</span></div>
-          <div class="bar-aft" style="width:8%"><span class="bar-v bar-va">20min</span></div>
-        </div>
-        <div class="bar-tag">−92%</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-lbl">Relatório gerencial</div>
-        <div class="bar-track">
-          <div class="bar-bef" style="width:90%"><span class="bar-v">5h</span></div>
-          <div class="bar-aft" style="width:18%"><span class="bar-v bar-va">45min</span></div>
-        </div>
-        <div class="bar-tag">−85%</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-lbl">E-mail de campanha</div>
-        <div class="bar-track">
-          <div class="bar-bef" style="width:42%"><span class="bar-v">2h</span></div>
-          <div class="bar-aft" style="width:7%"><span class="bar-v bar-va">15min</span></div>
-        </div>
-        <div class="bar-tag">−88%</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-lbl">Descrição de produto</div>
-        <div class="bar-track">
-          <div class="bar-bef" style="width:55%"><span class="bar-v">2,5h</span></div>
-          <div class="bar-aft" style="width:6%"><span class="bar-v bar-va">10min</span></div>
-        </div>
-        <div class="bar-tag">−93%</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-lbl">Resumo de reunião</div>
-        <div class="bar-track">
-          <div class="bar-bef" style="width:34%"><span class="bar-v">1,5h</span></div>
-          <div class="bar-aft" style="width:5%"><span class="bar-v bar-va">5min</span></div>
-        </div>
-        <div class="bar-tag">−94%</div>
-      </div>
+    <div class="head-block">
+      <div class="eyebrow">Comparativo de impacto</div>
+      <h2 class="ttl">Quanto custa <span class="lime">NÃO usar IA</span> na sua empresa?</h2>
+      <p class="sub">A economia real que um profissional ou pequeno negócio pode gerar com IA nas tarefas do dia a dia.</p>
     </div>
-
-    <div class="tbl-wrap">
-      <table class="roi-tbl">
-        <thead>
-          <tr>
-            <th>Situação</th><th>Sem IA / mês</th>
-            <th class="gold">Com IA / mês</th><th>Economia</th>
-          </tr>
-        </thead>
+    <div class="card bars">
+      <div class="bars-head">
+        <h3>Horas por tarefa — Antes vs. Com IA</h3>
+        <div class="bars-leg"><span><span class="leg-dot" style="background:rgba(255,255,255,.18)"></span>Sem IA</span><span><span class="leg-dot" style="background:#C8FF3D"></span>Com IA</span></div>
+      </div>
+      <div class="bars-sub">Estimativa de tempo por tarefa comum em PMEs</div>
+      <div id="bars"></div>
+    </div>
+    <div class="tbl-wrap card" style="border-radius:22px">
+      <table class="roi">
+        <thead><tr><th>Situação</th><th>Sem IA / mês</th><th>Com IA / mês</th><th>Economia</th></tr></thead>
         <tbody>
-          <tr>
-            <td>Profissional autônomo — copywriting</td>
-            <td class="bef">R$3.200 (freelancer)</td>
-            <td><strong>R$37</strong> (este guia)</td>
-            <td>R$3.163/mês</td>
-          </tr>
-          <tr>
-            <td>Gestor — 40h/mês em relatórios</td>
-            <td class="bef">40h improdutivas</td>
-            <td><strong>4h com IA</strong></td>
-            <td>36h recuperadas</td>
-          </tr>
-          <tr>
-            <td>E-commerce — descrições de produto</td>
-            <td class="bef">R$1.800/mês (redator)</td>
-            <td><strong>R$0</strong> extra</td>
-            <td>R$1.800/mês</td>
-          </tr>
-          <tr>
-            <td>Agência — produção de conteúdo</td>
-            <td class="bef">3 dias/semana</td>
-            <td><strong>4h/semana</strong></td>
-            <td>2 dias livres</td>
-          </tr>
-          <tr>
-            <td>PME — atendimento ao cliente</td>
-            <td class="bef">R$4.500/mês (assistente)</td>
-            <td><strong>R$150/mês</strong> (IA)</td>
-            <td>R$4.350/mês</td>
-          </tr>
+          <tr><td>Profissional autônomo — copywriting</td><td class="bef">R$3.200 (freelancer)</td><td class="now">R$37 (este guia)</td><td class="save">R$3.163/mês</td></tr>
+          <tr><td>Gestor — 40h/mês em relatórios</td><td class="bef">40h improdutivas</td><td class="now">4h com IA</td><td class="save">36h recuperadas</td></tr>
+          <tr><td>E-commerce — descrições de produto</td><td class="bef">R$1.800/mês (redator)</td><td class="now">R$0 extra</td><td class="save">R$1.800/mês</td></tr>
+          <tr><td>Agência — produção de conteúdo</td><td class="bef">3 dias/semana</td><td class="now">4h/semana</td><td class="save">2 dias livres</td></tr>
+          <tr><td>PME — atendimento ao cliente</td><td class="bef">R$4.500/mês (assistente)</td><td class="now">R$150/mês (IA)</td><td class="save">R$4.350/mês</td></tr>
         </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3"><strong>Retorno sobre investimento no 1º mês</strong></td>
-            <td>+8.500× o valor do guia</td>
-          </tr>
-        </tfoot>
+        <tfoot><tr><td colspan="3">Retorno sobre o investimento no 1º mês</td><td>+8.500×</td></tr></tfoot>
       </table>
     </div>
   </div>
 </section>
 
-<!-- ── CHAPTERS ── -->
-<section class="section section-alt">
+<!-- ══ CAPÍTULOS ══ -->
+<section class="section" id="capitulos" style="background:linear-gradient(180deg,#06080b 0%,#0a0d12 100%)">
   <div class="wrap">
-    <div class="eyebrow">O que você vai aprender</div>
-    <h2 class="ttl">8 capítulos. Do zero à IA integrada no seu negócio.</h2>
-    <div class="gbar"></div>
-    <div class="chs-grid">
-      <div class="ch-card"><div class="ch-n">01</div><div><div class="ch-ttl">Por Que IA Vai Mudar Sua Vida</div><div class="ch-dsc">O contexto real da transformação — por que 2025 é o ponto de virada e o que está em jogo para quem não agir agora.</div></div></div>
-      <div class="ch-card"><div class="ch-n">02</div><div><div class="ch-ttl">IA para Pequenas e Médias Empresas</div><div class="ch-dsc">Aplicações concretas por departamento: Vendas, Marketing, Financeiro, RH, Atendimento e Operações — com casos reais.</div></div></div>
-      <div class="ch-card"><div class="ch-n">03</div><div><div class="ch-ttl">Redução de Custos com IA</div><div class="ch-dsc">Dados reais de redução de custo operacional. Onde cortar, quanto cortar e como implementar em menos de 30 dias.</div></div></div>
-      <div class="ch-card"><div class="ch-n">04</div><div><div class="ch-ttl">Automação de Processos</div><div class="ch-dsc">Antes vs. depois em 5 processos comuns de PME. Como transformar operações que levam dias em rotinas de minutos.</div></div></div>
-      <div class="ch-card"><div class="ch-n">05</div><div><div class="ch-ttl">Engenharia de Prompt — Fórmula C.A.R.E.</div><div class="ch-dsc">O sistema que transforma qualquer pedido em um prompt que realmente funciona. Exemplos prontos para copiar e usar.</div></div></div>
-      <div class="ch-card"><div class="ch-n">06</div><div><div class="ch-ttl">As Principais Ferramentas de IA</div><div class="ch-dsc">Comparativo completo de ChatGPT, Claude, Gemini, Perplexity e outras. Qual usar para cada tipo de tarefa.</div></div></div>
-      <div class="ch-card"><div class="ch-n">07</div><div><div class="ch-ttl">Arquitetura de Informação e Agentes de IA</div><div class="ch-dsc">Como estruturar processos, bases de conhecimento e orquestrar múltiplos agentes de IA trabalhando juntos — automações que escalam sem esforço humano constante.</div></div></div>
-      <div class="ch-card"><div class="ch-n">08</div><div><div class="ch-ttl">Plano de Ação — 30 Dias com IA</div><div class="ch-dsc">Um cronograma semana a semana para integrar IA no seu trabalho real — com metas, ferramentas e prompts para cada etapa.</div></div></div>
+    <div class="head-block">
+      <div class="eyebrow">O que você vai aprender</div>
+      <h2 class="ttl">8 capítulos. Do zero à IA <span class="lime">integrada</span> no seu negócio.</h2>
+      <p class="sub">Estrutura linear: cada capítulo é um degrau prático construído sobre o anterior.</p>
     </div>
+    <div class="grid-2" id="chapters"></div>
     <div class="cta-blk">
-      <h3>Tudo isso por menos do que um jantar</h3>
-      <p>Acesso imediato aos 8 capítulos + prompts prontos + plano de 30 dias + comparativo de ferramentas.</p>
-      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener"
-         class="btn btn-g" onclick="trackCTA('chapters_cta')">GARANTIR MEU ACESSO — R$37</a>
-      <p class="gn" style="margin-top:12px;"><strong>✓ 7 dias de garantia incondicional.</strong> Não gostou, devolvemos 100%.</p>
+      <div>
+        <h3>Tudo isso por <span class="lime">menos do que um jantar</span>.</h3>
+        <p>Acesso imediato aos 8 capítulos + prompts prontos + plano de 30 dias + comparativo de ferramentas.</p>
+      </div>
+      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime" onclick="trackCTA('chapters')">Garantir meu acesso — R$37 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ── TOOLS ── -->
-<section class="section">
+<!-- ══ FERRAMENTAS ══ -->
+<section class="section" id="ferramentas" style="background:var(--ink2)">
   <div class="wrap">
-    <div class="eyebrow">Comparativo de ferramentas</div>
-    <h2 class="ttl">Qual ferramenta usar para cada situação?</h2>
-    <div class="gbar"></div>
-    <p class="sub">O ebook traz um comparativo completo. Veja um resumo das principais ferramentas disponíveis hoje.</p>
-    <div class="tbl-wrap">
-      <table class="tools-tbl">
-        <thead>
-          <tr>
-            <th>Ferramenta</th><th>Textos</th><th>Dados</th>
-            <th>Imagens</th><th>Automação</th><th>Grátis?</th>
-            <th class="gold">Melhor para</th>
-          </tr>
-        </thead>
+    <div class="head-block">
+      <div class="eyebrow">Comparativo de ferramentas</div>
+      <h2 class="ttl">Qual ferramenta usar para <span class="lime">cada situação</span>?</h2>
+      <p class="sub">O ebook traz um comparativo completo. Veja um resumo das principais ferramentas disponíveis hoje.</p>
+    </div>
+    <div class="tbl-wrap card" style="border-radius:22px">
+      <table class="tools">
+        <thead><tr><th>Ferramenta</th><th>Textos</th><th>Dados</th><th>Imagens</th><th>Automação</th><th>Grátis?</th><th>Melhor para</th></tr></thead>
         <tbody>
-          <tr><td class="tnm">ChatGPT<span class="btag">popular</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">Parcial</span></td><td>Geral, textos, código</td></tr>
-          <tr><td class="tnm">Claude</td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="crs">—</span></td><td><span class="chk">✓</span></td><td><span class="chk">Parcial</span></td><td>Textos longos, análise</td></tr>
-          <tr><td class="tnm">Gemini<span class="btag">Google</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">Sim</span></td><td>Integração Google Workspace</td></tr>
-          <tr><td class="tnm">Perplexity</td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="crs">—</span></td><td><span class="crs">—</span></td><td><span class="chk">Parcial</span></td><td>Pesquisa com fontes</td></tr>
-          <tr><td class="tnm">Midjourney</td><td><span class="crs">—</span></td><td><span class="crs">—</span></td><td><span class="chk">✓</span></td><td><span class="crs">—</span></td><td><span class="crs">Não</span></td><td>Imagens profissionais</td></tr>
-          <tr><td class="tnm">Make / Zapier</td><td><span class="crs">—</span></td><td><span class="chk">✓</span></td><td><span class="crs">—</span></td><td><span class="chk">✓</span></td><td><span class="chk">Parcial</span></td><td>Automação de fluxos</td></tr>
+          <tr><td><span class="tnm">ChatGPT</span><span class="btag">popular</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td>Parcial</td><td>Geral, textos, código</td></tr>
+          <tr><td><span class="tnm">Claude</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="crs">—</span></td><td><span class="chk">✓</span></td><td>Parcial</td><td>Textos longos, análise</td></tr>
+          <tr><td><span class="tnm">Gemini</span><span class="btag">Google</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td>Sim</td><td>Integração Google Workspace</td></tr>
+          <tr><td><span class="tnm">Perplexity</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="crs">—</span></td><td><span class="crs">—</span></td><td>Parcial</td><td>Pesquisa com fontes</td></tr>
+          <tr><td><span class="tnm">Midjourney</span></td><td><span class="crs">—</span></td><td><span class="crs">—</span></td><td><span class="chk">✓</span></td><td><span class="crs">—</span></td><td>Não</td><td>Imagens profissionais</td></tr>
+          <tr><td><span class="tnm">Make/Zapier</span></td><td><span class="crs">—</span></td><td><span class="chk">✓</span></td><td><span class="crs">—</span></td><td><span class="chk">✓</span></td><td>Parcial</td><td>Automação de fluxos</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="cta-blk" style="margin-top:40px">
-      <h3>Você já sabe qual ferramenta usar para cada tarefa</h3>
-      <p>Agora aprenda os prompts que fazem cada uma delas entregar o máximo. Por R$37 com garantia de 7 dias.</p>
-      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener"
-         class="btn btn-g" onclick="trackCTA('tools_cta')">GARANTIR O GUIA — R$37</a>
-      <p class="gn" style="margin-top:12px;"><strong>✓ Garantia de 7 dias.</strong> Não gostou? Devolvemos 100%.</p>
-    </div>
   </div>
 </section>
 
-<!-- ── OFFER BOX ── -->
-<section class="section section-alt" id="oferta">
+<!-- ══ INCLUÍDO + PREÇO ══ -->
+<section class="section" id="incluido" style="background:linear-gradient(180deg,#0a0d12 0%,#06080b 100%)">
   <div class="wrap">
-    <div class="offer-box">
-      <h2>IA para Todos — Guia Prático</h2>
-      <p class="ofsub">30 prompts prontos para copiar e usar hoje — economize 5+ horas por semana, para qualquer profissional, sem saber programar.</p>
-      <ul class="chklist">
-        <li><span class="ck">✓</span> 30 prompts prontos — copie, cole e use no mesmo dia</li>
-        <li><span class="ck">✓</span> 8 capítulos — do zero ao avançado</li>
-        <li><span class="ck">✓</span> Fórmula C.A.R.E. — o método por trás de cada prompt</li>
-        <li><span class="ck">✓</span> Como a IA pensa — a lógica que faz qualquer prompt funcionar melhor</li>
-        <li><span class="ck">✓</span> Aplicações práticas por área: Vendas, Marketing, RH, Financeiro, Jurídico e mais</li>
-        <li><span class="ck">✓</span> Dicas exclusivas para tirar o máximo de cada ferramenta — e qual usar em cada situação</li>
-        <li><span class="ck">✓</span> Comparativo completo de ferramentas — Maio 2026</li>
-        <li><span class="ck">✓</span> Capítulo exclusivo: Arquitetura de Informação com IA</li>
-        <li><span class="ck">✓</span> Como orquestrar múltiplos agentes de IA para tarefas complexas</li>
-        <li><span class="ck">✓</span> Plano de ação de 30 dias — semana a semana</li>
-        <li><span class="ck">✓</span> Acesso imediato em PDF — para sempre</li>
-      </ul>
-
-      <div class="off-cd">
-        <div class="lbl">Preço de lançamento encerra em</div>
-        <div class="off-cd-u">
-          <div class="cdu"><span class="n" id="ocd-h">--</span><span class="l">horas</span></div>
-          <span class="cdsep">:</span>
-          <div class="cdu"><span class="n" id="ocd-m">--</span><span class="l">min</span></div>
-          <span class="cdsep">:</span>
-          <div class="cdu"><span class="n" id="ocd-s">--</span><span class="l">seg</span></div>
+    <div class="inc-grid">
+      <div>
+        <div class="eyebrow">O que está incluído</div>
+        <h2 class="ttl" style="font-size:clamp(34px,4vw,52px)">IA para Todos — <span class="lime">Guia Prático</span></h2>
+        <p class="sub">30 prompts prontos para copiar e usar hoje — economize 5+ horas por semana, para qualquer profissional, sem saber programar.</p>
+        <ul class="inc-list" id="inc-list"></ul>
+      </div>
+      <div class="price-card">
+        <div class="eyebrow lime" style="margin-bottom:18px">Acesso completo</div>
+        <div class="upd-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+          <div><strong>Atualizações mensais grátis</strong><span>Compre a v1 hoje · receba v2, v3, v4… sem pagar de novo</span></div>
+        </div>
+        <div class="price-row">
+          <div><div class="price-from">De R$97</div><div class="price-now"><span class="cur">R$</span><span class="val">37</span></div></div>
+          <div class="price-side">Pagamento único<br>Sem mensalidade<br>Acesso vitalício</div>
+        </div>
+        <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="price-btn" onclick="trackCTA('included')">
+          Garantir meu acesso agora
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <div class="price-notes">
+          <div style="color:rgba(255,255,255,.78)"><span class="chk">✓</span> Garantia 7 dias: não economizou 5h+? Devolvemos 100%</div>
+          <div style="color:var(--muted)"><span class="chk">✓</span> PDF imediato após o pagamento</div>
+          <div style="color:var(--muted)">🔒 Pagamento seguro via Kiwify</div>
         </div>
       </div>
-
-      <div class="price-rsn">Preço de lançamento · válido por tempo limitado</div>
-      <div class="price-fnl">
-        <div class="from">De R$97</div>
-        <div class="main"><span>R$</span>37</div>
-        <div class="per">pagamento único · sem mensalidade · acesso vitalício</div>
-      </div>
-      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener"
-         class="btn btn-g xl blk" onclick="trackCTA('offer_box')">GARANTIR MEU ACESSO AGORA</a>
-      <p style="font-size:12.5px;color:rgba(255,255,255,0.28);margin-top:16px;">
-        ✓ Garantia de 7 dias: se você não economizar 5+ horas na primeira semana, devolvemos 100%. Risco zero.
-      </p>
     </div>
   </div>
 </section>
 
-<!-- ── FAQ ── -->
-<section class="section">
+<!-- ══ TRANSPARÊNCIA ══ -->
+<section class="section" id="transparencia" style="background:linear-gradient(180deg,#06080b 0%,#04060a 100%)">
   <div class="wrap">
-    <div class="eyebrow">Perguntas frequentes</div>
-    <h2 class="ttl">Tudo que você quer saber antes de comprar</h2>
-    <div class="gbar"></div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">Preciso ter conhecimento técnico ou saber programar?<span class="faq-ico">+</span></button>
-        <div class="faq-ans"><p>Não. O guia foi escrito para quem nunca usou IA antes. Toda a linguagem é prática, com exemplos reais — sem jargão técnico, sem código. Se você sabe usar o WhatsApp, você consegue aplicar o conteúdo.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">O conteúdo serve para qualquer tipo de empresa ou profissão?<span class="faq-ico">+</span></button>
-        <div class="faq-ans"><p>Sim. O guia foi desenhado para qualquer profissional que trabalha com informação, comunicação ou decisão — advogados, médicos, profissionais de marketing, empreendedores, gestores, vendedores, RH. Há aplicações e exemplos diretos para cada área, não apenas para donos de empresa.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">O que exatamente vou aprender e dominar com este guia?<span class="faq-ico">+</span></button>
-        <div class="faq-ans"><p>Além dos 30 prompts prontos, você vai entender <strong>por que eles funcionam</strong> — a lógica de como a IA interpreta contexto, tom e estrutura. Com isso, você sai capaz de criar seus próprios prompts do zero, escolher a ferramenta certa para cada tarefa e adaptar o método a qualquer situação nova. Não é uma coleção de atalhos: é um modelo mental que você leva para sempre.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">Como funciona a garantia de 7 dias?<span class="faq-ico">+</span></button>
-        <div class="faq-ans"><p>Se por qualquer motivo você não ficar satisfeito nos primeiros 7 dias, basta enviar um e-mail para contato@businessforchampions.com e devolvemos 100% do valor. Sem burocracia, sem perguntas. O prazo segue o Código de Defesa do Consumidor (Art. 49).</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">Por que o preço é R$37 se o conteúdo vale muito mais?<span class="faq-ico">+</span></button>
-        <div class="faq-ans"><p>Estamos no período de lançamento e queremos que o maior número possível de profissionais e empreendedores brasileiros tenha acesso a esse conhecimento. O preço de R$37 é válido por tempo limitado — após o lançamento, o valor retorna para R$97.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">As ferramentas citadas são gratuitas?<span class="faq-ico">+</span></button>
-        <div class="faq-ans"><p>A maioria tem versões gratuitas funcionais. O ebook indica claramente quais são gratuitas, quais têm versão paga e para qual uso cada uma é mais indicada. É possível aplicar grande parte do conteúdo sem gastar nada além do guia.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">O conteúdo vai ficar desatualizado rapidamente?<span class="faq-ico">+</span></button>
-        <div class="faq-ans"><p>Os fundamentos — criar bons prompts, estruturar processos com IA, identificar oportunidades de automação — têm vida longa. O comparativo de ferramentas foi atualizado para Maio 2026 e a lógica por trás das recomendações não muda com novos modelos.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">Como recebo o ebook após a compra?<span class="faq-ico">+</span></button>
-        <div class="faq-ans"><p>O acesso é imediato. Assim que o pagamento for confirmado pela Kiwify, você recebe o link de download por e-mail em segundos. O PDF fica disponível para sempre — sem prazo de validade, sem mensalidade.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">Quanto tempo leva para ver os primeiros resultados?<span class="faq-ico">+</span></button>
-        <div class="faq-ans"><p>Os primeiros resultados aparecem no mesmo dia. O Capítulo 4 tem prompts que você pode copiar e aplicar em menos de 5 minutos — sem setup, sem configuração. Em 30 dias seguindo o plano de ação do guia, você terá automatizado pelo menos 3 processos da sua rotina.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">Há suporte após a compra?<span class="faq-ico">+</span></button>
-        <div class="faq-ans"><p>Sim. Qualquer dúvida sobre o conteúdo, envie para contato@businessforchampions.com e respondemos em até 24h. Compradores também terão acesso prioritário à comunidade exclusiva que estamos construindo — com novos prompts e cases reais toda semana.</p></div>
-      </div>
-    </div>
-    <div class="cta-blk">
-      <h3>Não espere o "momento certo". Ele já passou.</h3>
-      <p>Cada semana sem IA é uma semana pagando mais, produzindo menos e perdendo espaço para quem já decidiu agir.</p>
-      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener"
-         class="btn btn-g" onclick="trackCTA('faq_cta')">QUERO O GUIA AGORA — R$37</a>
-      <p class="gn" style="margin-top:12px;"><strong>✓ Garantia de 7 dias · Acesso imediato · Sem assinatura.</strong></p>
-    </div>
-  </div>
-</section>
-
-<!-- ── TRANSPARENCY ── -->
-<section class="section section-alt">
-  <div class="wrap">
-    <div class="tc">
+    <div class="head-block">
       <div class="eyebrow">Transparência total</div>
-      <h2 class="ttl">Como este guia foi desenvolvido</h2>
-      <div class="gbar"></div>
-      <p class="sub">Não escondemos nada. Este guia foi construído inteiramente com Inteligência Artificial — e isso é exatamente o que o torna um caso prático do que você vai aprender.</p>
+      <h2 class="ttl">Tudo isto foi feito com IA — <span class="lime">inclusive esta página</span></h2>
+      <p class="sub">Não escondo nada: o guia, esta landing page e toda a estratégia de marketing e venda foram produzidos 100% por mim, usando Claude e ChatGPT. Você não está lendo sobre o que a IA pode fazer — você está dentro de um exemplo vivo disso.</p>
     </div>
-    <div class="tr-grid">
-      <div class="tr-card">
-        <div class="tr-ico">🤖</div>
-        <h4>Desenvolvido com IA</h4>
-        <p>Todo o conteúdo foi gerado com Claude (Anthropic) e revisado editorialmente pelo autor — estrutura, lógica e exemplos.</p>
-      </div>
-      <div class="tr-card">
-        <div class="tr-ico">📊</div>
-        <h4>Dados verificáveis</h4>
-        <p>Todas as estatísticas — BCG, JPMorgan, Klarna, Microsoft — são de fontes públicas e verificáveis. Links disponíveis no guia.</p>
-      </div>
-      <div class="tr-card">
-        <div class="tr-ico">🔄</div>
-        <h4>Atualizado em Maio 2026</h4>
-        <p>O comparativo de ferramentas e os dados de mercado refletem o estado atual da IA — não informações defasadas.</p>
-      </div>
-      <div class="tr-card">
-        <div class="tr-ico">✅</div>
-        <h4>Revisão editorial humana</h4>
-        <p>Cada capítulo passou por revisão de clareza, coerência e aplicabilidade prática antes de ser publicado.</p>
-      </div>
+    <div class="grid-2" id="transp" style="margin-bottom:32px"></div>
+    <div class="tr-chips">
+      <span class="lbl">Ferramentas usadas</span>
+      <span class="tr-chip">Claude (Anthropic)</span>
+      <span class="tr-chip">Cowork</span>
+      <span class="tr-chip">Claude Code</span>
+      <span class="tr-chip">ChatGPT (OpenAI)</span>
+      <span class="tr-chip">Engenharia de prompt</span>
     </div>
     <div class="tr-quote">
-      <p>
-        <strong>Por que ser transparente sobre o uso de IA?</strong>
-        Porque acreditamos que a honestidade é parte da proposta. Um guia que ensina a usar IA foi,
-        ele mesmo, produzido com IA — e isso demonstra na prática o nível de qualidade que as ferramentas
-        certas conseguem entregar. Comprando este guia, você tem acesso exatamente ao processo que vai aprender a replicar.
-      </p>
+      <div class="lbl">A prova é a própria página</div>
+      <p>Eu não terceirizei nada. Sentei com Claude e ChatGPT, escrevi e reescrevi prompts no chat, usei Cowork e Code, e dirigi a IA até cada peça ficar pronta — o guia, este site e a campanha de marketing inteira. <strong>Se uma pessoa só consegue produzir tudo isto com IA, imagine o que ela faz pela sua rotina de trabalho. Comprando o guia, você aprende exatamente o processo que gerou o que está vendo agora.</strong></p>
     </div>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
-<footer>
-  <div class="ft-links">
-    <a href="#" onclick="abrirModal('modal-priv');return false;">Política de Privacidade</a>
-    <a href="#" onclick="abrirModal('modal-termos');return false;">Termos de Uso</a>
-    <a href="#" onclick="abrirModal('modal-disc');return false;">Disclaimer</a>
-    <a href="mailto:contato@businessforchampions.com">contato@businessforchampions.com</a>
+<!-- ══ FAQ ══ -->
+<section class="section" id="faq" style="background:var(--ink)">
+  <div class="wrap">
+    <div class="head-block" style="max-width:920px">
+      <div class="eyebrow">Perguntas frequentes</div>
+      <h2 class="ttl">Tudo que você quer saber <span class="lime">antes de comprar</span></h2>
+    </div>
+    <div class="faq-list" id="faq-list"></div>
+    <div class="cta-blk">
+      <div>
+        <h3>Não espere o "momento certo". <span class="lime">Ele já passou.</span></h3>
+        <p>Cada semana sem IA é uma semana pagando mais, produzindo menos e perdendo espaço.</p>
+      </div>
+      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime" onclick="trackCTA('faq')">Quero o guia — R$37 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
   </div>
-  <hr class="ft-div"/>
-  <p>© 2026 Business for Champions · IA para Todos — Guia Prático ·
-    <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener"
-       onclick="trackCTA('footer_cta')" style="color:var(--green);text-decoration:none;">Garantir acesso — R$37</a>
-  </p>
-  <p style="margin-top:5px;">São Paulo — SP · Produto desenvolvido inteiramente com Inteligência Artificial</p>
-  <p style="margin-top:9px;font-size:11px;color:rgba(255,255,255,0.16);">
-    Conteúdo produzido com Claude (Anthropic) e revisado pelo autor.
-    Os dados de mercado são provenientes de fontes públicas.
-    Resultados podem variar conforme o contexto de cada negócio.
-  </p>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="ft-grid">
+    <div>
+      <div class="ft-brand">
+        <div class="brand-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/><circle cx="12" cy="12" r="2.4" fill="#C8FF3D" stroke="none"/></svg></div>
+        <div class="brand-name">Business for Champions</div>
+      </div>
+      <div style="line-height:1.7;max-width:440px">IA para Todos — Guia Prático.<br>Guia, página e marketing produzidos 100% com IA<br>por Dayyán Morandi · Claude (Anthropic) + ChatGPT (OpenAI).</div>
+    </div>
+    <div>
+      <div class="ft-col-h">Páginas</div>
+      <div class="ft-links"><a href="#problema">O problema</a><a href="#capitulos">Capítulos</a><a href="#ferramentas">Ferramentas</a><a href="#faq">FAQ</a></div>
+    </div>
+    <div>
+      <div class="ft-col-h">Legal</div>
+      <div class="ft-links"><a onclick="openModal('mod-priv')">Política de Privacidade</a><a onclick="openModal('mod-terms')">Termos de Uso</a><a href="mailto:dayyan@4content.com.br">dayyan@4content.com.br</a></div>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <div>© 2026 Business for Champions · IA para Todos — Guia Prático</div>
+    <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" onclick="trackCTA('footer')">Garantir acesso — R$37 →</a>
+  </div>
 </footer>
 
-<!-- ── MOBILE CTA BAR ── -->
-<div class="mob-bar">
-  <div class="mp">Preço de lançamento<strong>R$37</strong></div>
-  <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener"
-     class="mb" onclick="trackCTA('mobile_bar')">GARANTIR ACESSO</a>
+<!-- ══ MOBILE CTA BAR ══ -->
+<div class="mob-bar" id="mob-bar">
+  <div class="mp">IA para Todos · <strong>R$37</strong></div>
+  <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="mb" onclick="trackCTA('mobile_bar')">Garantir agora →</a>
 </div>
 
-<!-- ── EXIT INTENT ── -->
-<div class="exit-ov" id="exit-modal">
+<!-- ══ EXIT INTENT ══ -->
+<div class="exit-ov" id="exit-ov">
   <div class="exit-bx">
-    <button class="exit-x" onclick="fecharExit()" aria-label="Fechar">✕</button>
-    <span class="eico">⏳</span>
-    <h3>Espera — o preço de <em>lançamento encerra em breve</em></h3>
-    <p>Você está prestes a fechar esta página. O preço de R$37 é válido apenas durante o lançamento. Depois, volta para R$97.</p>
-    <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener"
-       class="btn btn-g lg blk" onclick="trackCTA('exit_intent');fecharExit();">GARANTIR R$37 AGORA</a>
-    <p class="exit-gn"><strong>✓ Garantia de 7 dias.</strong> Risco zero.</p>
-    <button class="exit-dis" onclick="fecharExit()">Não quero, vou pagar R$97 depois.</button>
+    <button class="exit-x" onclick="closeExit()" aria-label="Fechar">✕</button>
+    <h3>Espera — <em>antes de sair.</em></h3>
+    <p>Por R$37 você leva o guia completo <strong style="color:#fff">e todas as atualizações mensais</strong> — v2, v3, v4… sem pagar de novo. Garantia de 7 dias: se não economizar 5h na primeira semana, devolvemos 100%.</p>
+    <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime" style="width:100%" onclick="trackCTA('exit_intent')">Garantir por R$37 agora</a>
+    <div class="exit-gn">✓ Acesso imediato · ✓ Pagamento único · ✓ Sem assinatura</div>
+    <button class="exit-dis" onclick="closeExit()">Não, prefiro continuar pagando mais caro pelo meu tempo</button>
   </div>
 </div>
 
-<!-- ── COOKIE BANNER ── -->
-<div id="cookie-banner">
-  <p>Usamos cookies para análise de tráfego (Google Analytics) e anúncios (Meta Pixel). Ao continuar, você concorda com nossa <a href="#" onclick="abrirModal('modal-priv');return false;">Política de Privacidade</a> e com a <strong style="color:rgba(255,255,255,0.8)">LGPD</strong>.</p>
-  <button id="cookie-accept" onclick="aceitarCookies()">Entendi</button>
+<!-- ══ COOKIE BANNER ══ -->
+<div id="cookie-banner" style="display:none">
+  <p>Usamos cookies e pixels (Google Analytics, Meta) para medir o desempenho da página e melhorar sua experiência. Ao continuar, você concorda com nossa <a onclick="openModal('mod-priv')">Política de Privacidade</a>.</p>
+  <button id="cookie-accept" onclick="acceptCookies()">Aceitar e fechar</button>
 </div>
 
-<!-- ── MODAIS LGPD ── -->
-<div class="mod-ov" id="modal-priv">
+<!-- ══ LGPD MODALS ══ -->
+<div class="mod-ov" id="mod-priv">
   <div class="mod-bx">
-    <button class="mod-cls" onclick="fecharModal('modal-priv')" aria-label="Fechar">✕</button>
+    <button class="mod-cls" onclick="closeModal('mod-priv')" aria-label="Fechar">✕</button>
     <h3>Política de Privacidade</h3>
-    <p>Esta política descreve como coletamos e usamos seus dados em conformidade com a <strong style="color:var(--gold)">LGPD — Lei 13.709/2018</strong>.</p>
+    <p>Esta política descreve como tratamos seus dados em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
     <h4>Dados coletados</h4>
-    <ul>
-      <li>Dados de navegação via Google Analytics 4</li>
-      <li>Dados de interação com anúncios via Meta Pixel</li>
-      <li>Dados de compra coletados pela plataforma Kiwify</li>
-      <li>E-mail para envio do material adquirido</li>
-    </ul>
+    <p>Coletamos dados de navegação anônimos via cookies e pixels (Google Analytics 4 e Meta Pixel) para medir audiência e desempenho de campanhas. Dados de pagamento são tratados exclusivamente pela Kiwify — não temos acesso aos dados do seu cartão.</p>
     <h4>Finalidade</h4>
-    <ul>
-      <li>Entrega do produto digital adquirido</li>
-      <li>Comunicações sobre o produto</li>
-      <li>Análise de tráfego para melhoria do site</li>
-      <li>Veiculação de anúncios relevantes</li>
-    </ul>
-    <h4>Compartilhamento</h4>
-    <p>Dados compartilhados apenas com Kiwify, Google e Meta, conforme suas políticas. Não vendemos dados a terceiros.</p>
-    <h4>Seus direitos (LGPD)</h4>
-    <ul><li>Acesso, correção ou exclusão dos seus dados</li><li>Revogação do consentimento a qualquer momento</li></ul>
-    <p>Para exercer seus direitos: <strong style="color:var(--gold)">contato@businessforchampions.com</strong></p>
-    <h4>Retenção</h4>
-    <p>Dados de compra retidos pelo prazo legal de 5 anos. Dados de navegação seguem o prazo padrão das plataformas (26 meses no GA4).</p>
+    <p>Medir conversão, otimizar anúncios e melhorar a experiência da página. Não vendemos nem compartilhamos seus dados com terceiros para fins de marketing externo.</p>
+    <h4>Seus direitos</h4>
+    <p>Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento pelo e-mail dayyan@4content.com.br.</p>
+    <h4>Contato do controlador</h4>
+    <p>Dayyán Morandi · dayyan@4content.com.br</p>
   </div>
 </div>
-
-<div class="mod-ov" id="modal-termos">
+<div class="mod-ov" id="mod-terms">
   <div class="mod-bx">
-    <button class="mod-cls" onclick="fecharModal('modal-termos')" aria-label="Fechar">✕</button>
+    <button class="mod-cls" onclick="closeModal('mod-terms')" aria-label="Fechar">✕</button>
     <h3>Termos de Uso</h3>
-    <h4>1. Produto</h4>
-    <p><strong style="color:var(--gold)">IA para Todos — Guia Prático</strong> é um produto digital (PDF) comercializado por Business for Champions. Acesso imediato após confirmação do pagamento.</p>
-    <h4>2. Licença de uso</h4>
-    <p>Licença pessoal, intransferível e não exclusiva. É proibido reproduzir, revender ou redistribuir o material sem autorização expressa.</p>
-    <h4>3. Garantia de 7 dias</h4>
-    <p>Reembolso integral em até 7 dias corridos após a compra, sem justificativa, pelo e-mail <strong style="color:var(--gold)">contato@businessforchampions.com</strong>. Segue o Art. 49 do CDC.</p>
-    <h4>4. Limitação de responsabilidade</h4>
-    <p>Conteúdo de finalidade educacional. Resultados são ilustrativos e podem variar.</p>
-    <h4>5. Propriedade intelectual</h4>
-    <p>Todo o conteúdo é protegido por direitos autorais. Produção com auxílio de IA e curadoria humana.</p>
-    <h4>6. Foro</h4>
-    <p>Comarca de São Paulo — SP.</p>
+    <h4>Produto</h4>
+    <p>"IA para Todos — Guia Prático" é um material digital em PDF entregue após a confirmação do pagamento via Kiwify. O acesso é vitalício e de uso pessoal.</p>
+    <h4>Garantia</h4>
+    <p>Garantia incondicional de 7 dias, conforme o Art. 49 do Código de Defesa do Consumidor. Solicite o reembolso pelo e-mail dayyan@4content.com.br — devolvemos 100% sem burocracia.</p>
+    <h4>Uso responsável</h4>
+    <p>O conteúdo é educacional. Os resultados variam conforme a aplicação individual. As estatísticas citadas são de fontes públicas e não constituem garantia de resultado específico.</p>
+    <h4>Propriedade intelectual</h4>
+    <p>É proibida a redistribuição, revenda ou reprodução do material sem autorização expressa.</p>
   </div>
 </div>
 
-<div class="mod-ov" id="modal-disc">
-  <div class="mod-bx">
-    <button class="mod-cls" onclick="fecharModal('modal-disc')" aria-label="Fechar">✕</button>
-    <h3>Disclaimer — Aviso Importante</h3>
-    <h4>Conteúdo gerado com IA</h4>
-    <p>Este guia foi produzido com <strong style="color:var(--gold)">Claude</strong> (Anthropic), com curadoria, revisão e direção editorial humana. O uso de IA na produção de conteúdo educacional é legal e transparente.</p>
-    <h4>Dados e estatísticas</h4>
-    <p>Os dados citados (BCG, McKinsey, Klarna, JPMorgan) são de relatórios e publicações públicas. Recomendamos consultar as fontes originais.</p>
-    <h4>Resultados</h4>
-    <p>Exemplos apresentados são ilustrativos. Resultados individuais variam conforme tipo de negócio, implementação e contexto de mercado.</p>
-    <h4>Relação com ferramentas citadas</h4>
-    <p>Não possuímos vínculo comercial com as ferramentas citadas. As recomendações são baseadas exclusivamente em critérios editoriais.</p>
-    <h4>Finalidade educacional</h4>
-    <p>Material exclusivamente educacional e informativo. Não constitui consultoria empresarial, financeira ou jurídica.</p>
-  </div>
-</div>
-
-<!-- ── SCRIPTS ── -->
 <script>
-// TRACKING
-function trackCTA(pos){
-  if(typeof gtag!=='undefined')
-    gtag('event','purchase_intent',{event_category:'conversion',event_label:pos,value:37,currency:'BRL'});
-  if(typeof fbq!=='undefined')
-    fbq('track','InitiateCheckout',{value:37,currency:'BRL',content_name:'IA para Todos',content_type:'product'});
+/* ════ DATA ════ */
+var PROMPTS = [
+  {meta:"prompt #01 · amostra do guia", save:"−15 min por e-mail",
+   prompt:"Reescreva este e-mail de follow-up para ficar 30% mais curto, manter o tom cordial e adicionar um próximo passo claro:\n\n\"Oi João, queria saber se você teve a chance de revisar a proposta que mandei semana passada. Fico no aguardo, qualquer coisa estou à disposição. Abraço.\"",
+   response:"Oi João,\n\nConseguiu olhar a proposta da semana passada?\n\nSe fizer sentido, marco 20min na quinta às 14h pra alinharmos os próximos passos.\n\nAbraço."},
+  {meta:"prompt #02 · amostra do guia", save:"−45 min por reunião",
+   prompt:"Resuma esta transcrição de reunião em: (1) 3 decisões tomadas, (2) lista de próximos passos com responsável e prazo, (3) pontos em aberto. Formato: bullets curtos.\n\n[cole a transcrição aqui]",
+   response:"**Decisões**\n• Migrar relatórios mensais para Notion\n• Ana assume o piloto com vendas\n• Reunião quinzenal às terças 10h\n\n**Próximos passos**\n• Ana → mapear processo atual · até 12/jun\n• Carlos → setup do template · até 15/jun\n• Bea → comunicar ao time · até 18/jun\n\n**Em aberto**\n• Migração do histórico de 2024"},
+  {meta:"prompt #03 · amostra do guia", save:"−2h por catálogo",
+   prompt:"Crie 3 versões de descrição (curta, média, longa) para este produto, com foco em benefício e não em feature. Produto: cadeira ergonômica X-300, regulagens de altura, encosto lombar, R$1.890.\n\nMantenha tom: profissional, direto, sem clichês.",
+   response:"**Curta (40 palavras)**\nA X-300 sustenta sua coluna nas 8 horas de trabalho. Altura, encosto e braços ajustáveis em segundos. Quem senta nela uma semana não volta pra cadeira antiga.\n\n**Média (90 palavras)**\n[…3 parágrafos com benefício, prova e CTA…]\n\n**Longa (180 palavras)**\n[…versão completa com história e especificações…]"}
+];
+
+var REASONS = [
+  {ic:"M13 2 4 14h7l-1 8 9-12h-7l1-8Z", t:"Implementação no mesmo dia", b:"Prompts prontos para copiar e usar hoje em e-mails, propostas, relatórios e atendimento — sem configuração."},
+  {ic:"M14.5 9.5C14 8.5 13 8 12 8c-1.5 0-2.5 1-2.5 2s1 1.7 2.5 2 2.5 1 2.5 2-1 2-2.5 2c-1 0-2-.5-2.5-1.5", t:"ROI mensurável em semanas", b:"Exemplos concretos de quanto tempo e dinheiro cada automação economiza. Você vê o retorno antes de terminar o guia."},
+  {ic:"M9 4a3 3 0 0 0-3 3v1a3 3 0 0 0-2 2.8c0 1.4.8 2.4 2 2.8V15a3 3 0 0 0 3 3h0a2 2 0 0 0 2-2V5a1 1 0 0 0-2 0Z", t:"Entenda como a IA pensa", b:"Você aprende a lógica por trás dos resultados — não só o que escrever, mas por que funciona. Crie seus próprios prompts do zero."},
+  {ic:"M3 21V5M3 21h18M7 16v-4M11 16V8M15 16v-6M19 16v-9", t:"Baseado em dados reais", b:"Cada recomendação é respaldada por estudos da BCG, McKinsey, JPMorgan e Klarna — não em especulação."},
+  {ic:"m12 3 9 5-9 5-9-5 9-5Z M3 13l9 5 9-5", t:"Orquestre agentes e ferramentas", b:"Aprenda a combinar múltiplos agentes de IA em fluxos de trabalho — e saiba qual ferramenta usar em cada etapa."},
+  {ic:"M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 2 2 6-6a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2 2.5-2.5Z", t:"Ferramentas de Maio 2026", b:"Comparativo atualizado de ChatGPT, Claude, Gemini, Perplexity e Make — qual usar para cada tipo de tarefa."}
+];
+
+var DATA = [
+  {v:"R$40M/ano", d:"A Klarna substituiu o trabalho de 700 atendentes com IA — realocando equipe para funções de maior valor.", s:"Klarna, Relatório Público 2024"},
+  {v:"360k h/ano", d:"O JPMorgan implementou IA para análise de contratos e economizou 360 mil horas de trabalho jurídico por ano.", s:"JPMorgan Chase, 2023"},
+  {v:"40% melhor", d:"Consultores com IA entregaram trabalho 40% melhor em qualidade e completaram 25% mais tarefas no mesmo tempo.", s:"BCG & Harvard Business School, 2023"},
+  {v:"55% + rápido", d:"Desenvolvedores com GitHub Copilot completaram tarefas 55% mais rápido. Ganhos generalizados na Microsoft.", s:"Microsoft / GitHub, 2023"},
+  {v:"44% das funções", d:"O Fórum Econômico Mundial estima que 44% das habilidades profissionais serão transformadas pela IA até 2027.", s:"World Economic Forum, 2025"},
+  {v:"2× crescimento", d:"PMEs que adotam tecnologia digital crescem 2x mais rápido. IA é a maior alavanca disponível hoje.", s:"Sebrae / FGV, 2024"}
+];
+
+var BARS = [
+  {l:"Proposta comercial", bw:80, aw:14, bef:"3h", aft:"30min", pct:"−83%"},
+  {l:"Posts de conteúdo", bw:95, aw:8, bef:"4h", aft:"20min", pct:"−92%"},
+  {l:"Relatório gerencial", bw:100, aw:15, bef:"5h", aft:"45min", pct:"−85%"},
+  {l:"E-mail de campanha", bw:55, aw:7, bef:"2h", aft:"15min", pct:"−88%"},
+  {l:"Descrição de produto", bw:65, aw:5, bef:"2,5h", aft:"10min", pct:"−93%"},
+  {l:"Resumo de reunião", bw:40, aw:3, bef:"1,5h", aft:"5min", pct:"−94%"}
+];
+
+var CHAPTERS = [
+  ["01","Por Que IA Vai Mudar Sua Vida","O contexto real da transformação — por que 2025 é o ponto de virada e o que está em jogo para quem não agir agora."],
+  ["02","IA para Pequenas e Médias Empresas","Aplicações concretas por departamento: Vendas, Marketing, Financeiro, RH, Atendimento e Operações — com casos reais."],
+  ["03","Redução de Custos com IA","Dados reais de redução de custo operacional. Onde cortar, quanto cortar e como implementar em menos de 30 dias."],
+  ["04","Automação de Processos","Antes vs. depois em 5 processos comuns de PME. Como transformar operações que levam dias em rotinas de minutos."],
+  ["05","Engenharia de Prompt — Fórmula C.A.R.E.","O sistema que transforma qualquer pedido em um prompt que realmente funciona. Exemplos prontos para copiar e usar."],
+  ["06","As Principais Ferramentas de IA","Comparativo completo de ChatGPT, Claude, Gemini, Perplexity e outras. Qual usar para cada tipo de tarefa."],
+  ["07","Arquitetura de Informação e Agentes","Como estruturar processos, bases de conhecimento e orquestrar múltiplos agentes de IA trabalhando juntos."],
+  ["08","Plano de Ação — 30 Dias com IA","Um cronograma semana a semana para integrar IA no seu trabalho real — com metas, ferramentas e prompts."]
+];
+
+var CASES = [
+  {tag:"Relatórios automatizados", h:"Você ainda gasta 5 horas por relatório enquanto seu concorrente entrega em 30 minutos.",
+   w:["5h compilando dados de fontes diferentes","Análise refeita do zero a cada ciclo","Erros de cópia que viram decisão errada"],
+   c:["Prompt que estrutura, analisa e formata em minutos","Modelo reutilizável — mensal, trimestral, anual","Insights que você sozinho não enxergaria"],
+   aud:["Gestores","Controllers","Analistas","Sócios de PME"], mv:"5h → 45min", mu:"por relatório",
+   ic:"M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z M14 3v5h5M9 13h6M9 17h4"},
+  {tag:"Conteúdo para social media", h:"Um post por semana virou seis por dia. Sem IA, é impossível manter o ritmo.",
+   w:["Bloqueio criativo segundo após segundo","Agência cobrando R$3–8k/mês pelo básico","Posts genéricos que somem no algoritmo"],
+   c:["30 posts/mês em 1 hora — sua voz, sua identidade","Variações automáticas para LinkedIn, Instagram, X","Calendário editorial pronto pra um trimestre"],
+   aud:["Empreendedores","Social media","Marketers","Criadores"], mv:"−R$3.000", mu:"por mês em agência",
+   ic:"M3 3h18v18H3z M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"},
+  {tag:"Planilhas financeiras precisas", h:"Um erro de fórmula vira decisão errada. IA pega o que seu olho não vê.",
+   w:["Planilhas com erros que ninguém percebe","Meses pra reconstruir um modelo que travou","Dependência de quem fez — se sai, você quebra"],
+   c:["Auditoria de fórmulas com prompt específico","Modelagem de fluxo de caixa em horas","Cenários (otimista, base, pessimista) num clique"],
+   aud:["Contadores","Financeiro","Fundadores","CFOs"], mv:"+92%", mu:"menos retrabalho",
+   ic:"M3 4h18v16H3z M3 9h18M9 4v16M15 4v16"},
+  {tag:"Análise de dados de clientes", h:"Seus clientes já estão dizendo o que querem. Sem IA, ninguém ouve.",
+   w:["Feedback se acumulando sem virar ação","Churn por motivos que você nunca mapeou","Segmentação \"pelo feeling\", não pelo dado"],
+   c:["Análise de sentimento em milhares de mensagens","Segmentação automática por comportamento real","Predição de churn com sinais que você ignora"],
+   aud:["Vendas","CS","Marketing","Atendimento"], mv:"−40%", mu:"em churn evitável",
+   ic:"M3 5c0-1.7 4-3 9-3s9 1.3 9 3-4 3-9 3-9-1.3-9-3Z M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"},
+  {tag:"Estratégia de marketing", h:"Sua concorrência tem 5 cenários testados. Quantos você tem?",
+   w:["Um plano feito no escuro — e meses pra validar","Reuniões intermináveis girando no mesmo eixo","Personas que existem só no PowerPoint"],
+   c:["5 cenários completos com KPIs e jornada em 1 dia","Personas com base em dados reais, não palpite","Testes A/B planejados antes de gastar 1 real"],
+   aud:["Marketing","Fundadores","Agências","CMOs"], mv:"5×", mu:"mais cenários testados",
+   ic:"M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"}
+];
+
+var INC = [
+  "30 prompts prontos — copie, cole e use no mesmo dia",
+  "8 capítulos — do zero ao avançado",
+  "Fórmula C.A.R.E. — o método por trás de cada prompt",
+  "Como a IA pensa — a lógica que faz qualquer prompt funcionar melhor",
+  "Aplicações práticas por área: Vendas, Marketing, RH, Financeiro, Jurídico e mais",
+  "Dicas exclusivas para tirar o máximo de cada ferramenta",
+  "Comparativo completo de ferramentas — sempre atualizado",
+  "Atualizações mensais grátis — receba v2, v3, v4… sem pagar de novo",
+  "Capítulo exclusivo: Arquitetura de Informação com IA",
+  "Como orquestrar múltiplos agentes de IA para tarefas complexas",
+  "Plano de ação de 30 dias — semana a semana",
+  "Acesso imediato em PDF — para sempre"
+];
+
+var TRANSP = [
+  {ic:"M4 7h16v13H4z M12 7V3M9 13h.01M15 13h.01M9 17h6", t:"O guia, escrito com IA", b:"Os 8 capítulos, os 30 prompts e o método C.A.R.E. foram redigidos conversando com Claude e ChatGPT — refinando cada prompt no chat até chegar no resultado."},
+  {ic:"M12 3v6M12 15v6M3 12h6M15 12h6", t:"Esta página, gerada com IA", b:"A landing page que você está lendo foi construída com IA usando Claude (incluindo Cowork e Code) — do layout ao texto, ajustada por prompt, sem agência e sem dev."},
+  {ic:"M3 21V5M3 21h18M7 16v-4M11 16V8M15 16v-6", t:"A estratégia de marketing, idem", b:"Posicionamento, copy de venda, campanha de Instagram e segmentação por público — tudo elaborado em conversa com a IA, prompt após prompt."},
+  {ic:"M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z m-4 9 3 3 5-6", t:"Direção 100% humana", b:"Cada peça foi dirigida, decidida e revisada por mim, Dayyán Morandi. A IA executou; a estratégia, o julgamento e a curadoria são meus."}
+];
+
+var FAQS = [
+  ["Preciso ter conhecimento técnico ou saber programar?","Não. O guia foi escrito para quem nunca usou IA antes. Toda a linguagem é prática, com exemplos reais — sem jargão técnico, sem código. Se você sabe usar o WhatsApp, você consegue aplicar o conteúdo."],
+  ["O conteúdo serve para qualquer tipo de empresa ou profissão?","Sim. O guia foi desenhado para qualquer profissional que trabalha com informação, comunicação ou decisão — advogados, médicos, profissionais de marketing, empreendedores, gestores, vendedores, RH. Há aplicações e exemplos diretos para cada área."],
+  ["O que exatamente vou aprender e dominar com este guia?","Além dos 30 prompts prontos, você vai entender por que eles funcionam — a lógica de como a IA interpreta contexto, tom e estrutura. Com isso, você sai capaz de criar seus próprios prompts do zero e escolher a ferramenta certa para cada tarefa. Não é uma coleção de atalhos: é um modelo mental que você leva para sempre."],
+  ["Como funciona a garantia de 7 dias?","Se por qualquer motivo você não ficar satisfeito nos primeiros 7 dias, basta enviar um e-mail para dayyan@4content.com.br e devolvemos 100% do valor. Sem burocracia. O prazo segue o Código de Defesa do Consumidor (Art. 49)."],
+  ["Por que o preço é R$37 se o conteúdo vale muito mais?","Porque o objetivo é acesso: quanto mais profissionais brasileiros dominarem IA, melhor. Por R$37 você leva o guia completo e <strong>todas as atualizações mensais</strong> — v2, v3, v4… sem pagar de novo. É um único pagamento, com acesso vitalício: você compra a versão de hoje e recebe cada nova edição conforme a IA evolui."],
+  ["Como recebo o ebook após a compra?","O acesso é imediato. Assim que o pagamento for confirmado pela Kiwify, você recebe o link de download por e-mail em segundos. O PDF fica disponível para sempre — sem prazo de validade, sem mensalidade."]
+];
+
+/* ════ RENDER ════ */
+function el(html){var d=document.createElement('div');d.innerHTML=html.trim();return d.firstChild;}
+function icoSvg(p){return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="'+p+'"/></svg>';}
+
+// reasons
+(function(){var c=document.getElementById('reasons');REASONS.forEach(function(r){c.appendChild(el('<div class="card hov scard"><div class="ic ico-box">'+icoSvg(r.ic)+'</div><h4>'+r.t+'</h4><p>'+r.b+'</p></div>'));});})();
+// data
+(function(){var c=document.getElementById('data');DATA.forEach(function(d){c.appendChild(el('<div class="card hov dcard"><div class="stat">'+d.v+'</div><div class="desc">'+d.d+'</div><div class="src">'+d.s+'</div></div>'));});})();
+// bars
+(function(){var c=document.getElementById('bars');BARS.forEach(function(b){c.appendChild(el('<div class="bar-row"><div class="bar-lbl">'+b.l+'</div><div class="bar-bars"><div class="bar-line"><div class="bar-bef" style="width:'+b.bw+'%"></div><span class="bar-v bef">'+b.bef+'</span></div><div class="bar-line"><div class="bar-aft" style="width:'+b.aw+'%"></div><span class="bar-v aft">'+b.aft+'</span></div></div><div class="bar-pct">'+b.pct+'</div></div>'));});})();
+// chapters
+(function(){var c=document.getElementById('chapters');CHAPTERS.forEach(function(ch){c.appendChild(el('<div class="chcard"><div class="num">'+ch[0]+'</div><div class="body"><h4>'+ch[1]+'</h4><p>'+ch[2]+'</p></div></div>'));});})();
+// included
+(function(){var c=document.getElementById('inc-list');INC.forEach(function(t){c.appendChild(el('<li><span class="chk-sm">✓</span><span>'+t+'</span></li>'));});})();
+// transparency
+(function(){var c=document.getElementById('transp');TRANSP.forEach(function(t){c.appendChild(el('<div class="card hov" style="padding:32px 36px"><div style="display:flex;align-items:flex-start;gap:20px"><div class="ico-box">'+icoSvg(t.ic)+'</div><div><div style="font-size:19px;font-weight:700;color:#fff;letter-spacing:-.012em;margin-bottom:8px">'+t.t+'</div><div style="color:var(--text);font-size:15px;line-height:1.55">'+t.b+'</div></div></div></div>'));});})();
+// cases
+(function(){var c=document.getElementById('cases');CASES.forEach(function(d,i){
+  var wl=d.w.map(function(x){return '<li>'+x+'</li>';}).join('');
+  var cl=d.c.map(function(x){return '<li>'+x+'</li>';}).join('');
+  var al=d.aud.map(function(x){return '<span class="aud-chip">'+x+'</span>';}).join('');
+  c.appendChild(el('<article class="case"><div class="case-glow"></div><div class="case-in"><div><div class="case-num">0'+(i+1)+'</div><div class="ico-box" style="width:60px;height:60px;border-radius:14px">'+icoSvg(d.ic)+'</div><div class="case-tag">Caso · '+d.tag+'</div><div class="case-metric"><div class="v">'+d.mv+'</div><div class="u">'+d.mu+'</div></div></div><div><h3>'+d.h+'</h3><div class="ba"><div class="ba-col left"><div class="ba-h">✕ Sem IA</div><ul>'+wl+'</ul></div><div class="ba-col right"><div class="ba-h">✓ Com o guia</div><ul>'+cl+'</ul></div></div><div class="case-aud"><span class="lbl">Aplicável a</span>'+al+'</div></div></div></article>'));
+});})();
+// faq
+(function(){var c=document.getElementById('faq-list');FAQS.forEach(function(f,i){
+  var item=el('<div class="faq-item'+(i===0?' open':'')+'"><button class="faq-btn"><span class="q">'+f[0]+'</span><span class="faq-ic">+</span></button><div class="faq-ans"><p>'+f[1]+'</p></div></div>');
+  var ans=item.querySelector('.faq-ans');
+  item.querySelector('.faq-btn').addEventListener('click',function(){
+    var open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(x){x.classList.remove('open');x.querySelector('.faq-ans').style.maxHeight='0';});
+    if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+  });
+  c.appendChild(item);
+  if(i===0){setTimeout(function(){ans.style.maxHeight=ans.scrollHeight+'px';},100);}
+});})();
+
+/* ════ PROMPT SAMPLE TABS ════ */
+(function(){
+  function fmt(s){return s.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');}
+  function show(i){
+    var p=PROMPTS[i];
+    document.getElementById('ps-meta').textContent=p.meta;
+    document.getElementById('ps-save').textContent=p.save;
+    document.getElementById('ps-prompt').textContent=p.prompt;
+    document.getElementById('ps-response').innerHTML=fmt(p.response);
+    document.querySelectorAll('.ps-tab').forEach(function(t,ti){t.classList.toggle('active',ti===i);});
+  }
+  document.querySelectorAll('.ps-tab').forEach(function(t){t.addEventListener('click',function(){show(+t.dataset.i);});});
+  show(0);
+})();
+
+/* ════ NAVBAR SCROLL ════ */
+(function(){
+  var nav=document.getElementById('nav');
+  function on(){nav.classList.toggle('scrolled', window.scrollY>24);}
+  window.addEventListener('scroll',on,{passive:true}); on();
+})();
+
+/* ════ MOBILE BAR (hide near footer not needed; always after scroll) ════ */
+(function(){
+  var bar=document.getElementById('mob-bar');
+  function on(){ if(window.innerWidth<=768){ bar.style.display = window.scrollY>700 ? 'flex' : 'none'; } }
+  window.addEventListener('scroll',on,{passive:true}); on();
+})();
+
+/* ════ CTA TRACKING ════ */
+function trackCTA(loc){
+  try{ gtag('event','cta_click',{cta_location:loc}); }catch(e){}
+  try{ fbq('track','InitiateCheckout',{content_name:'IA para Todos', value:37, currency:'BRL', cta_location:loc}); }catch(e){}
 }
 
-// COUNTDOWN — 7-day rolling; auto-extends 1 week on expiry with success message
+/* ════ EXIT INTENT ════ */
 (function(){
-  var KEY='ia_cd_dl';
-  var WEEK=7*24*3600000;
-  var dl=parseInt(localStorage.getItem(KEY),10);
-  if(!dl||isNaN(dl)){dl=Date.now()+WEEK;localStorage.setItem(KEY,String(dl));}
-  function pad(n){return n<10?'0'+n:n;}
-  function showExtendedMsg(){
-    var lbls=document.querySelectorAll('.hero-cd .lbl, .off-cd .lbl');
-    lbls.forEach(function(el){el.textContent='O sucesso foi tanto que estendemos o preço de lançamento por mais uma semana 🎉';el.style.fontSize='13px';});
-  }
-  function tick(){
-    var now=Date.now();
-    if(dl<=now){
-      dl=now+WEEK;
-      localStorage.setItem(KEY,String(dl));
-      showExtendedMsg();
-    }
-    var d=dl-now;
-    var h=Math.floor(d/3600000),m=Math.floor((d%3600000)/60000),s=Math.floor((d%60000)/1000);
-    var hs=pad(h),ms=pad(m),ss=pad(s);
-    var a=document.getElementById('ann-cd');if(a)a.textContent=hs+':'+ms+':'+ss;
-    ['hcd','ocd'].forEach(function(p){
-      var eh=document.getElementById(p+'-h'),em=document.getElementById(p+'-m'),es=document.getElementById(p+'-s');
-      if(eh){eh.textContent=hs;em.textContent=ms;es.textContent=ss;}
-    });
-  }
-  tick();setInterval(tick,1000);
-})();
-
-// FAQ ACCORDION
-function toggleFaq(btn){
-  var item=btn.parentElement;
-  var isOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');});
-  if(!isOpen)item.classList.add('open');
-}
-
-// EXIT INTENT
-(function(){
-  var shown=false;
-  function showExit(){
-    if(shown||sessionStorage.getItem('exit_shown'))return;
-    shown=true;sessionStorage.setItem('exit_shown','1');
-    document.getElementById('exit-modal').classList.add('open');
-    if(typeof gtag!=='undefined')gtag('event','exit_intent_shown',{event_category:'engagement'});
-    if(typeof fbq!=='undefined')fbq('trackCustom','ExitIntent',{content_name:'IA para Todos',value:37,currency:'BRL'});
-  }
-  // 1. Chegou ao final da página (≥92% rolado)
+  var KEY='ia_exit_shown';
+  function canShow(){ return sessionStorage.getItem(KEY)!=='1'; }
+  function showExit(){ if(canShow()){ document.getElementById('exit-ov').classList.add('open'); sessionStorage.setItem(KEY,'1'); try{gtag('event','exit_intent_shown');}catch(e){} } }
+  window.closeExit=function(){ document.getElementById('exit-ov').classList.remove('open'); };
+  // desktop: mouse leaves top
+  document.addEventListener('mouseout',function(e){ if(!e.relatedTarget && e.clientY<10) showExit(); });
+  // mobile: fast scroll up
+  var lastY=window.scrollY, lastT=Date.now();
   window.addEventListener('scroll',function(){
-    var pct=(window.scrollY+window.innerHeight)/Math.max(1,document.body.scrollHeight);
-    if(pct>=0.92)showExit();
+    var y=window.scrollY, t=Date.now();
+    if(window.innerWidth<=768 && lastY-y>60 && t-lastT<300 && y<400) showExit();
+    lastY=y; lastT=t;
   },{passive:true});
-  // 2. Fechar aba ou mudar URL (beforeunload)
-  window.addEventListener('beforeunload',function(){showExit();});
 })();
-function fecharExit(){document.getElementById('exit-modal').classList.remove('open');}
 
-// SCROLL TRACKING
-document.addEventListener('DOMContentLoaded',function(){
-  var ms=[25,50,75,100],fired={};
-  window.addEventListener('scroll',function(){
-    var pct=Math.round((window.scrollY/Math.max(1,document.body.scrollHeight-window.innerHeight))*100);
-    ms.forEach(function(m){
-      if(pct>=m&&!fired[m]){fired[m]=true;if(typeof gtag!=='undefined')gtag('event','scroll_depth',{event_category:'engagement',event_label:m+'%'});}
-    });
-  });
-  [30,60,120].forEach(function(s){
-    setTimeout(function(){if(typeof gtag!=='undefined')gtag('event','time_on_page',{event_category:'engagement',event_label:s+'s'});},s*1000);
-  });
-});
-
-// COOKIE BANNER
-(function(){if(localStorage.getItem('cookies_ok')){var el=document.getElementById('cookie-banner');if(el)el.style.display='none';}})();
-function aceitarCookies(){localStorage.setItem('cookies_ok','1');document.getElementById('cookie-banner').style.display='none';}
-
-// MODALS
-function abrirModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';}
-function fecharModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow='';}
-document.querySelectorAll('.mod-ov').forEach(function(el){
-  el.addEventListener('click',function(e){if(e.target===el)fecharModal(el.id);});
-});
-document.addEventListener('keydown',function(e){
-  if(e.key==='Escape'){
-    document.querySelectorAll('.mod-ov.open').forEach(function(el){fecharModal(el.id);});
-    fecharExit();
-  }
-});
-
-// ── META PIXEL REMARKETING EVENTS ──────────────────────────────────────────
+/* ════ COOKIE BANNER ════ */
 (function(){
-  function mpx(e,p){if(typeof fbq!=='undefined')fbq('trackCustom',e,p||{});}
-  function mpxStd(e,p){if(typeof fbq!=='undefined')fbq('track',e,p||{});}
-
-  // ViewContent — visitante que permaneceu 15s+
-  setTimeout(function(){
-    mpxStd('ViewContent',{content_name:'IA para Todos LP',content_category:'landing_page',value:37,currency:'BRL'});
-  },15000);
-
-  // ReturnVisit — 2ª visita em diante
-  var VKEY='ia_visit_count';
-  var visits=parseInt(localStorage.getItem(VKEY)||'0',10)+1;
-  localStorage.setItem(VKEY,String(visits));
-  if(visits>=2){
-    mpx('ReturnVisit',{visit_number:visits,content_name:'IA para Todos'});
-    if(typeof gtag!=='undefined')gtag('event','return_visit',{event_category:'engagement',event_label:'visit_'+visits});
-  }
-
-  // ScrollDepth — 50% e 75%
-  var sd={};
-  window.addEventListener('scroll',function(){
-    var pct=Math.round((window.scrollY/Math.max(1,document.body.scrollHeight-window.innerHeight))*100);
-    if(pct>=50&&!sd[50]){sd[50]=1;mpx('ScrollDepth50',{content_name:'IA para Todos'});}
-    if(pct>=75&&!sd[75]){sd[75]=1;mpx('ScrollDepth75',{content_name:'IA para Todos'});}
-  },{passive:true});
-
-  // ExitIntent — disparado pelo MutationObserver abaixo
-  document.addEventListener('exitIntentShown',function(){
-    mpx('ExitIntent',{content_name:'IA para Todos',value:37,currency:'BRL'});
-  });
-
-  // MutationObserver: detecta quando exit-modal recebe classe 'open'
-  // DOM já está pronto aqui (script no final do </body>)
-  var exitOv=document.getElementById('exit-modal');
-  if(exitOv){
-    new MutationObserver(function(muts){
-      muts.forEach(function(m){
-        if(m.target.classList.contains('open'))
-          document.dispatchEvent(new Event('exitIntentShown'));
-      });
-    }).observe(exitOv,{attributes:true,attributeFilter:['class']});
-  }
+  if(localStorage.getItem('ia_cookie_ok')!=='1'){ document.getElementById('cookie-banner').style.display='flex'; }
 })();
+function acceptCookies(){ localStorage.setItem('ia_cookie_ok','1'); document.getElementById('cookie-banner').style.display='none'; }
+
+/* ════ MODALS ════ */
+function openModal(id){ document.getElementById(id).classList.add('open'); }
+function closeModal(id){ document.getElementById(id).classList.remove('open'); }
+document.querySelectorAll('.mod-ov').forEach(function(ov){ ov.addEventListener('click',function(e){ if(e.target===ov) ov.classList.remove('open'); }); });
+document.getElementById('exit-ov').addEventListener('click',function(e){ if(e.target===this) closeExit(); });
 </script>
+
 </body>
 </html>
