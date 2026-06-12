@@ -112,23 +112,6 @@ img{max-width:100%;display:block;}
 .nav-links a{color:var(--muted);font-size:14px;font-weight:500;transition:color .2s;}
 .nav-links a:hover{color:#fff;}
 .nav-links a.btn-lime,.nav-links a.btn-lime:hover{color:#0a0a0a;}
-/* CORREÇÃO 4 — lista linear de fases */
-.phase-list{display:flex;flex-direction:column;}
-.phase{display:grid;grid-template-columns:20% 1fr;gap:28px;align-items:start;padding:30px 0;border-top:1px solid rgba(255,255,255,.12);}
-.phase:first-child{border-top:none;}
-.ph-num{font-family:var(--mono);font-size:clamp(48px,6vw,80px);font-weight:600;color:var(--lime);line-height:.9;letter-spacing:-.03em;}
-.ph-title{font-size:clamp(22px,2.4vw,28px);font-weight:700;color:#fff;letter-spacing:-.015em;line-height:1.15;}
-.ph-tool{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);margin-top:8px;}
-.ph-desc{font-size:16px;line-height:1.55;color:rgba(255,255,255,.7);margin-top:12px;max-width:680px;}
-.sec-light .phase{border-top-color:rgba(0,0,0,.12);}
-.sec-light .ph-num,.sec-light .ph-tool{color:#2c4400;}
-.sec-light .ph-title{color:#0a0d12;}
-.sec-light .ph-desc{color:#3b424e;}
-@media(max-width:768px){.phase{grid-template-columns:1fr;gap:6px;padding:24px 0;}.ph-num{font-size:46px;}}
-/* CORREÇÃO 1 — autor 2 colunas, foto contida */
-.cv-wrap{grid-template-columns:40% 1fr;align-items:start;}
-.cv-photo{aspect-ratio:auto;max-height:480px;height:480px;}
-@media(max-width:1024px){.cv-photo{height:auto;max-height:320px;aspect-ratio:16/10;}}
 
 /* ── HERO ── */
 .hero{position:relative;min-height:100vh;width:100%;overflow:hidden;background:#0a0a0a;}
@@ -221,33 +204,15 @@ img{max-width:100%;display:block;}
 .upd-badge{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;background:rgba(200,255,61,.06);border:1px solid rgba(200,255,61,.22);margin-bottom:8px;}
 .upd-badge strong{display:block;color:#fff;font-size:15px;font-weight:700;letter-spacing:-.01em;}
 .upd-badge span{display:block;color:var(--text);font-size:13px;line-height:1.4;margin-top:2px;}
-.launch-note{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--lime);background:rgba(200,255,61,.08);border:1px solid rgba(200,255,61,.28);border-radius:999px;padding:5px 12px;margin-bottom:16px;}
-.sec-light .launch-note{color:#2c4400;background:rgba(44,68,0,.08);border-color:rgba(44,68,0,.28);}
-/* CORREÇÃO 5 — âncora de preço */
-.price-from{color:rgba(255,255,255,.5);font-size:24px;text-decoration:line-through;margin-bottom:4px;line-height:1;}
-.price-save{font-size:14px;color:var(--lime);margin-bottom:8px;font-weight:600;}
-/* CORREÇÃO 2 — CTA pós-dor */
-.dor-cta{padding:48px 0 0;text-align:center;}
-.dor-cta p{font-size:clamp(20px,2.4vw,26px);font-weight:700;color:#fff;letter-spacing:-.015em;margin-bottom:22px;}
-.btn-outline{display:inline-flex;align-items:center;gap:12px;justify-content:center;font-family:var(--sans);font-weight:700;border-radius:999px;font-size:16px;padding:15px 30px;background:transparent;border:1.5px solid var(--lime);color:var(--lime);transition:all .2s;cursor:pointer;}
-.btn-outline:hover{background:rgba(200,255,61,.1);transform:translateY(-2px);}
-/* CORREÇÃO 6 — menu mobile */
-.nav-burger{display:none;background:none;border:1px solid rgba(255,255,255,.18);border-radius:10px;width:42px;height:42px;cursor:pointer;color:#fff;align-items:center;justify-content:center;}
-.mob-menu{display:none;position:fixed;top:0;right:0;bottom:0;width:78%;max-width:320px;z-index:70;background:rgba(8,10,14,.98);backdrop-filter:blur(20px);border-left:1px solid rgba(255,255,255,.1);padding:80px 28px 28px;flex-direction:column;gap:6px;transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.7,.2,1);}
-.mob-menu.open{display:flex;transform:translateX(0);}
-.mob-menu a{color:#fff;font-size:18px;font-weight:600;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);}
-.mob-menu a:last-child{border-bottom:none;}
-.mob-menu-x{position:absolute;top:22px;right:22px;background:none;border:none;color:rgba(255,255,255,.5);font-size:26px;cursor:pointer;line-height:1;}
-.mob-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:69;}
-.mob-ov.open{display:block;}
-@media(max-width:1024px){.nav-burger{display:flex;}}
+.launch-note{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#ff8a5c;background:rgba(255,120,80,.08);border:1px solid rgba(255,120,80,.28);border-radius:999px;padding:5px 12px;margin-bottom:16px;}
+.sec-light .launch-note{color:#b34a1f;background:rgba(179,74,31,.08);border-color:rgba(179,74,31,.28);}
 .cd-blocks{display:inline-flex;align-items:flex-end;gap:22px;margin-top:6px;}
 .cd-blk{text-align:center;}
 .cd-blk .n{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:clamp(44px,5vw,72px);font-weight:600;line-height:1;color:var(--lime);letter-spacing:-.02em;}
 .cd-blk .l{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;margin-top:10px;}
 .cd-colon{font-size:clamp(36px,4vw,56px);color:rgba(255,255,255,.25);font-weight:300;line-height:1;padding-bottom:22px;}
 .price-row{padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:28px;}
-.price-from{color:rgba(255,255,255,.5);font-size:24px;text-decoration:line-through;margin-bottom:4px;line-height:1;}
+.price-from{color:rgba(255,255,255,.45);font-size:17px;text-decoration:line-through;margin-bottom:8px;}
 .price-now{display:flex;align-items:baseline;gap:4px;}
 .price-now .cur{color:rgba(255,255,255,.5);font-size:22px;font-weight:600;}
 .price-now .val{color:var(--lime);font-size:84px;font-weight:800;letter-spacing:-.04em;line-height:1;}
@@ -526,19 +491,8 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
     <a href="#capitulos">O método</a>
     <a href="#faq">FAQ</a>
     <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime sm" onclick="trackCTA('nav')">R$47 → Garantir</a>
-    <button class="nav-burger" id="navBurger" aria-label="Abrir menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
   </nav>
 </header>
-<!-- CORREÇÃO 6 — menu mobile -->
-<div class="mob-ov" id="mobOv"></div>
-<nav class="mob-menu" id="mobMenu">
-  <button class="mob-menu-x" id="mobMenuX" aria-label="Fechar">✕</button>
-  <a href="#problema" onclick="closeMob()">O problema</a>
-  <a href="#depoimentos" onclick="closeMob()">Depoimentos</a>
-  <a href="#capitulos" onclick="closeMob()">O método</a>
-  <a href="#oferta" onclick="closeMob()">A oferta</a>
-  <a href="#faq" onclick="closeMob()">FAQ</a>
-</nav>
 
 <!-- ══ HERO ══ -->
 <section class="hero">
@@ -654,11 +608,6 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
       <div class="card hov pcard"><div class="ico-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-9"/><path d="M14 6h7v7"/></svg></div><div class="tag">Concorrência desigual</div><h3>Uma pessoa com IA supera uma equipe de 3</h3><p>Você está competindo no mesmo mercado sem essa vantagem? Cada semana de atraso amplia a distância.</p></div>
       <div class="card hov pcard"><div class="ico-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1"/><rect x="3" y="14" width="18" height="6" rx="1"/></svg></div><div class="tag">Barreira falsa</div><h3>Você não precisa ser técnico para usar IA</h3><p>As ferramentas de hoje foram feitas para qualquer pessoa. O que falta é saber como pedir — e é isso que este guia ensina.</p></div>
     </div>
-    <!-- CORREÇÃO 2 — CTA após dor -->
-    <div class="dor-cta">
-      <p>A solução é mais simples do que parece.</p>
-      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn-outline" onclick="trackCTA('after_problem')">Ver o método — R$47 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-    </div>
   </div>
 </section>
 
@@ -702,7 +651,7 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
       <h2 class="ttl">7 fases. Do zero à <span class="lime">primeira venda</span>.</h2>
       <p class="sub">Estrutura linear: cada fase é um degrau prático construído sobre o anterior — com a ferramenta certa e o prompt que destrava o trabalho.</p>
     </div>
-    <div class="phase-list" id="chapters"></div>
+    <div class="grid-2" id="chapters"></div>
     <div class="cta-blk">
       <div>
         <h3>Acesso imediato. Pagamento <span class="lime">único</span>.</h3>
@@ -858,7 +807,7 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
       </div>
       <div class="price-card">
         <div class="eyebrow lime" style="margin-bottom:18px">Acesso completo</div>
-        <div class="launch-note">Versão 1 — atualizações mensais inclusas</div>
+        <div class="launch-note">🔥 Preço de lançamento</div>
         <div class="upd-badge">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
           <div><strong>Atualizações mensais grátis</strong><span>Compre a v1 hoje · receba v2, v3, v4… sem pagar de novo</span></div>
@@ -866,7 +815,6 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
         <div class="price-row">
           <div>
             <div class="price-from">De R$127</div>
-            <div class="price-save">Você economiza R$80 hoje</div>
             <div class="price-now"><span class="cur">R$</span><span class="val">47</span></div>
           </div>
           <div class="price-side">Pagamento único<br>Acesso vitalício</div>
@@ -963,7 +911,7 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
     </div>
     <div>
       <div class="ft-col-h">Páginas</div>
-      <div class="ft-links"><a href="#problema">O problema</a><a href="#depoimentos">Quem está usando</a><a href="#capitulos">O método</a><a href="#faq">FAQ</a></div>
+      <div class="ft-links"><a href="#problema">O problema</a><a href="#depoimentos">Depoimentos</a><a href="#capitulos">O método</a><a href="#faq">FAQ</a></div>
     </div>
     <div>
       <div class="ft-col-h">Legal</div>
@@ -1073,39 +1021,39 @@ var BARS = [
 ];
 
 var CHAPTERS = [
-  ["01","A Meta Certa","Planejamento","Defina o produto digital, o público e o preço — antes de abrir qualquer ferramenta."],
-  ["02","Planejamento Estratégico","Claude Cowork + Projects","Use o Claude como sócio estrategista: desenhe o plano de fases e mantenha o contexto organizado."],
-  ["03","Agentes-Gestores","Claude Code + ChatGPT","Crie um time de IA: agentes que atuam como marketing, UX, financeiro e gestão do projeto."],
-  ["04","Construção","Claude Code","Gere o produto e a landing page em ciclos curtos — v1, v2, v3 — até a versão final."],
-  ["05","Integrações","GitHub · Kiwify · GA · Meta","Conecte hospedagem, pagamento e medição: a estrutura que recebe a venda e rastreia cada visita."],
-  ["06","Divulgação","Claude Design","Crie as artes e a copy das campanhas: vários ângulos, feed e stories, na identidade da marca."],
-  ["07","Publicar e Otimizar","Tráfego + A/B","Suba, meça, rode testes A/B e escale o que converte. O ciclo que faz a plataforma melhorar sozinha."]
+  ["01","A Meta Certa","Antes de abrir qualquer ferramenta: como definir um produto digital simples e vendável, o público e o preço em 3 frases."],
+  ["02","Planejamento — Cowork + Projects","Use o Claude como sócio estrategista: desenhe o plano de fases que faz sentido de negócio e mantenha o contexto que tudo reaproveita."],
+  ["03","Os Agentes-Gestores — Claude Code + ChatGPT","Crie um time de IA: agentes que atuam como marketing, comunicação, UX, financeiro e gestão do projeto."],
+  ["04","Construção — Claude Code","Gere o produto e a landing page e refine em ciclos curtos (v1, v2, v3…) até a versão final."],
+  ["05","Integrações — GitHub · Kiwify · GA · Meta","Conecte hospedagem, pagamento e medição: a estrutura que recebe a venda e rastreia cada visita."],
+  ["06","Divulgação — Claude Design","Crie as artes e a copy das campanhas de tráfego: vários ângulos, feed e stories, na identidade da marca."],
+  ["07","Publicar e Otimizar","Suba, meça os eventos, rode testes A/B e escale o que converte. O ciclo que faz a plataforma melhorar sozinha."]
 ];
 
 var CASES = [
   {tag:"Relatórios automatizados", h:"Você ainda gasta 5 horas por relatório enquanto seu concorrente entrega em 30 minutos.",
-   w:["5h compilando dados de fontes diferentes","Erros de cópia que viram decisão errada"],
-   c:["Prompt que estrutura, analisa e formata em minutos","Insights que você sozinho não enxergaria"],
+   w:["5h compilando dados de fontes diferentes","Análise refeita do zero a cada ciclo","Erros de cópia que viram decisão errada"],
+   c:["Prompt que estrutura, analisa e formata em minutos","Modelo reutilizável — mensal, trimestral, anual","Insights que você sozinho não enxergaria"],
    aud:["Gestores","Controllers","Analistas","Sócios de PME"], mv:"5h → 45min", mu:"por relatório",
    ic:"M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z M14 3v5h5M9 13h6M9 17h4"},
   {tag:"Conteúdo para social media", h:"Um post por semana virou seis por dia. Sem IA, é impossível manter o ritmo.",
-   w:["Bloqueio criativo segundo após segundo","Agência cobrando R$3–8k/mês pelo básico"],
-   c:["30 posts/mês em 1 hora — sua voz, sua identidade","Variações automáticas para LinkedIn, Instagram, X"],
+   w:["Bloqueio criativo segundo após segundo","Agência cobrando R$3–8k/mês pelo básico","Posts genéricos que somem no algoritmo"],
+   c:["30 posts/mês em 1 hora — sua voz, sua identidade","Variações automáticas para LinkedIn, Instagram, X","Calendário editorial pronto pra um trimestre"],
    aud:["Empreendedores","Social media","Marketers","Criadores"], mv:"−R$3.000", mu:"por mês em agência",
    ic:"M3 3h18v18H3z M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"},
   {tag:"Planilhas financeiras precisas", h:"Um erro de fórmula vira decisão errada. IA pega o que seu olho não vê.",
-   w:["Planilhas com erros que ninguém percebe","Dependência de quem fez — se sai, você quebra"],
-   c:["Auditoria de fórmulas com prompt específico","Cenários (otimista, base, pessimista) num clique"],
+   w:["Planilhas com erros que ninguém percebe","Meses pra reconstruir um modelo que travou","Dependência de quem fez — se sai, você quebra"],
+   c:["Auditoria de fórmulas com prompt específico","Modelagem de fluxo de caixa em horas","Cenários (otimista, base, pessimista) num clique"],
    aud:["Contadores","Financeiro","Fundadores","CFOs"], mv:"+92%", mu:"menos retrabalho",
    ic:"M3 4h18v16H3z M3 9h18M9 4v16M15 4v16"},
   {tag:"Análise de dados de clientes", h:"Seus clientes já estão dizendo o que querem. Sem IA, ninguém ouve.",
-   w:["Feedback se acumulando sem virar ação","Churn por motivos que você nunca mapeou"],
-   c:["Análise de sentimento em milhares de mensagens","Predição de churn com sinais que você ignora"],
+   w:["Feedback se acumulando sem virar ação","Churn por motivos que você nunca mapeou","Segmentação \"pelo feeling\", não pelo dado"],
+   c:["Análise de sentimento em milhares de mensagens","Segmentação automática por comportamento real","Predição de churn com sinais que você ignora"],
    aud:["Vendas","CS","Marketing","Atendimento"], mv:"−40%", mu:"em churn evitável",
    ic:"M3 5c0-1.7 4-3 9-3s9 1.3 9 3-4 3-9 3-9-1.3-9-3Z M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"},
   {tag:"Estratégia de marketing", h:"Sua concorrência tem 5 cenários testados. Quantos você tem?",
-   w:["Um plano feito no escuro — e meses pra validar","Personas que existem só no PowerPoint"],
-   c:["5 cenários completos com KPIs e jornada em 1 dia","Personas com base em dados reais, não palpite"],
+   w:["Um plano feito no escuro — e meses pra validar","Reuniões intermináveis girando no mesmo eixo","Personas que existem só no PowerPoint"],
+   c:["5 cenários completos com KPIs e jornada em 1 dia","Personas com base em dados reais, não palpite","Testes A/B planejados antes de gastar 1 real"],
    aud:["Marketing","Fundadores","Agências","CMOs"], mv:"5×", mu:"mais cenários testados",
    ic:"M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"}
 ];
@@ -1150,7 +1098,7 @@ function icoSvg(p){return '<svg width="24" height="24" viewBox="0 0 24 24" fill=
 // bars
 (function(){var c=document.getElementById('bars');if(!c)return;BARS.forEach(function(b){c.appendChild(el('<div class="bar-row"><div class="bar-lbl">'+b.l+'</div><div class="bar-bars"><div class="bar-line"><div class="bar-bef" style="width:'+b.bw+'%"></div><span class="bar-v bef">'+b.bef+'</span></div><div class="bar-line"><div class="bar-aft" style="width:'+b.aw+'%"></div><span class="bar-v aft">'+b.aft+'</span></div></div><div class="bar-pct">'+b.pct+'</div></div>'));});})();
 // chapters
-(function(){var c=document.getElementById('chapters');if(!c)return;CHAPTERS.forEach(function(ch){c.appendChild(el('<div class="phase"><div class="ph-num">'+ch[0]+'</div><div class="ph-body"><div class="ph-title">'+ch[1]+'</div><div class="ph-tool">'+ch[2]+'</div><div class="ph-desc">'+ch[3]+'</div></div></div>'));});})();
+(function(){var c=document.getElementById('chapters');if(!c)return;CHAPTERS.forEach(function(ch){c.appendChild(el('<div class="chcard"><div class="num">'+ch[0]+'</div><div class="body"><h4>'+ch[1]+'</h4><p>'+ch[2]+'</p></div></div>'));});})();
 // included
 (function(){var c=document.getElementById('inc-list');if(!c)return;INC.forEach(function(t){c.appendChild(el('<li><span class="chk-sm">✓</span><span>'+t+'</span></li>'));});})();
 // transparency
@@ -1188,16 +1136,6 @@ function icoSvg(p){return '<svg width="24" height="24" viewBox="0 0 24 24" fill=
   }
   document.querySelectorAll('.ps-tab').forEach(function(t){t.addEventListener('click',function(){show(+t.dataset.i);});});
   show(0);
-})();
-
-/* ════ MENU MOBILE (CORREÇÃO 6) ════ */
-(function(){
-  var menu=document.getElementById('mobMenu'), ov=document.getElementById('mobOv');
-  var open=function(){menu.classList.add('open');ov.classList.add('open');};
-  window.closeMob=function(){menu.classList.remove('open');ov.classList.remove('open');};
-  var b=document.getElementById('navBurger'); if(b) b.addEventListener('click',open);
-  var x=document.getElementById('mobMenuX'); if(x) x.addEventListener('click',window.closeMob);
-  if(ov) ov.addEventListener('click',window.closeMob);
 })();
 
 /* ════ NAVBAR SCROLL ════ */
