@@ -123,8 +123,6 @@ img{max-width:100%;display:block;}
 .hero h1{font-size:clamp(38px,4.4vw,64px);line-height:1.06;letter-spacing:-.026em;font-weight:800;color:#fff;text-wrap:balance;}
 .hero h1 .l2{color:var(--lime);}
 .hero-sub{margin-top:18px;max-width:520px;font-size:16.5px;line-height:1.5;color:rgba(255,255,255,.82);}
-.hero-cred{margin-top:16px;max-width:520px;font-size:13px;line-height:1.5;color:var(--lime);opacity:.92;}
-.hero-cred strong{color:#fff;font-weight:700;}
 .hero-cta-row{margin-top:26px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
 .hero-cd{display:flex;flex-direction:column;gap:4px;border-left:1px solid rgba(255,255,255,.15);padding-left:22px;}
 .hero-cd .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;}
@@ -220,10 +218,6 @@ img{max-width:100%;display:block;}
 .price-btn{display:flex;align-items:center;justify-content:center;gap:12px;padding:22px 28px;border-radius:16px;margin-top:24px;background:var(--lime);color:#0a0a0a;font-size:17px;font-weight:700;width:100%;box-shadow:0 14px 40px rgba(200,255,61,.34), inset 0 1px 0 rgba(255,255,255,.4);transition:transform .2s;}
 .price-btn:hover{transform:translateY(-2px);}
 .price-notes{margin-top:18px;display:flex;flex-direction:column;gap:10px;}
-.guarantee-box{margin-top:18px;display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:14px;background:rgba(200,255,61,.06);border:1px dashed rgba(200,255,61,.4);}
-.guarantee-box .gb-ic{flex-shrink:0;margin-top:1px;}
-.guarantee-box div{font-size:13.5px;line-height:1.55;color:var(--text);}
-.guarantee-box strong{color:#fff;font-weight:700;}
 .price-notes div{display:flex;align-items:center;gap:10px;font-size:13.5px;}
 
 /* ── MANDATORY CASES ── */
@@ -503,13 +497,12 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
   </div>
   <div class="hero-main">
     <div>
-      <div class="eyebrow">Método completo · PDF · 49 páginas · R$47 · Acesso imediato</div>
-      <h1>Do zero ao primeiro<br>produto vendido.<br><span class="l2">Só você, só IA.</span></h1>
-      <p class="hero-sub">Em 7 fases você define o produto, gera a landing page, integra o pagamento e sobe a campanha. Sem dev. Sem agência. O guia traz o método, o manual das ferramentas e 38 prompts prontos para copiar e colar.</p>
-      <div class="hero-cred">Por <strong>Dayyán Morandi</strong> — estrategista por trás de campanhas digitais que já alcançaram <strong>+100 milhões de pessoas</strong> em todo o mundo. LaLiga · Real Madrid · ESPN · YouTube</div>
+      <div class="eyebrow">Guia em PDF · 49 páginas · Acesso imediato</div>
+      <h1>Sua plataforma<br>de vendas.<br><span class="l2">Feita só com IA.</span></h1>
+      <p class="hero-sub">Do zero ao primeiro pagamento — sem dev, sem agência, sem contratar ninguém. Só você e a IA. O guia traz o método, o manual e os prompts prontos.</p>
       <div class="hero-cta-row">
         <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime" onclick="trackCTA('hero')">
-          Quero começar hoje — R$47
+          Quero o guia — R$47
           <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
         <div class="hero-cd">
@@ -611,56 +604,51 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
   </div>
 </section>
 
-<!-- ══ DEPOIMENTOS ══ -->
-<style>
-.dp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1180px;margin:0 auto;}
-.dp-result{font-size:14px;font-weight:700;color:var(--lime);letter-spacing:-.01em;margin-bottom:12px;line-height:1.35;}
-.sec-light .dp-result{color:#2c4400;}
-.dp-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px dashed rgba(95,125,10,.45)!important;background:rgba(95,125,10,.04)!important;box-shadow:none!important;min-height:220px;}
-.dp-ph .pi{width:46px;height:46px;border-radius:50%;border:1px dashed rgba(95,125,10,.5);display:grid;place-items:center;color:#2c4400;font-size:24px;margin-bottom:14px;}
-.dp-ph p{font-size:14.5px;color:#5b6470;line-height:1.5;max-width:200px;}
-.dp-card{position:relative;padding:32px 34px;margin:0;overflow:hidden;}
-.dp-q{position:absolute;top:14px;right:26px;font-family:Georgia,serif;font-size:90px;line-height:1;color:rgba(200,255,61,.14);}
-.dp-text{font-size:19px;line-height:1.6;color:#fff;font-weight:500;letter-spacing:-.01em;margin:0 0 24px;text-wrap:pretty;}
-.dp-foot{display:flex;align-items:center;gap:14px;}
-.dp-av{width:48px;height:48px;border-radius:50%;flex-shrink:0;background:var(--limebg);border:1px solid var(--limebd);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:16px;color:var(--lime);}
-.dp-name{font-size:16px;font-weight:700;color:#fff;letter-spacing:-.01em;}
-.dp-role{font-size:13.5px;color:var(--muted);margin-top:1px;}
-@media(max-width:980px){.dp-grid{grid-template-columns:1fr;}.dp-card{padding:30px 28px;}}
-</style>
-<section class="section sec-light" id="depoimentos" style="background:linear-gradient(180deg,#06080b 0%,#0a0d12 100%)">
+<!-- ══ HISTÓRIA / MANIFESTO ══ -->
+<section class="section" id="historia" style="background:linear-gradient(180deg,#0a0d12 0%,#06080b 100%)">
   <div class="wrap">
-    <div class="head-block center">
-      <div class="eyebrow lime">Quem já está usando</div>
-      <h2 class="ttl">Os primeiros leitores <span class="lime">já estão aplicando</span></h2>
-      <p class="sub">Profissionais usando os prompts do guia no dia a dia do próprio negócio.</p>
+    <div class="head-block" style="max-width:980px">
+      <div class="eyebrow lime">Por que eu criei isto</div>
+      <h2 class="ttl">Você provavelmente está sentado numa <span class="lime">mina de ouro</span> — e ainda não percebeu.</h2>
     </div>
-    <div class="dp-grid">
-      <figure class="card hov dp-card"><div class="dp-q">“</div><div style="display:flex;gap:3px;margin-bottom:18px"><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg></div><div class="dp-result">Planilhas de alunos em minutos, não em horas</div><blockquote class="dp-text">O Guia já me ajudou a encontrar uma forma eficaz para gerenciar minhas planilhas de alunos e tornar o atendimento deles muito mais eficaz.</blockquote><figcaption class="dp-foot"><div class="dp-av">TT</div><div><div class="dp-name">Tomas Triel</div><div class="dp-role">Personal Trainer</div></div></figcaption></figure>
-      <figure class="card hov dp-card"><div class="dp-q">“</div><div style="display:flex;gap:3px;margin-bottom:18px"><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg></div><div class="dp-result">Conteúdo de rede social com mais consistência</div><blockquote class="dp-text">Já estou utilizando alguns dos prompts para analisar os conteúdos da minha rede social e melhorar minha presença no mundo digital.</blockquote><figcaption class="dp-foot"><div class="dp-av">MC</div><div><div class="dp-name">Marcelo Campos</div><div class="dp-role">Gestor de Saúde e Qualidade de Vida Empresarial</div></div></figcaption></figure>
-      <figure class="card dp-card dp-ph"><div class="pi">+</div><p>Em breve: novos relatos de quem aplicou o método.</p></figure>
+    <div class="story-grid">
+      <div>
+        <div class="story-beat">
+          <p>Durante anos, eu dependi de terceiros para tirar projetos do papel. E toda vez que isso acontecia, eu perdia <strong>velocidade</strong>, perdia <strong>controle</strong> — e muitas vezes perdia <strong>oportunidades</strong>.</p>
+          <p>Hoje eu construo muito mais sozinho. Não porque virei programador. Não porque virei desenvolvedor. Mas porque aprendi a usar inteligência artificial da maneira certa.</p>
+          <p class="big">A maior vantagem não é economizar dinheiro. É recuperar o controle.</p>
+        </div>
+        <div class="story-beat">
+          <p>Toda vez que eu tinha uma ideia, precisava esperar. Esperar orçamento. Esperar desenvolvimento. Esperar aprovação. Esperar entrega.</p>
+          <p>E eu percebi uma coisa: o recurso mais importante de um empreendedor não é dinheiro. <strong>É velocidade.</strong> Porque quando você executa rápido, você aprende mais rápido, corrige mais rápido e cresce mais rápido.</p>
+          <p>Hoje eu transformo uma ideia em produto sem depender de uma estrutura inteira. E essa sensação de liberdade é, provavelmente, o maior benefício que a IA me trouxe.</p>
+        </div>
+      </div>
+      <aside class="story-aside">
+        <div class="story-quote">"Existe uma diferença enorme entre ter uma ideia e <span class="lime">controlar a execução dela</span>."</div>
+        <div class="story-gains">
+          <div class="story-gain"><div class="gi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></div><div><div class="gt">Velocidade</div><div class="gd">Da ideia ao produto sem fila de espera.</div></div></div>
+          <div class="story-gain"><div class="gi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></svg></div><div><div class="gt">Controle</div><div class="gd">Você dirige cada etapa — sem terceiros.</div></div></div>
+          <div class="story-gain"><div class="gi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div><div><div class="gt">Liberdade</div><div class="gd">Executar sem depender de uma estrutura inteira.</div></div></div>
+        </div>
+        <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime" style="width:100%;margin-top:26px" onclick="trackCTA('historia')">Quero esse controle — R$47 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </aside>
     </div>
   </div>
 </section>
 
-<!-- ══ CAPÍTULOS ══ -->
-<section class="section sec-light" id="capitulos" style="background:linear-gradient(180deg,#06080b 0%,#0a0d12 100%)">
+<!-- ══ RAZÕES ══ -->
+<section class="section sec-light" id="razoes" style="background:linear-gradient(180deg,#06080b 0%,#0a0d12 100%)">
   <div class="wrap">
-    <div class="head-block">
-      <div class="eyebrow">O que você vai aprender</div>
-      <h2 class="ttl">7 fases. Do zero à <span class="lime">primeira venda</span>.</h2>
-      <p class="sub">Estrutura linear: cada fase é um degrau prático construído sobre o anterior — com a ferramenta certa e o prompt que destrava o trabalho.</p>
+    <div class="head-block center">
+      <div class="eyebrow">Por que este guia funciona</div>
+      <h2 class="ttl">6 razões para começar <span class="lime">hoje</span></h2>
+      <p class="sub">Mais do que teoria — um guia construído para gerar resultado imediato, mesmo para quem nunca usou IA antes.</p>
     </div>
-    <div class="grid-2" id="chapters"></div>
-    <div class="cta-blk">
-      <div>
-        <h3>Acesso imediato. Pagamento <span class="lime">único</span>.</h3>
-        <p>As 7 fases do método + 38 prompts prontos + plano de 30 dias — com todas as atualizações mensais inclusas.</p>
-      </div>
-      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime" onclick="trackCTA('chapters')">Garantir meu acesso — R$47 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-    </div>
+    <div class="grid-3" id="reasons"></div>
   </div>
 </section>
+
 
 <!-- ══ AMOSTRA DE PROMPT ══ -->
 <section class="section" id="amostra" style="background:linear-gradient(180deg,#06080b 0%,#0a0d12 100%)">
@@ -719,6 +707,32 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
   </div>
 </section>
 
+<!-- ══ DEPOIMENTOS ══ -->
+<style>
+.dp-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1000px;margin:0 auto;}
+.dp-card{position:relative;padding:32px 34px;margin:0;overflow:hidden;}
+.dp-q{position:absolute;top:14px;right:26px;font-family:Georgia,serif;font-size:90px;line-height:1;color:rgba(200,255,61,.14);}
+.dp-text{font-size:19px;line-height:1.6;color:#fff;font-weight:500;letter-spacing:-.01em;margin:0 0 24px;text-wrap:pretty;}
+.dp-foot{display:flex;align-items:center;gap:14px;}
+.dp-av{width:48px;height:48px;border-radius:50%;flex-shrink:0;background:var(--limebg);border:1px solid var(--limebd);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:16px;color:var(--lime);}
+.dp-name{font-size:16px;font-weight:700;color:#fff;letter-spacing:-.01em;}
+.dp-role{font-size:13.5px;color:var(--muted);margin-top:1px;}
+@media(max-width:768px){.dp-grid{grid-template-columns:1fr;}.dp-card{padding:32px 26px;}}
+</style>
+<section class="section sec-light" id="depoimentos" style="background:linear-gradient(180deg,#06080b 0%,#0a0d12 100%)">
+  <div class="wrap">
+    <div class="head-block center">
+      <div class="eyebrow lime">Quem já está usando</div>
+      <h2 class="ttl">Os primeiros leitores <span class="lime">já estão aplicando</span></h2>
+      <p class="sub">Profissionais usando os prompts do guia no dia a dia do próprio negócio.</p>
+    </div>
+    <div class="dp-grid">
+      <figure class="card hov dp-card"><div class="dp-q">“</div><div style="display:flex;gap:3px;margin-bottom:18px"><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg></div><blockquote class="dp-text">O Guia já me ajudou a encontrar uma forma eficaz para gerenciar minhas planilhas de alunos e tornar o atendimento deles muito mais eficaz.</blockquote><figcaption class="dp-foot"><div class="dp-av">TT</div><div><div class="dp-name">Tomas Triel</div><div class="dp-role">Personal Trainer</div></div></figcaption></figure>
+      <figure class="card hov dp-card"><div class="dp-q">“</div><div style="display:flex;gap:3px;margin-bottom:18px"><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8FF3D"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.8l1.2-6.6L2.5 9l6.6-.9L12 2z"/></svg></div><blockquote class="dp-text">Já estou utilizando alguns dos prompts para analisar os conteúdos da minha rede social e melhorar minha presença no mundo digital.</blockquote><figcaption class="dp-foot"><div class="dp-av">MC</div><div><div class="dp-name">Marcelo Campos</div><div class="dp-role">Gestor de Saúde e Qualidade de Vida Empresarial</div></div></figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <!-- ══ AUTOR ══ -->
 <section class="section" id="autor" style="background:var(--ink)">
   <div class="wrap">
@@ -766,25 +780,6 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
 })();
 </script>
 
-<!-- ══ DADOS DE MERCADO ══ -->
-<section class="section" id="dados" style="background:linear-gradient(180deg,#0a0d12 0%,#06080b 100%)">
-  <div class="wrap">
-    <div class="head-block center">
-      <div class="eyebrow">Dados de mercado</div>
-      <h2 class="ttl">O que as maiores empresas do mundo já estão <span class="lime">declarando</span></h2>
-      <p class="sub">Declarações públicas de resultados reais com IA. A pergunta é: quando a sua empresa vai fazer o mesmo?</p>
-    </div>
-    <div class="grid-3" id="data"></div>
-    <div class="cta-blk">
-      <div>
-        <h3>O conhecimento que separa <span class="lime">quem cresce</span> de quem fica para trás.</h3>
-        <p>Por R$47 você tem acesso a tudo que precisa para começar a usar IA de forma prática, hoje.</p>
-      </div>
-      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime" onclick="trackCTA('market')">Quero o guia — R$47 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-    </div>
-  </div>
-</section>
-
 <!-- ══ OFERTA ══ -->
 <section class="section" id="oferta" style="background:linear-gradient(180deg,#06080b 0%,#0a0d12 100%)">
   <div class="wrap">
@@ -795,14 +790,11 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
         <p class="sub">Não é um curso de 40 horas. É o método direto, com o manual das plataformas e os prompts — do zero à primeira venda, começando hoje.</p>
         <ul class="offer-list">
           <li><span class="chk-sm">✓</span> O método completo em 7 fases</li>
-          <li><span class="chk-sm">✓</span> Manual das 8 plataformas — passo a passo</li>
-          <li><span class="chk-sm">✓</span> 8 prompts de construção da plataforma</li>
-          <li><span class="chk-sm">✓</span> 30 prompts comerciais prontos — copie e use</li>
-          <li><span class="chk-sm">✓</span> Fórmula C.A.R.E. — o método por trás de cada prompt</li>
-          <li><span class="chk-sm">✓</span> Como criar e orquestrar agentes-gestores de IA</li>
-          <li><span class="chk-sm">✓</span> Plano de ação de 30 dias — semana a semana</li>
-          <li><span class="chk-sm">✓</span> Atualizações mensais grátis — sem pagar de novo</li>
-          <li><span class="chk-sm">✓</span> Acesso imediato em PDF — para sempre</li>
+          <li><span class="chk-sm">✓</span> Manual das 8 plataformas, passo a passo</li>
+          <li><span class="chk-sm">✓</span> 38 prompts prontos · copia e cola</li>
+          <li><span class="chk-sm">✓</span> Plano de ação de 30 dias</li>
+          <li><span class="chk-sm">✓</span> Atualizações mensais grátis · v1, v2, v3…</li>
+          <li><span class="chk-sm">✓</span> Acesso vitalício em PDF</li>
         </ul>
       </div>
       <div class="price-card">
@@ -824,13 +816,29 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
           <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
         <div class="price-notes">
+          <div style="color:rgba(255,255,255,.78)"><span class="chk">✓</span> 7 dias de garantia — devolução 100% sem perguntas</div>
           <div style="color:var(--muted)">🔒 Pagamento seguro via Kiwify</div>
         </div>
-        <div class="guarantee-box">
-          <div class="gb-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.6 3.4 8.4 8 9 4.6-.6 8-4.4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
-          <div><strong>Garantia incondicional de 7 dias.</strong> Se você não economizar pelo menos 5 horas de trabalho aplicando os prompts — devolvemos 100% do valor. Sem formulário. Sem pergunta. Basta enviar um e-mail.</div>
-        </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DADOS DE MERCADO ══ -->
+<section class="section" id="dados" style="background:linear-gradient(180deg,#0a0d12 0%,#06080b 100%)">
+  <div class="wrap">
+    <div class="head-block center">
+      <div class="eyebrow">Dados de mercado</div>
+      <h2 class="ttl">O que as maiores empresas do mundo já estão <span class="lime">declarando</span></h2>
+      <p class="sub">Declarações públicas de resultados reais com IA. A pergunta é: quando a sua empresa vai fazer o mesmo?</p>
+    </div>
+    <div class="grid-3" id="data"></div>
+    <div class="cta-blk">
+      <div>
+        <h3>O conhecimento que separa <span class="lime">quem cresce</span> de quem fica para trás.</h3>
+        <p>Por R$47 você tem acesso a tudo que precisa para começar a usar IA de forma prática, hoje.</p>
+      </div>
+      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime" onclick="trackCTA('market')">Quero o guia — R$47 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
@@ -866,6 +874,131 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
   </div>
 </section>
 
+<!-- ══ CAPÍTULOS ══ -->
+<section class="section sec-light" id="capitulos" style="background:linear-gradient(180deg,#06080b 0%,#0a0d12 100%)">
+  <div class="wrap">
+    <div class="head-block">
+      <div class="eyebrow">O que você vai aprender</div>
+      <h2 class="ttl">7 fases. Do zero à <span class="lime">primeira venda</span>.</h2>
+      <p class="sub">Estrutura linear: cada fase é um degrau prático construído sobre o anterior — com a ferramenta certa e o prompt que destrava o trabalho.</p>
+    </div>
+    <div class="grid-2" id="chapters"></div>
+    <div class="cta-blk">
+      <div>
+        <h3>Acesso imediato. Pagamento <span class="lime">único</span>.</h3>
+        <p>Os 8 capítulos + 38 prompts prontos + plano de 30 dias + comparativo de ferramentas — com todas as atualizações mensais inclusas.</p>
+      </div>
+      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime" onclick="trackCTA('chapters')">Garantir meu acesso — R$47 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FERRAMENTAS ══ -->
+<section class="section" id="ferramentas" style="background:var(--ink2)">
+  <div class="wrap">
+    <div class="head-block">
+      <div class="eyebrow">Comparativo de ferramentas</div>
+      <h2 class="ttl">Qual ferramenta usar para <span class="lime">cada situação</span>?</h2>
+      <p class="sub">O ebook traz um comparativo completo. Veja um resumo das principais ferramentas disponíveis hoje.</p>
+    </div>
+    <div class="tbl-wrap card" style="border-radius:22px">
+      <table class="tools">
+        <thead><tr><th>Ferramenta</th><th>Textos</th><th>Dados</th><th>Imagens</th><th>Automação</th><th>Grátis?</th><th>Melhor para</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tnm">ChatGPT</span><span class="btag">popular</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td>Parcial</td><td>Geral, textos, código</td></tr>
+          <tr><td><span class="tnm">Claude</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="crs">—</span></td><td><span class="chk">✓</span></td><td>Parcial</td><td>Textos longos, análise</td></tr>
+          <tr><td><span class="tnm">Gemini</span><span class="btag">Google</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td>Sim</td><td>Integração Google Workspace</td></tr>
+          <tr><td><span class="tnm">Perplexity</span></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td><span class="crs">—</span></td><td><span class="crs">—</span></td><td>Parcial</td><td>Pesquisa com fontes</td></tr>
+          <tr><td><span class="tnm">Midjourney</span></td><td><span class="crs">—</span></td><td><span class="crs">—</span></td><td><span class="chk">✓</span></td><td><span class="crs">—</span></td><td>Não</td><td>Imagens profissionais</td></tr>
+          <tr><td><span class="tnm">Make/Zapier</span></td><td><span class="crs">—</span></td><td><span class="chk">✓</span></td><td><span class="crs">—</span></td><td><span class="chk">✓</span></td><td>Parcial</td><td>Automação de fluxos</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INCLUÍDO + PREÇO ══ -->
+<section class="section" id="incluido" style="background:linear-gradient(180deg,#0a0d12 0%,#06080b 100%)">
+  <div class="wrap">
+    <div class="inc-grid">
+      <div>
+        <div class="eyebrow">O que está incluído</div>
+        <h2 class="ttl" style="font-size:clamp(34px,4vw,52px)">IA que Vende — <span class="lime">Guia Prático</span></h2>
+        <p class="sub">O método, o manual das plataformas e 38 prompts prontos para criar sua plataforma de vendas digitais do zero — sem contratar ninguém.</p>
+        <ul class="inc-list" id="inc-list"></ul>
+      </div>
+      <div class="price-card">
+        <div class="eyebrow lime" style="margin-bottom:18px">Acesso completo</div>
+        <div class="launch-note">🔥 Preço de lançamento</div>
+        <div class="upd-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+          <div><strong>Atualizações mensais grátis</strong><span>Compre a v1 hoje · receba v2, v3, v4… sem pagar de novo</span></div>
+        </div>
+        <div class="price-row">
+          <div><div class="price-from">De R$127</div><div class="price-now"><span class="cur">R$</span><span class="val">47</span></div></div>
+          <div class="price-side">Pagamento único<br>Sem mensalidade<br>Acesso vitalício</div>
+        </div>
+        <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="price-btn" onclick="trackCTA('included')">
+          Garantir meu acesso agora
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <div class="price-notes">
+          <div style="color:rgba(255,255,255,.78)"><span class="chk">✓</span> Garantia 7 dias: não economizou 5h+? Devolvemos 100%</div>
+          <div style="color:var(--muted)"><span class="chk">✓</span> PDF imediato após o pagamento</div>
+          <div style="color:var(--muted)">🔒 Pagamento seguro via Kiwify</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRANSPARÊNCIA ══ -->
+<section class="section" id="transparencia" style="background:linear-gradient(180deg,#06080b 0%,#04060a 100%)">
+  <div class="wrap">
+    <div class="head-block">
+      <div class="eyebrow">Transparência total</div>
+      <h2 class="ttl">Tudo isto foi feito com IA — <span class="lime">inclusive esta página</span></h2>
+      <p class="sub">Não escondo nada: o guia, esta landing page e toda a estratégia de marketing e venda foram produzidos 100% por mim, usando Claude e ChatGPT. Você não está lendo sobre o que a IA pode fazer — você está dentro de um exemplo vivo disso.</p>
+    </div>
+    <div class="grid-2" id="transp" style="margin-bottom:32px"></div>
+    <div class="tr-chips">
+      <span class="lbl">Ferramentas usadas</span>
+      <span class="tr-chip">Claude (Anthropic)</span>
+      <span class="tr-chip">Cowork</span>
+      <span class="tr-chip">Claude Code</span>
+      <span class="tr-chip">ChatGPT (OpenAI)</span>
+      <span class="tr-chip">Engenharia de prompt</span>
+    </div>
+    <div class="tr-quote">
+      <div class="lbl">A prova é a própria página</div>
+      <p>Eu não terceirizei nada. Sentei com Claude e ChatGPT, escrevi e reescrevi prompts no chat, usei Cowork e Code, e dirigi a IA até cada peça ficar pronta — o guia, este site e a campanha de marketing inteira. <strong>Se uma pessoa só consegue produzir tudo isto com IA, imagine o que ela faz pela sua rotina de trabalho. Comprando o guia, você aprende exatamente o processo que gerou o que está vendo agora.</strong></p>
+    </div>
+
+    <!-- DISCLAIMER: custos reais + direção humana -->
+    <div class="disc-grid" style="margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+      <div class="card" style="padding:36px 38px">
+        <div class="eyebrow lime" style="margin-bottom:20px">Quanto custou de ferramenta</div>
+        <p style="color:var(--text);font-size:15px;line-height:1.55;margin-bottom:22px">Transparência total também no investimento. Veja o que foi pago e o que foi de graça para construir tudo isto:</p>
+        <div style="display:flex;flex-direction:column;gap:0">
+          <div class="disc-row"><span class="disc-tool">Claude (Anthropic)</span><span class="disc-tag paid">Plano pago</span></div>
+          <div class="disc-row"><span class="disc-tool">ChatGPT (OpenAI)</span><span class="disc-tag free">Versão gratuita</span></div>
+          <div class="disc-row"><span class="disc-tool">GitHub</span><span class="disc-tag free">Versão gratuita</span></div>
+          <div class="disc-row"><span class="disc-tool">Kiwify</span><span class="disc-tag free">Grátis · só taxas por venda</span></div>
+          <div class="disc-row"><span class="disc-tool">Google Analytics</span><span class="disc-tag free">Integração gratuita</span></div>
+          <div class="disc-row"><span class="disc-tool">Meta Business</span><span class="disc-tag free">Integração gratuita</span></div>
+        </div>
+        <p style="color:var(--muted);font-size:12.5px;line-height:1.5;margin-top:20px">Ou seja: a única assinatura paga foi a do Claude. As demais plataformas foram usadas no plano gratuito — a Kiwify só cobra as taxas sobre cada venda realizada, e a publicidade no Meta é um investimento de tráfego à parte, opcional.</p>
+      </div>
+      <div class="card" style="padding:36px 38px">
+        <div class="eyebrow lime" style="margin-bottom:20px">Direção 100% humana</div>
+        <p style="color:rgba(255,255,255,.86);font-size:15.5px;line-height:1.6;margin-bottom:16px"><strong style="color:#fff">A IA não trabalhou sozinha — ela trabalhou comigo.</strong> Todo o desenvolvimento foi feito mediante análise do que cada plataforma entregava.</p>
+        <p style="color:var(--text);font-size:15px;line-height:1.6;margin-bottom:16px">Com base nas respostas do ChatGPT, nas ações dos agentes e nos projetos entregues no Cowork, eu ia conversando com as plataformas: pedindo mudanças, sugerindo alterações, questionando funcionamento e UX, e solicitando análises e estudos comparativos com sistemas e produtos semelhantes.</p>
+        <p style="color:var(--text);font-size:15px;line-height:1.6">O objetivo de cada iteração foi um só: chegar a um resultado <strong style="color:#fff">altamente competitivo</strong>. A IA executou; a estratégia, o julgamento, a curadoria e a decisão final foram sempre meus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══ FAQ ══ -->
 <section class="section sec-light" id="faq" style="background:var(--ink)">
   <div class="wrap">
@@ -884,21 +1017,6 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
   </div>
 </section>
 
-<!-- ══ CTA FINAL ══ -->
-<section class="section" id="cta-final" style="background:radial-gradient(120% 80% at 50% 0%,rgba(200,255,61,.1) 0%,transparent 55%),linear-gradient(180deg,#0a0d12,#06080b)">
-  <div class="wrap" style="text-align:center;max-width:920px">
-    <div class="eyebrow lime" style="justify-content:center">Última chamada</div>
-    <h2 class="ttl" style="font-size:clamp(40px,5vw,72px)">Não espere o momento certo.<br><span class="lime">Ele já passou.</span></h2>
-    <p class="sub" style="margin-left:auto;margin-right:auto">Cada semana sem IA é uma semana pagando mais, produzindo menos e perdendo espaço para quem já decidiu.</p>
-    <div style="margin-top:34px;display:flex;justify-content:center">
-      <a href="https://pay.kiwify.com.br/qP4dKNI" target="_blank" rel="noopener" class="btn btn-lime" onclick="trackCTA('cta_final')" style="font-size:19px;padding:22px 40px">Quero o guia — R$47 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-    </div>
-    <div style="margin-top:22px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:14px">
-      <span>✓ Acesso imediato</span><span>✓ Pagamento único</span><span>✓ Garantia 7 dias</span><span>✓ Sem assinatura</span>
-    </div>
-  </div>
-</section>
-
 <!-- ══ FOOTER ══ -->
 <footer>
   <div class="ft-grid">
@@ -911,7 +1029,7 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
     </div>
     <div>
       <div class="ft-col-h">Páginas</div>
-      <div class="ft-links"><a href="#problema">O problema</a><a href="#depoimentos">Depoimentos</a><a href="#capitulos">O método</a><a href="#faq">FAQ</a></div>
+      <div class="ft-links"><a href="#problema">O problema</a><a href="#capitulos">O método</a><a href="#ferramentas">Ferramentas</a><a href="#faq">FAQ</a></div>
     </div>
     <div>
       <div class="ft-col-h">Legal</div>
@@ -1092,19 +1210,19 @@ function el(html){var d=document.createElement('div');d.innerHTML=html.trim();re
 function icoSvg(p){return '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="'+p+'"/></svg>';}
 
 // reasons
-(function(){var c=document.getElementById('reasons');if(!c)return;REASONS.forEach(function(r){c.appendChild(el('<div class="card hov scard"><div class="ic ico-box">'+icoSvg(r.ic)+'</div><h4>'+r.t+'</h4><p>'+r.b+'</p></div>'));});})();
+(function(){var c=document.getElementById('reasons');REASONS.forEach(function(r){c.appendChild(el('<div class="card hov scard"><div class="ic ico-box">'+icoSvg(r.ic)+'</div><h4>'+r.t+'</h4><p>'+r.b+'</p></div>'));});})();
 // data
-(function(){var c=document.getElementById('data');if(!c)return;DATA.forEach(function(d){c.appendChild(el('<div class="card hov dcard"><div class="stat">'+d.v+'</div><div class="desc">'+d.d+'</div><div class="src">'+d.s+'</div></div>'));});})();
+(function(){var c=document.getElementById('data');DATA.forEach(function(d){c.appendChild(el('<div class="card hov dcard"><div class="stat">'+d.v+'</div><div class="desc">'+d.d+'</div><div class="src">'+d.s+'</div></div>'));});})();
 // bars
-(function(){var c=document.getElementById('bars');if(!c)return;BARS.forEach(function(b){c.appendChild(el('<div class="bar-row"><div class="bar-lbl">'+b.l+'</div><div class="bar-bars"><div class="bar-line"><div class="bar-bef" style="width:'+b.bw+'%"></div><span class="bar-v bef">'+b.bef+'</span></div><div class="bar-line"><div class="bar-aft" style="width:'+b.aw+'%"></div><span class="bar-v aft">'+b.aft+'</span></div></div><div class="bar-pct">'+b.pct+'</div></div>'));});})();
+(function(){var c=document.getElementById('bars');BARS.forEach(function(b){c.appendChild(el('<div class="bar-row"><div class="bar-lbl">'+b.l+'</div><div class="bar-bars"><div class="bar-line"><div class="bar-bef" style="width:'+b.bw+'%"></div><span class="bar-v bef">'+b.bef+'</span></div><div class="bar-line"><div class="bar-aft" style="width:'+b.aw+'%"></div><span class="bar-v aft">'+b.aft+'</span></div></div><div class="bar-pct">'+b.pct+'</div></div>'));});})();
 // chapters
-(function(){var c=document.getElementById('chapters');if(!c)return;CHAPTERS.forEach(function(ch){c.appendChild(el('<div class="chcard"><div class="num">'+ch[0]+'</div><div class="body"><h4>'+ch[1]+'</h4><p>'+ch[2]+'</p></div></div>'));});})();
+(function(){var c=document.getElementById('chapters');CHAPTERS.forEach(function(ch){c.appendChild(el('<div class="chcard"><div class="num">'+ch[0]+'</div><div class="body"><h4>'+ch[1]+'</h4><p>'+ch[2]+'</p></div></div>'));});})();
 // included
-(function(){var c=document.getElementById('inc-list');if(!c)return;INC.forEach(function(t){c.appendChild(el('<li><span class="chk-sm">✓</span><span>'+t+'</span></li>'));});})();
+(function(){var c=document.getElementById('inc-list');INC.forEach(function(t){c.appendChild(el('<li><span class="chk-sm">✓</span><span>'+t+'</span></li>'));});})();
 // transparency
-(function(){var c=document.getElementById('transp');if(!c)return;TRANSP.forEach(function(t){c.appendChild(el('<div class="card hov" style="padding:32px 36px"><div style="display:flex;align-items:flex-start;gap:20px"><div class="ico-box">'+icoSvg(t.ic)+'</div><div><div style="font-size:19px;font-weight:700;color:#fff;letter-spacing:-.012em;margin-bottom:8px">'+t.t+'</div><div style="color:var(--text);font-size:15px;line-height:1.55">'+t.b+'</div></div></div></div>'));});})();
+(function(){var c=document.getElementById('transp');TRANSP.forEach(function(t){c.appendChild(el('<div class="card hov" style="padding:32px 36px"><div style="display:flex;align-items:flex-start;gap:20px"><div class="ico-box">'+icoSvg(t.ic)+'</div><div><div style="font-size:19px;font-weight:700;color:#fff;letter-spacing:-.012em;margin-bottom:8px">'+t.t+'</div><div style="color:var(--text);font-size:15px;line-height:1.55">'+t.b+'</div></div></div></div>'));});})();
 // cases
-(function(){var c=document.getElementById('cases');if(!c)return;CASES.forEach(function(d,i){
+(function(){var c=document.getElementById('cases');CASES.forEach(function(d,i){
   var wl=d.w.map(function(x){return '<li>'+x+'</li>';}).join('');
   var cl=d.c.map(function(x){return '<li>'+x+'</li>';}).join('');
   var al=d.aud.map(function(x){return '<span class="aud-chip">'+x+'</span>';}).join('');
