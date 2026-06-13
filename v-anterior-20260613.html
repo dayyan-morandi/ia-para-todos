@@ -128,6 +128,7 @@ img{max-width:100%;display:block;}
 /* CORREÇÃO 1 — autor 2 colunas, foto contida */
 .cv-wrap{grid-template-columns:40% 1fr;align-items:start;}
 .cv-photo{aspect-ratio:auto;max-height:480px;height:480px;}
+@media(max-width:1024px){.cv-photo{height:auto;max-height:320px;aspect-ratio:16/10;}}
 
 /* ── HERO ── */
 .hero{position:relative;min-height:100vh;width:100%;overflow:hidden;background:#0a0a0a;}
@@ -533,7 +534,7 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
 <nav class="mob-menu" id="mobMenu">
   <button class="mob-menu-x" id="mobMenuX" aria-label="Fechar">✕</button>
   <a href="#problema" onclick="closeMob()">O problema</a>
-  <a href="#depoimentos" onclick="closeMob()">Quem está usando</a>
+  <a href="#depoimentos" onclick="closeMob()">Depoimentos</a>
   <a href="#capitulos" onclick="closeMob()">O método</a>
   <a href="#oferta" onclick="closeMob()">A oferta</a>
   <a href="#faq" onclick="closeMob()">FAQ</a>
@@ -587,7 +588,7 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
 
 <style>
 /* ── AUTHOR CAROUSEL ── */
-.cv-wrap{display:grid;grid-template-columns:40% 1fr;gap:48px;align-items:start;margin-top:10px;}
+.cv-wrap{display:grid;grid-template-columns:.85fr 1fr;gap:48px;align-items:center;margin-top:10px;}
 .cv-photo{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.42);aspect-ratio:4/5;}
 .cv-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block;}
 .cv-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(6,8,11,.85) 100%);pointer-events:none;}
@@ -618,7 +619,7 @@ footer{background:var(--ink3);border-top:1px solid rgba(255,255,255,.06);padding
 .cv-rail .rl{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin-bottom:13px;}
 .cv-chips{display:flex;flex-wrap:wrap;gap:8px;}
 .cv-chips span{font-size:12.5px;color:var(--text);background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:999px;padding:6px 13px;}
-@media(max-width:768px){.cv-wrap{grid-template-columns:1fr;gap:30px;}.cv-photo{height:auto;max-height:320px;aspect-ratio:16/10;}.cv-photo img{object-position:center top;}}
+@media(max-width:1024px){.cv-wrap{grid-template-columns:1fr;gap:30px;}}
 
 /* ── HISTÓRIA / MANIFESTO ── */
 .story-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:start;margin-top:8px;}
